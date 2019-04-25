@@ -559,6 +559,32 @@
 
           
           
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links Interestings
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.preposterousuniverse.com/blog/" title="Preposterous Universe" target="_blank">Preposterous Universe</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.andrewsun.net/panta_rhei/" title="Anything Goes" target="_blank">Anything Goes</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://bactra.org/weblog/" title="Three-Toed Sloth" target="_blank">Three-Toed Sloth</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://changhai.org/" title="Changhai Lu" target="_blank">Changhai Lu</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
 
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=27591598&auto=0&height=66"></iframe>
 
@@ -588,6 +614,15 @@
   <span class="author" itemprop="copyrightHolder">Miralem</span>
 
   
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">Site words total count&#58;</span>
+    
+    <span title="Site words total count">53.6k</span>
+  
 </div>
 
 
@@ -604,6 +639,32 @@
 
 
 
+<span id="timeDate">��������...</span>
+<span id="times">����ʱ����...</span> 
+<script> 
+    var now = new Date(); 
+    function createtime() {
+    var grt= new Date("01/07/2019 12:00:00");
+    now.setTime(now.getTime()+250); 
+    days = (now - grt ) / 1000 / 60 / 60 / 24; 
+    dnum = Math.floor(days); hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); 
+    hnum = Math.floor(hours); 
+    if(String(hnum).length ==1 ){
+        hnum = "0" + hnum;
+    } 
+    minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+    mnum = Math.floor(minutes); if(String(mnum).length ==1 )
+    {
+       mnum = "0" + mnum;
+    } 
+    seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+    snum = Math.round(seconds);
+    if(String(snum).length ==1 ){snum = "0" + snum;} 
+    document.getElementById("timeDate").innerHTML = " Run for " dnum+" days ";
+    document.getElementById("times").innerHTML = hnum + " hours " + mnum + " mins " + snum + " secs";
+} 
+    setInterval("createtime()",250); 
+</script>
         
 
 
