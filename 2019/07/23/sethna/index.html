@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="FISICA,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="2019-7-22 先更到前五章">
+<meta name="keywords" content="FISICA">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Sethna 统计物理学课本 读书笔记">
+<meta property="og:url" content="http://yoursite.com/2019/07/23/sethna/index.html">
+<meta property="og:site_name" content="Miralem 的博客">
+<meta property="og:description" content="2019-7-22 先更到前五章">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-07-22T16:35:13.252Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Sethna 统计物理学课本 读书笔记">
+<meta name="twitter:description" content="2019-7-22 先更到前五章">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/07/23/sethna/">
+
+
+
+
+
+  <title>Sethna 统计物理学课本 读书笔记 | Miralem 的博客</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Miralem 的博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Miralemi r'ykdisykhr</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            About
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-jokes">
+          <a href="/jokes/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br>
+            
+            jokes
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-maktaba">
+          <a href="/libre/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br>
+            
+            maktaba
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/23/sethna/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Miralem">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://i.loli.net/2019/01/19/5c4290acb14e1.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Miralem 的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Sethna 统计物理学课本 读书笔记</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-07-23T00:34:06+08:00">
+                2019-07-23
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  5k words
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Reading time &asymp;</span>
+                
+                <span title="Reading time">
+                  20 minutes
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>2019-7-22 先更到前五章</p>
+<a id="more"></a>
+<h3 id="第一章：为什么学统计力学"><a href="#第一章：为什么学统计力学" class="headerlink" title="第一章：为什么学统计力学"></a>第一章：为什么学统计力学</h3><p>1.</p>
+<p>许多概念和方法对于实用的科学影响深远：系综，熵，相和相变，蒙卡方法，涌现，以及临界性。</p>
+<p>系综：系统中不能掌握的自由度太大，就别研究系统，而研究分布，这是一种有益的思维方式。</p>
+<p>熵：统计力学对世界的大贡献。毋庸赘言。</p>
+<p>相：大大加深我们对于对称性的理解。同时，还有和微扰论的联系——见第八章。</p>
+<p>计算方法：以蒙卡为首，具有统计力学的精神。虽然这基本上是个新学科⑧。。。这方面还是要看krauth的书。</p>
+<p>涌现：影响科学哲学的思维方式。系统在特定的极限附近产生大尺度上的新规律这一点同样是对既定物理直觉的一种冲击。</p>
+<p>相变和临界性：我个人对于种种Ising和类Ising模型挺感兴趣。也许以后会在闲的时候多了解一些相关内容，总结起来。</p>
+<p>2.</p>
+<p>这一章的习题挺有意思的，介绍了一点随机矩阵的概念。感觉我的计算能力又退步了。</p>
+<h3 id="第二章：随机行走与涌现"><a href="#第二章：随机行走与涌现" class="headerlink" title="第二章：随机行走与涌现"></a>第二章：随机行走与涌现</h3><p>1.</p>
+<p>随机行走里面包含了两种涌现：</p>
+<ul>
+<li>单次随机行走在长时间下有标度不变性</li>
+<li>随机行走的终点有一个满足扩散定律的分布</li>
+</ul>
+<p>2.</p>
+<p>容易从归纳法证明，一维随机行走的终点位置，其分布的方均根$\sigma\propto\sqrt{N}$。高维的时候，由于两次走的有$\left\langle\ell_{m} \cdot \ell_{n}\right\rangle= L^{2}\langle\cos (\theta)\rangle= 0$，该结论还成立。</p>
+<p>对于这种情况，如果我们说这个随机行走的“体积”用N度量，线度用R表示，则R^D^=V中的D可知为2。这是一个2维分形。</p>
+<p>对于长链聚合物的情形，由于它们是费米子组成的，$\sigma\propto N^\nu$的指数相应的要增加，在二维的情形下，可严格算出是3/4。</p>
+<p>在以上的情况中，$\nu$是一个临界指数。随机行走这个东西具有所谓的“普适性”——一个玄学概念，我觉得被封为toy model的东西都应该具备才行——而$\nu$是本书中见到的首个“普适性”临界指数（不加前三个字，或许会更好听）。</p>
+<p>3.</p>
+<p>一堆分子的随机行走的分布自然地由扩散方程描述。它有形式$\frac{\partial \rho}{\partial t}=D \nabla^{2} \rho=D \frac{\partial^{2} \rho}{\partial x^{2}}$。</p>
+<p>对于终点分布的密度，现在从$\rho\left(x^{\prime}, t\right)$求$\rho(x, t+\Delta t)$。单步的分布记做$\chi(l)$，</p>
+<p>$\begin{aligned} \rho(x, t+\Delta t) &amp;=\int_{-\infty}^{\infty} \rho\left(x^{\prime}, t\right) \chi\left(x-x^{\prime}\right) d x^{\prime} \\ &amp;=\int_{-\infty}^{\infty} \rho(x-z, t) \chi(z) d z \end{aligned}$</p>
+<p>如果$\rho$的空间尺度远大于步长，则展开之</p>
+<p>$\begin{aligned} \rho(x, t+\Delta t) &amp; \approx \int\left[\rho(x, t)-z \frac{\partial \rho}{\partial x}+\frac{z^{2}}{2} \frac{\partial^{2} \rho}{\partial x^{2}}\right] \chi(z) d z \\ &amp;=\rho(x, t) \int \chi(z) d z-\frac{\partial \rho}{\partial x} \int z \chi(z) d z+1 / 2 \frac{\partial^{2} \rho}{\partial x^{2}} \int z^{2} \chi(z) d z \\ &amp;=\rho(x, t)+1 / 2 \frac{\partial^{2} \rho}{\partial x^{2}} a^{2} \end{aligned}$</p>
+<p>a是一个常数。这就是说$\frac{\partial \rho}{\partial t}=\frac{a^{2}}{2 \Delta t} \frac{\partial^{2} \rho}{\partial x^{2}}$，即扩散方程。$D=a^2/2\Delta t$。</p>
+<p>4.</p>
+<p>从守恒的要求，可以写$\frac{\partial \rho}{\partial t}=-\nabla\cdot J$。由扩散方程，流J是从高密度往低密度走。</p>
+<p>如果有一个外力以$x(t+\Delta t)=x(t)+F \gamma \Delta t+\ell(t)$出现，可用前面的办法算出</p>
+<p>$\begin{aligned} J &amp;=\gamma F \rho-D \frac{\partial \rho}{\partial x} \\ \frac{\partial \rho}{\partial t} &amp;=-\gamma F \frac{\partial \rho}{\partial x}+D \frac{\partial^{2} \rho}{\partial x^{2}} \end{aligned}$</p>
+<p>把J的式子放在前是有理由的。作者在这里教诲说：当搞一个守恒的量时，先写它的流的表达式，确保它真的是守恒的——如果这里F不均匀，扩散方程就得多一项，先写J可以帮助避免在此疏漏。</p>
+<p>要感觉这些方程，可以看看稳定的解。给定不可透过的边界，则无F时这假想气体的$\rho$得各处均匀，有F（重力）时则沉到地上。</p>
+<p>5.</p>
+<p>解这扩散方程的工具包括傅里叶变化和格林函数。前者由于FFT的存在而受计算上的偏好，后者则在解析解方面更重要，可以用来做一些估计。</p>
+<p>在相当松的条件下，具有平移不变性的系统中的线性方程都有平面波解。对一个傅里叶分量$\tilde{\rho}_k$来说，</p>
+<p>$\begin{aligned} \frac{\partial \rho}{\partial t}=\frac{d \widetilde{\rho}_{k}}{d t} e^{-i k x} &amp;=D \frac{\partial^{2} \rho}{\partial x^{2}}=-D k^{2} \widetilde{\rho}_{k} e^{-i k x} \\ \frac{d \widetilde{\rho}_{k}}{d t} &amp;=-D k^{2} \widetilde{\rho}_{k} \\ \text{是故}\widetilde{\rho}_{k}(t) &amp;=\widetilde{\rho}_{k}(0) e^{-D k^{2} t} \end{aligned}$</p>
+<p>这样$\rho(x, t)=\frac{1}{2 \pi} \int_{-\infty}^{\infty} \widetilde{\rho}_{k}(0) e^{-i k x} e^{-D k^{2} t} d k$，而由初始条件可以知道$\widetilde{\rho}_{k}(0)=\int_{-\infty}^{\infty} \rho(x, 0) e^{i k x} d x$，这就解出来了。这说明时间一长，波长短的分量基本上都迅速decay掉了。</p>
+<p>其实我也想不起来格林函数能用的条件了，但是似乎一般物理上的系统都能用。取$G(x, 0)=\delta(x)$，用傅里叶方法解出来$\widetilde{G}_{k}(0)=1$，$G(x, t)=\frac{1}{\sqrt{4 \pi D t}} e^{-x^{2} / 4 D t}$，于是</p>
+<p>$\rho(x, t)=\int \rho(y, 0) G(x-y, t) d y=\int \rho(y, 0) \frac{e^{-(y-x)^{2} / 4 D t}}{\sqrt{4 \pi D t}} d y$</p>
+<p>这个形式（卷积）意味着随着时间的流逝，$\rho(y,0)$的不平之处会逐渐被抹平。</p>
+<h3 id="第三章：温度和热力学平衡"><a href="#第三章：温度和热力学平衡" class="headerlink" title="第三章：温度和热力学平衡"></a>第三章：温度和热力学平衡</h3><p>1.</p>
+<p>微正则系综中不加说明（下一章才有说明）地指出，等能面上各相点取到的概率相等。约束NVE后，系统的平衡态即确定。</p>
+<p>2.</p>
+<p>考虑一个盒子，有2N个粒子，而其中恰有N+m个在盒子的右边。这概率就是$P_{m}=2^{-2 N}\left(\begin{array}{c}{2 N} \\ {N+m}\end{array}\right)$。取对数，用斯特林公式，</p>
+<p>$\begin{aligned}\log P_m&amp;\approx2N\log N-(N+m)(\log N+m/N-m^2/N^2)\\ &amp;-(N-m)(\log N-m/N-m^2/N^2)\\&amp;\approx -m^2/N\end{aligned}$</p>
+<p>归一化，得$P_{m} \approx \sqrt{1 / \pi N} \exp \left(-m^{2} / N\right)$，粒子数涨落是高斯分布的，其方差$\propto\sqrt{N}$。</p>
+<p>3.</p>
+<p>考虑单原子分子理想气体。已知高维球体积$\mu\left(\mathbb{S}_{R}^{\ell-1}\right)=\pi^{\ell / 2} R^{\ell} / \frac{\ell}{2} !$，可算出相空间体积的微分$(3 N / 2 E) \pi^{\frac{3 N}{2}}(2 m E)^{\frac{3 N}{2}} / \frac{3 N !}{2}$。针对某一个粒子，$\rho\left(p_{1}\right)=\frac{1}{\sqrt{2 \pi m(2 E / 3 N)}} \exp \left(\frac{-p_{1}^{2}}{2 m} \frac{3 N}{2 E}\right)$。这些都是人们在课上所知道的。</p>
+<p>4.</p>
+<p>温度是一个重要的东西。有了温度，就有了更方便的正则系综。由于温度是定义出来反映平衡系统的普遍特性（能量）的，它在系综理论的框架下非常高效。为了把能量单位转成温度单位，人们启用了常数$k_B$。</p>
+<p>取两个系统相互接触，其能量为E~1~，E~2~。其总能量为E。对于某一个系统，有$\rho\left(E_{1}\right)=\Omega_{1}\left(E_{1}\right) \Omega_{2}\left(E-E_{1}\right) / \Omega(E)$，$\Omega(E)=\int d E_{1} \Omega_{1}\left(E_{1}\right) \Omega_{2}\left(E-E_{1}\right)$。因此，为了取到平衡，有$\frac{1}{\Omega_{1}} \frac{d \Omega_{1}}{d E_{1}}=\frac{1}{\Omega_{2}} \frac{d \Omega_{2}}{d E_{2}}$。引入熵S，则两边是$dS/dE$，定义这个东西是$1/T$。它是从外界买来定量的能量所需要花费（向外输出）的熵值。</p>
+<p>考虑平衡附近的涨落。若$E_{1}^{<em>}$是平衡处系统1的能量，可以得到$\rho\left(E_{1}\right)=\frac{1}{\sqrt{2 \pi} \sigma_{E}} e^{-\left(E_{1}-E_{1}^{</em>}\right)^{2} / 2 \sigma_{E}^{2}}$。其方差是$k_{B} / \sigma_{E}^{2}=\frac{\partial^{2} S_{1}}{\partial E_{1}^{2}}+\frac{\partial^{2} S_{2}}{\partial E_{2}^{2}}$。考虑到S是广延量，这方差$\propto N^{-1}$。实际上，更详细的说法是，由于$\frac{\partial^2S}{\partial E^2}/k_B=-\frac{1}{k_BT}\frac{1}{Nc_vT}$，而前者是一个能量单位，后者则是广延量，因此其几何平均值$\propto N^{-1}$。这个式子同时还提供了一个很好的测热容的办法。</p>
+<p>5.</p>
+<p>熵对NVE中的另两者求导可以得到压强和化学势。事实上，在这书里它们就是这样定义的。</p>
+<p>有一个有趣的推导，即从微正则系综来推导压强的力学定义$P=-\Delta E/\Delta V$与现在的统计力学定义$P=T\left.\frac{\partial S}{\partial V}\right|_{E, N}$是等价的。要做到这一点，得在新的框架下把$P=-\Delta E/\Delta V$写出来。考虑一个液体绝热变化，从$V$到$V+\Delta V$再回到$V$。这过程中液体的哈密顿量（本书作者特别喜欢用\mathbb来代表相空间的坐标）$\mathcal{H}(\mathbb{P}, \mathbb{Q}, V(t))$有$\frac{d \mathcal{H}(\mathbb{P}(t), \mathbb{Q}(t), V(t))}{d t}=\frac{\partial\mathcal{H}}{\partial t}=\frac{\partial \mathcal{H}}{\partial V}(\mathbb{P}, \mathbb{Q}) \frac{d V}{d t}$</p>
+<p>取系综平均。我们假设，在此绝热过程中，系统变得太慢，以至于它总是在平衡态。这样就可以得到$\frac{d\langle\mathcal{H}\rangle}{d t}=\left\langle\frac{\partial \mathcal{H}}{\partial V}\right\rangle_{E(t), V(t)} \frac{d V}{d t}$。由旧的定义即$d\left&lt;\mathcal{H}\right&gt;=-PdV$，$-P=\left\langle\frac{\partial \mathcal{H}}{\partial V}\right\rangle=\frac{1}{\Omega(E)} \int d \mathbb{P} d \mathbb{Q} \delta(E-\mathcal{H}(\mathbb{P}, \mathbb{Q}, V)) \frac{\partial \mathcal{H}}{\partial V}$。另一方面，由于</p>
+<p>$\begin{aligned}\Omega(E)&amp;=\frac{\partial}{\partial E}|_{V, N}\int_{E&lt;\mathcal{H}&lt;E+\delta E}d\mathbb{P}d\mathbb{Q}\\&amp;=\frac{\partial}{\partial E}|_{V, N}\int d\mathbb{P}d\mathbb{Q}\Theta(E-\mathcal{H})\end{aligned}$</p>
+<p>而新的定义又有$\left.\frac{\partial S}{\partial V}\right|_{E, N}=\frac{\partial}{\partial V} k_{B} \log (\Omega)=\frac{k_{B}}{\Omega}\left.\frac{\partial \Omega}{\partial V}\right|_{E, N}$，可知</p>
+<p>$\begin{aligned}\left.\frac{\partial \Omega}{\partial V}\right|_{E, N} &amp;=\left.\frac{\partial}{\partial V}\right|_{E, N}\left.\frac{\partial}{\partial E}\right|_{V, N} \int d \mathbb{P} d \mathbb{Q}(E-\mathcal{H}(\mathbb{P}, \mathbb{Q}, V)) \\ &amp;=\left.\frac{\partial}{\partial E}\right|_{V, N} \int d \mathbb{P} d \mathbb{Q} \frac{\partial}{\partial V} \Theta(E-\mathcal{H}(\mathbb{P}, \mathbb{Q}, V)) \\ &amp;=-\left.\frac{\partial}{\partial E}\right|_{V, N} \int d \mathbb{P} d \mathbb{Q} \delta(E-\mathcal{H}(\mathbb{P}, \mathbb{Q}, V)) \frac{\partial \mathcal{H}}{\partial V} \end{aligned}$</p>
+<p>注意这个积分，它正是老定义下的$P\Omega(E)$。代回去，即有</p>
+<p>$\left.\frac{\partial S}{\partial V}\right|_{E, N}=P / T+k_{B}\left.\frac{\partial P}{\partial E}\right|_{V, N}$</p>
+<p>右边第二项是$N^{-1}$小量。这样就证完了。</p>
+<p>6.</p>
+<p>我们可以从微正则系综得到理想气体的状态方程。不过，这一节重要的内容是介绍了量子力学对相空间体积计算的修正：</p>
+<ul>
+<li>经典力学并没规定相空间体积元的大小。这反映在$\Omega$具有未定的（常）系数上，导致熵没有一个自然的取零的地方。在量子力学里面，相空间的体积元将被证明是$h^{3N}$。</li>
+<li>更大的问题是，经典力学由于没有考虑到粒子的全同性，其计算相空间体积时多了一个因子$N!$，这导致熵的可加性受到损害。在量子力学出来之前，吉布斯敏锐地观察到了这一点并作了修正，但是他不知道这背后具体的缘故。</li>
+</ul>
+<p>修正完了之后，有著名的熵公式</p>
+<p>$S(E, V, N)=\frac{5}{2} N k_{B}+N k_{B} \log \left[\frac{V}{N h^{3}}\left(\frac{4 \pi m E}{3 N}\right)^{3 / 2}\right]$</p>
+<p>我们在这里引入德布罗意热波长$\lambda=h / \sqrt{4 \pi m E / 3 N}$，它的名字是因为它具有长度的量纲并且和粒子的吴志波波长相近。在量子化统计力学的过程中，随着系统的某个特征长度可以与它相比，它将起到重要的作用。</p>
+<p>6.</p>
+<p>这章的习题也很有启发性。</p>
+<h3 id="第四章：相空间动力学与各态历经"><a href="#第四章：相空间动力学与各态历经" class="headerlink" title="第四章：相空间动力学与各态历经"></a>第四章：相空间动力学与各态历经</h3><p>1.</p>
+<p>如果没有这一章的话，上一章中对于微正则系综的许多假设未免有些轻率。通过刘维尔定理和各态历经，我们可以说明相空间的体积不变，因此各处的状态密度也不随着系统演化而变化。各态历经的概念则（有些反直觉的，至少我初学时这样感到）说明系综平均确实等于时间平均（事实上，很多系统并不满足这个性质）。</p>
+<p>2.</p>
+<p>在<strong>哈密顿</strong>系统中，有关系$\begin{aligned} \dot{q}_{\alpha} &amp;=\partial \mathcal{H} / \partial p_{\alpha} \\ \dot{p}_{\alpha} &amp;=-\partial \mathcal{H} / \partial q_{\alpha} \end{aligned}$。考虑相空间体积的全微分$d\rho/dt=\partial \rho / \partial t+\mathbf{v} \cdot \nabla \rho$，而出于相流局部守恒的假设，任取一小块相空间，有相流带来的密度变化$-\nabla \cdot \mathbf{J}, \text { where } \mathbf{J}=\rho_{3 D} \mathbf{v}$。是故</p>
+<p>$\begin{aligned} \frac{\partial \rho}{\partial t} &amp;=-\sum_{\alpha=1}^{3 N}\left(\frac{\partial\left(\rho \dot{q}_{\alpha}\right)}{\partial q_{\alpha}}+\frac{\partial\left(\rho \dot{p}_{\alpha}\right)}{\partial p_{\alpha}}\right) \\ &amp;=-\sum_{\alpha=1}^{3 N}\left(\frac{\partial \rho}{\partial q_{\alpha}} \dot{q}_{\alpha}+\rho \frac{\partial \dot{q}_{\alpha}}{\partial q_{\alpha}}+\frac{\partial \rho}{\partial p_{\alpha}} \dot{p}_{\alpha}+\rho \frac{\partial \dot{p}_{\alpha}}{\partial p_{\alpha}}\right) \end{aligned}$</p>
+<p>由上面的关系，上式右边实际上就是$-\mathbf{v} \cdot \nabla \rho$。所以说相空间密度的全微分是0，一般流体密度满足这个性质，即叫做不可压缩流体。</p>
+<p>3.</p>
+<p>关于各态历经的讨论向来是又玄又tricky。事实上，在绝大多数情况下，即使系统并不符合各态历经假设（例如玻璃态），只要系统中有大量的相互作用的自由度，我们也可以放心大胆地相信统计力学的正确性。在这个时候，我（懒惰的读者）选择暂时不关心统计力学的基础问题。</p>
+<h3 id="第五章：熵"><a href="#第五章：熵" class="headerlink" title="第五章：熵"></a>第五章：熵</h3><p>熵的定义多种多样，熵的力量源远流长。</p>
+<p>1.</p>
+<p>最初的时候，人们从<strong>不可逆性</strong>这一点来定义熵。这是有历史原因的。在第一类永动机由于能量守恒而失败之后，人们准备从热——能量的新形式中找到无限能量的法门，因为世上的热是很多的。可惜的是，经过一些尝试，人们感觉到热这种形式中似乎有某种原理性的限制，使得热不能为我们所用。能量变成了热，就废了。</p>
+<p>我们熟悉尼古拉-卡诺的热机。他利用这个模型说明了这种原理性的限制，并证明了可逆过程中$Q_1/T_1=Q_2/T_2$。在系统同热库接触的过程中，$\Delta S_{thermo}=Q/T$表征了某种东西的流动。那就是熵。</p>
+<p>在实际情况下，任何的热机都会创造正熵。这代表着一种不可逆性。这是很奇怪的，因为分子运动的普遍规律具有时间反演对称性，而熵乘着时间的箭头无视了它。解决方案是认为宇宙在向着一个平衡态演化——它就是热寂。</p>
+<p>我个人在这个地方仍然感到很混乱。实际上，如果认为是非平衡态向平衡态演化，描述这个过程的应该是H定理。H定理是BBGKY hierarchy的基础，而后者主导着非平衡态统计物理领域，但H定理同时是一个很乱的问题。刚刚推出的时候玻尔兹曼用Stosszahlansatz（分子碰撞运动无关联假设）推掉了洛施密特的质疑（即上文“这是很奇怪的”处的相同质疑，但这回H定理是非平衡态的定理），但是这个假设并不是很能令严谨的数学人满意。他们之前在这个地方出发讨论了热力学极限的定义，并且他们现在还在做H定理的证明。总之，时间箭头的问题上，我了解的越多越困惑。有一篇知乎专栏文章似乎指出了一些可以思考的方向：<a href="https://zhuanlan.zhihu.com/p/51920899" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/51920899</a></p>
+<p>2.</p>
+<p>熵也被理解为对于<strong>混乱程度</strong>的度量。我们之前已经在此基础上推算了$1 / T=\partial S / \partial E$，这与上一种定义是等价的。我们已经比较了解这个定义了，所以可以看一个例子。在玻璃态物质中，系统（一般是液体）由于温度下降的过快而把许多原子“冻”在非最低能级的位置。因此这个系统降到绝对零度的时候还有一个残余的熵。人们一般用$S_{\text { liquid }}\left(T_{\ell}\right)-\int_{0}^{T_{\ell}} \frac{1}{T} \frac{d Q}{d T} d T$计算这个熵。该熵实际上的大小可以如下估计：对于玻璃态下单个原子的位势，一般有常数个极小值，而这些极小值之间的能量之差远小于$k_BT$和它们之间的势垒。在这个情况下，可以认为每个原子（粒子）有常数个可选的位置，对应$k_B$级别的熵。因此，系统残余的熵依然是很大的。</p>
+<p>3.</p>
+<p>熵也被理解为对于<strong>对系统的无知</strong>的度量。依然使用玻璃态的例子，如果我们拿X光测了各个粒子的实际位置，这系统的熵就降到0，我们就可以利用这些信息从这个玻璃态系统里继续榨取功。</p>
+<p>考虑一个概率分布$\left\{p_i\right\}$。可以证明$S_{\text { discrete }}=-k_{B}\left\langle\log p_{i}\right\rangle=- k_{B} \sum_{i} p_{i} \log p_{i}$。这式子在量子统计中需要将取均值用的$\sum_ip_i()$变成$Tr \boldsymbol{\rho}()$。香农熵也是这个定义法，只是把底数的e换成2。当然，双方（物理和CS领域）似乎都是叫做log的。</p>
+<p>香农熵的“自然性”来自于以下的结论：对于给定的离散随机变量的泛函$H_{m}\left(p_{1}, p_{2}, \ldots, p_{m}\right)$，如果满足以下三条性质：</p>
+<ul>
+<li>$H_{2}\left(\frac{1}{2}, \frac{1}{2}\right)=1$（归一化）</li>
+<li>$H_{2}(p, 1-p)$是关于p的连续函数（连续性）</li>
+<li>$H_{m}\left(p_{1}, p_{2}, \ldots, p_{m}\right)=H_{m-1}\left(p_{1}+p_{2}, p_{3}, \dots, p_{m}\right)+\left(p_{1}+p_{2}\right) H_{2}\left(\frac{p_{1}}{p_{1}+p_{2}}, \frac{p_{2}}{p_{1}+p_{2}}\right)$（组合性）</li>
+</ul>
+<p>那么唯一的解就是香农熵。组合性对应于熵的广延量的性质。注意到，一个分布的香农熵可以看做是该分布到均匀分布的Kullback-Leibler散度的相反数，最大化香农熵实际上就是基于我们对于系统的知识找出最“均匀”的先验分布，而对于均匀的信念正是贯彻于统计物理的精神当中的。在文章 <a href="https://zhuanlan.zhihu.com/p/73710585" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/73710585</a> 中，对于选取KL散度完成度量离均匀分布的距离这一任务的合法性通过“自然”的要求而证实了。</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/FISICA/" rel="tag"># FISICA</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/07/22/一张专辑的故事/" rel="next" title="一张专辑的故事">
+                <i class="fa fa-chevron-left"></i> 一张专辑的故事
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/07/23/axler/" rel="prev" title="便签：最近复习线性代数">
+                便签：最近复习线性代数 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC80NDg0Ny8yMTM2OA=="></div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="https://i.loli.net/2019/01/19/5c4290acb14e1.jpg" alt="Miralem">
+            
+              <p class="site-author-name" itemprop="name">Miralem</p>
+              <p class="site-description motion-element" itemprop="description">曾用名 Miralem Andre Pimpo。</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">47</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:wzh41807@126.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.facebook.com/andrepimpo" target="_blank" title="FB Page">
+                      
+                        <i class="fa fa-fw fa-facebook"></i>FB Page</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="skype:wzh41807?call|chat" target="_blank" title="Skype">
+                      
+                        <i class="fa fa-fw fa-skype"></i>Skype</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://music.163.com/#/user/home?id=102264001" target="_blank" title="网易云">
+                      
+                        <i class="fa fa-fw fa-wangyiyun"></i>网易云</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links Interestings
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.preposterousuniverse.com/blog/" title="Preposterous Universe" target="_blank">Preposterous Universe</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.andrewsun.net/panta_rhei/" title="Anything Goes" target="_blank">Anything Goes</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://bactra.org/weblog/" title="Three-Toed Sloth" target="_blank">Three-Toed Sloth</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://changhai.org/" title="Changhai Lu" target="_blank">Changhai Lu</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=27591598&auto=0&height=66"></iframe>
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#第一章：为什么学统计力学"><span class="nav-number">1.</span> <span class="nav-text">第一章：为什么学统计力学</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第二章：随机行走与涌现"><span class="nav-number">2.</span> <span class="nav-text">第二章：随机行走与涌现</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第三章：温度和热力学平衡"><span class="nav-number">3.</span> <span class="nav-text">第三章：温度和热力学平衡</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第四章：相空间动力学与各态历经"><span class="nav-number">4.</span> <span class="nav-text">第四章：相空间动力学与各态历经</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第五章：熵"><span class="nav-number">5.</span> <span class="nav-text">第五章：熵</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Miralem</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">Site words total count&#58;</span>
+    
+    <span title="Site words total count">105k</span>
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
+
+
+<span id="timeDate">��������...</span>
+<span id="times">����ʱ����...</span> 
+<script> 
+    var now = new Date(); 
+    function createtime() {
+    var grt= new Date("01/07/2019 12:00:00");
+    now.setTime(now.getTime()+250); 
+    days = (now - grt ) / 1000 / 60 / 60 / 24; 
+    dnum = Math.floor(days); hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); 
+    hnum = Math.floor(hours); 
+    if(String(hnum).length ==1 ){
+        hnum = "0" + hnum;
+    } 
+    minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+    mnum = Math.floor(minutes); if(String(mnum).length ==1 )
+    {
+       mnum = "0" + mnum;
+    } 
+    seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+    snum = Math.round(seconds);
+    if(String(snum).length ==1 ){snum = "0" + snum;} 
+    document.getElementById("timeDate").innerHTML = " Run for " dnum+" days ";
+    document.getElementById("times").innerHTML = hnum + " hours " + mnum + " mins " + snum + " secs";
+} 
+    setInterval("createtime()",250); 
+</script>
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+
+</body>
+</html>
