@@ -1,0 +1,1093 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="LIBRE,FISICA,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="看懂了书却⑧会做题等于白看  ——樱井纯，本书序言 我的量子力学学得非常不好，很多基本的东西都没有理解（讽刺的是，成绩却是最高的）。所以必须要回炉重造。 2019.8.4 更新到前两章">
+<meta name="keywords" content="LIBRE,FISICA">
+<meta property="og:type" content="article">
+<meta property="og:title" content="sakurai - modern qm">
+<meta property="og:url" content="http://yoursite.com/2019/08/04/sakurai/index.html">
+<meta property="og:site_name" content="Miralem 的博客">
+<meta property="og:description" content="看懂了书却⑧会做题等于白看  ——樱井纯，本书序言 我的量子力学学得非常不好，很多基本的东西都没有理解（讽刺的是，成绩却是最高的）。所以必须要回炉重造。 2019.8.4 更新到前两章">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://i.loli.net/2019/07/29/5d3e97d621e4728598.jpg">
+<meta property="og:image" content="https://i.loli.net/2019/07/29/5d3e9fac170c242647.jpg">
+<meta property="og:image" content="https://i.loli.net/2019/07/30/5d404d40eeab954113.jpg">
+<meta property="og:image" content="https://i.loli.net/2019/08/04/fraYujysmJ97GNW.jpg">
+<meta property="og:updated_time" content="2019-08-04T08:49:33.759Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="sakurai - modern qm">
+<meta name="twitter:description" content="看懂了书却⑧会做题等于白看  ——樱井纯，本书序言 我的量子力学学得非常不好，很多基本的东西都没有理解（讽刺的是，成绩却是最高的）。所以必须要回炉重造。 2019.8.4 更新到前两章">
+<meta name="twitter:image" content="https://i.loli.net/2019/07/29/5d3e97d621e4728598.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/08/04/sakurai/">
+
+
+
+
+
+  <title>sakurai - modern qm | Miralem 的博客</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Miralem 的博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Miralemi r'ykdisykhr</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            About
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-jokes">
+          <a href="/jokes/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br>
+            
+            jokes
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-maktaba">
+          <a href="/libre/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br>
+            
+            maktaba
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/04/sakurai/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Miralem">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://i.loli.net/2019/01/19/5c4290acb14e1.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Miralem 的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">sakurai - modern qm</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-08-04T16:47:14+08:00">
+                2019-08-04
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  9.9k words
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Reading time &asymp;</span>
+                
+                <span title="Reading time">
+                  47 minutes
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <blockquote>
+<p>看懂了书却⑧会做题等于白看</p>
+</blockquote>
+<p>——樱井纯，本书序言</p>
+<p>我的量子力学学得非常不好，很多基本的东西都没有理解（讽刺的是，成绩却是最高的）。所以必须要回炉重造。</p>
+<p>2019.8.4 更新到前两章</p>
+<a id="more"></a>
+<h3 id="第一章-基本概念"><a href="#第一章-基本概念" class="headerlink" title="第一章 基本概念"></a>第一章 基本概念</h3><p>1.</p>
+<p>从 Stern-Gerlach 实验说起。在该实验中，银原子由于带有磁矩的缘故受到磁场的偏转。可以知道，其受到的力正比于其磁矩的z分量，而制备出来的银原子没有经过任何“筛选”，因此猜测最终打在屏上应该是连续的一片。然而实际上却是两个点，对应自旋z分量为$S_z=\pm \hbar/2$。一开始，迷惑的人们管这个叫“空间量子化”（非常不恰当的名字）。这是第一个问题。</p>
+<p>人们又做了另一个实验。在这个实验中，本来应该已经“消失”的$S_z^-$分量神秘地又出现了。这是第二个问题。</p>
+<p><img src="https://i.loli.net/2019/07/29/5d3e97d621e4728598.jpg" alt=""></p>
+<p>这两件事情体现了量子现象的奇特之处。基于此以及其他一些奇怪的事情，我认为在量子力学的世界里，最好去（从数学上）习惯——而不是去（从物理上）理解——所有东西。这也是我不很喜欢这门科学的原因。</p>
+<p>2.</p>
+<p>一个态是希尔伯特空间里的一个右矢。观测量是厄密算符，观测值是算符的谱，对应本征态。</p>
+<p>$S_{z}\left|S_{z} ;+\right\rangle=\frac{\hbar}{2}\left|S_{z} ;+\right\rangle, \quad S_{z}\left|S_{z} ;-\right\rangle=-\frac{\hbar}{2}\left|S_{z} ;-\right\rangle$</p>
+<p>定义左矢是右矢的对偶，可以与右矢做内积、外积。定义正交、归一、完备等概念（略）。我们规定</p>
+<p>$\begin{array}{l}{(\langle\beta|) \cdot(X|\alpha\rangle)=(\langle\beta| X) \cdot(|\alpha\rangle)} \\ {\text { bra } \quad \text { ket } \quad \text { bra } \quad \text { ket }}\end{array}$</p>
+<p>对所有厄密算符，其本征值是实数，其本征态相互正交。</p>
+<p>现在我们再来考虑1/2自旋系统。$S_{z}=(h / 2)[(|+\rangle\langle+|)-(|-\rangle\langle-|) ]$，$S_{z}| \pm\rangle=\pm(\hbar / 2)| \pm\rangle$。在这个地方顺手提一下升降算符（这时它比较自然）$S_{+} \equiv \hbar|+\rangle\left\langle-\left|, \quad S_{-} \equiv \hbar\right|-\right\rangle\langle+|$。那么</p>
+<p>$S_{z} \doteq \frac{h}{2}\left(\begin{array}{cc}{1} &amp; {0} \\ {0} &amp; {-1}\end{array}\right), \quad S_{+} \doteq \hbar\left(\begin{array}{cc}{0} &amp; {1} \\ {0} &amp; {0}\end{array}\right), \quad S_{-} \doteq h\left(\begin{array}{cc}{0} &amp; {0} \\ {1} &amp; {0}\end{array}\right)$</p>
+<p>3.</p>
+<p>系统处在一个叠加态$\left|\alpha\right&gt;$，规定一次测量得到某本征态的概率为$\text{prob for } a^{\prime}=\left|\left\langle a^{\prime} | \alpha\right\rangle\right|^{2}$。我们从实验知道了$\left|\left\langle+| S_{x} ;+\right\rangle\right|=\left|\left\langle-| S_{x} ;+\right\rangle\right|=\frac{1}{\sqrt{2}}$，因此$\left|S_{x} ;+\right\rangle=\frac{1}{\sqrt{2}}|+\rangle+\frac{1}{\sqrt{2}} e^{i \delta_{1}}|-\rangle$。同理$\left|S_{y} ; \pm\right\rangle=\frac{1}{\sqrt{2}}|+\rangle \pm \frac{1}{\sqrt{2}} e^{i \delta_{2}}|-\rangle$，$\delta_{2}-\delta_{1}=\pm\pi / 2$。我们出于方便，选取$\delta_1=0$，出于右手系的缘故，选取$\delta_2=\pi/2$。该选择对应的三个方向的自旋正对应广泛使用的泡利矩阵的形式。注意到几个事情：</p>
+<p>$S_{ \pm}=S_{x} \pm i S_{y}$</p>
+<p>$\left[S_{i}, S_{j}\right]=i \varepsilon_{i j k} \hbar S_{k}$</p>
+<p>$\left[\mathbf{S}^{2}, S_{i}\right]=0$</p>
+<p>4.</p>
+<p>两个观测量的泊松括号取零，说明它们compatible。这词的意思是说对一个量的测量行为不会对另一个量造成影响（显然，不同方向的自旋不compatible）。这词同时意味着这两个量的算符具有同一组基。利用这件事，我们可以把这组基记为collective index $K’$。很多时候，某个量的某个本征值对应不止一个态，区分它们就得靠另一个compatible的量的本征值。</p>
+<p><img src="https://i.loli.net/2019/07/29/5d3e9fac170c242647.jpg" alt=""></p>
+<p>不compatible的量的测量行为，例如自旋，是很奇特的。上图里（a）情况是加入测量仪器B，但每次都放出不同的$\left|b’\right&gt;$再取平均，那么在最初滤过来$\left|a’\right&gt;$的情况下，在最右边测量到$\left|c’\right&gt;$的概率为$\left.\sum_{b^{\prime}}\left|\left\langle c^{\prime} | b^{\prime}\right\rangle\right|^{2}\left\langle b^{\prime} | a^{\prime}\right\rangle\right|^{2}=\sum_{b^{\prime}}\left\langle c^{\prime} | b^{\prime}\right\rangle\left\langle b^{\prime} | a^{\prime}\right\rangle\left\langle a^{\prime} | b^{\prime}\right\rangle\left\langle b^{\prime} | c^{\prime}\right\rangle$。但在（b）中没有测量仪器B，该概率为（式中加入了一个值为1 的因子）$\left|\sum_{b^{\prime}}\left\langle c^{\prime} | b^{\prime}\right\rangle\left\langle b^{\prime} | a^{\prime}\right\rangle\right|^{2}=\sum_{b^{\prime}} \sum_{b^{\prime \prime}}\left\langle c^{\prime} | b^{\prime}\right\rangle\left\langle b^{\prime} | a^{\prime}\right\rangle\left\langle a^{\prime} | b^{\prime \prime}\right\rangle\left\langle b^{\prime \prime} | c^{\prime}\right\rangle$。</p>
+<p>要想它们相等，非得B和A或C compatible才行。</p>
+<p>5.</p>
+<p>海森堡有一个不确定性原理。我们知道，A的dispersion为$\left\langle(\Delta A)^{2}\right\rangle=\left\langle\left(A^{2}-2 A\langle A\rangle+\langle A\rangle^{2}\right)\right\rangle=\left\langle A^{2}\right\rangle-\langle A\rangle^{2}$。对两个不同量来说，$\left\langle(\Delta A)^{2}\right\rangle\left\langle(\Delta B)^{2}\right\rangle \geq\left|\langle\Delta A \Delta B \rangle\right|^{2}$（schwarz不等式），而</p>
+<p>$\begin{array}{c}{\langle\Delta A \Delta B\rangle=\frac{1}{2}\langle[A, B]\rangle+\frac{1}{2}\langle\{\Delta A, \Delta B\}\rangle} \\ {\text { .             imaginary            real}}\end{array}$</p>
+<p>因此</p>
+<p>$|\langle\Delta A \Delta B\rangle|^{2}=\frac{1}{4}|\langle[A, B]\rangle|^{2}+\frac{1}{4}|\langle\{\Delta A, \Delta B\}\rangle|^{2}$</p>
+<p>可知</p>
+<p>$\left\langle(\Delta A)^{2}\right\rangle\left\langle(\Delta B)^{2}\right\rangle \geq \frac{1}{4}|\langle[A, B]\rangle|^{2}$。</p>
+<p>6.</p>
+<p>位置是一个可观测量，所以它也是一个算符。所以我们就说$x\left|x^{\prime}\right\rangle= x^{\prime}\left|x^{\prime}\right\rangle$。到了三维，$x\left|\mathbf{x}^{\prime}\right\rangle= x^{\prime}\left|\mathbf{x}^{\prime}\right\rangle, \quad y\left|\mathbf{x}^{\prime}\right\rangle= y^{\prime}\left|\mathbf{x}^{\prime}\right\rangle, \quad z\left|\mathbf{x}^{\prime}\right\rangle= z^{\prime}\left|\mathbf{x}^{\prime}\right\rangle$。根据我们的经验，任意两个方向的位置坐标都得compatible。即$\left[x_{i}, x_{j}\right]=0$。</p>
+<p>从经典力学我们知道动量是位置的生成元。考虑一个无穷小位移变换，$\mathscr{T}\left(d \mathbf{x}^{\prime}\right)\left|\mathbf{x}^{\prime}\right\rangle=\left|\mathbf{x}^{\prime}+d \mathbf{x}^{\prime}\right\rangle$，它必须具备诸多性质，例如酉性，叠加性等，而满足这些性质的变换正是$\mathscr{T}\left(d \mathbf{x}^{\prime}\right)=1-i \mathbf{K} \cdot d \mathbf{x}^{\prime}$，$\mathbf{K}$的分量都是厄密算符。这里的生成元$\mathbf{K}$和动量差一个单位$\hbar$。这是规定单位制的时候造成的历史遗留问题。</p>
+<p>由于$\left[\mathbf{x}, \mathscr{T}\left(d \mathbf{x}^{\prime}\right)\right]\left|\mathbf{x}^{\prime}\right\rangle= d \mathbf{x}^{\prime}\left|\mathbf{x}^{\prime}+d \mathbf{x}^{\prime}\right\rangle$，展开到一阶为$d \mathbf{x}^{\prime} |\mathbf{x}^{\prime} \rangle$，我们就有了$-i \mathbf{x K} \cdot d \mathbf{x}^{\prime}+i \mathbf{K} \cdot d \mathbf{x}^{\prime} \mathbf{x}=d \mathbf{x}^{\prime}$。把式子右边$d \mathbf{x}^{\prime}$的三个分量和左边对应起来，即可得$\left[x_{i}, K_{j}\right]=i \delta_{i j}$。从这一个式子结合上一节就可以得到我们中学时候了解的海森堡不确定性原理$\left\langle(\Delta x)^{2}\right\rangle\left\langle\left(\Delta p_{x}\right)^{2}\right\rangle \geq \hbar^{2} / 4$。</p>
+<p>考虑非无穷小的位移变换，$\mathscr{T}\left(\Delta x^{\prime} \hat{\mathbf{x}}\right)=\lim _{N \rightarrow \infty}\left(1-\frac{i p_{x} \Delta x^{\prime}}{N \hbar}\right)^{N}=\exp \left(-\frac{i p_{x} \Delta x^{\prime}}{\hbar}\right)$。任意两个方向的位移变换都得compatible，对应动量也compatible。这样我们就有了三个”canonical commutation relations”（这个“正则”，怕是和“正则系综”没关系，而和“正则变换”有关系？）：</p>
+<p>$\left[x_{i}, x_{j}\right]=0, \quad\left[p_{i}, p_{j}\right]=0, \quad\left[x_{i}, p_{j}\right]=i \hbar \delta_{i j}$</p>
+<p>这和经典力学里的相关内容一一对应。</p>
+<p>7.</p>
+<p>一般所说的（位置）波函数是某个态在位置基底上的各个投影。它的模的平方是概率密度，所以它的单位应该是$[V]^{-1/2}$。位置是个有连续谱的算符，动量也是，所以说这里的数学很乱，但是大多数地方只需要做两件事就可以推广之前对于分立谱的做法：把求和换成求积分；把 kronecker delta 换成 dirac delta。</p>
+<p>位置波函数$\left\langle x^{\prime} | \alpha\right\rangle=\psi_{\alpha}\left(x^{\prime}\right)$。用它可以把各种东西都放到位置的基底下来考虑。比如说，$\langle\beta | \alpha\rangle=\int d x^{\prime} \psi_{\beta}^{<em>}\left(x^{\prime}\right) \psi_{\alpha}\left(x^{\prime}\right)$，$\langle\beta|f(x)| \alpha\rangle=\int d x^{\prime} \psi_{\beta}^{</em>}\left(x^{\prime}\right) f\left(x^{\prime}\right) \psi_{\alpha}\left(x^{\prime}\right)$。注意右边的f不是算符。我们也可以知道动量算符在位置基底下的写法：</p>
+<p>$\begin{aligned}\left(1-\frac{i p \Delta x^{\prime}}{h}\right)|\alpha\rangle &amp;=\int d x^{\prime} \mathscr{T}\left(\Delta x^{\prime}\right)\left|x^{\prime}\right\rangle\left\langle x^{\prime} | \alpha\right\rangle \\ &amp;=\int d x^{\prime}\left|x^{\prime}+\Delta x^{\prime}\right\rangle\left\langle x^{\prime} | \alpha\right\rangle \\ &amp;=\int d x^{\prime}\left|x^{\prime}\right\rangle\left\langle x^{\prime}-\Delta x^{\prime} | \alpha\right\rangle \\ &amp;=\int d x^{\prime}\left|x^{\prime}\right\rangle\left\langle\left(x^{\prime}|\alpha\rangle-\Delta x^{\prime} \frac{\partial}{\partial x^{\prime}}\left\langle x^{\prime} | \alpha\right\rangle\right)\right.\end{aligned}$</p>
+<p>从此可知$p|\alpha\rangle=\int d x^{\prime}\left|x^{\prime}\right\rangle\left(-i \hbar \frac{\partial}{\partial x^{\prime}}\left\langle x^{\prime} | \alpha\right\rangle\right)$。</p>
+<p>同理，我们也可以写动量波函数$\left\langle p^{\prime} | \alpha\right\rangle=\phi_{\alpha}\left(p^{\prime}\right)$.我们将会发现，这两个波函数是一对傅里叶变换与逆变换。</p>
+<p>容易知道$\left\langle x^{\prime}|p| \alpha\right\rangle=- i \hbar \frac{\partial}{\partial x^{\prime}}\left\langle x^{\prime} | \alpha\right\rangle$，故$\left\langle x^{\prime}|p| p^{\prime}\right\rangle=- i \hbar \frac{\partial}{\partial x^{\prime}}\left\langle x^{\prime} | p^{\prime}\right\rangle$，左边同时又是$-i \hbar \frac{\partial}{\partial x^{\prime}}\left\langle x^{\prime} | p^{\prime}\right\rangle$。因此（归一化之后）$\left\langle x^{\prime} | p^{\prime}\right\rangle=\frac{1}{\sqrt{2 \pi \hbar}} \exp \left(\frac{i p^{\prime} x^{\prime}}{h}\right)$，故</p>
+<p>$\left\langle x^{\prime} | \alpha\right\rangle=\int d p^{\prime}\left\langle x^{\prime} | p^{\prime}\right\rangle\left\langle p^{\prime} | \alpha\right\rangle=\left[\frac{1}{\sqrt{2 \pi \hbar}}\right] \int d p^{\prime} \exp \left(\frac{i p^{\prime} x^{\prime}}{h}\right) \phi_{\alpha}\left(p^{\prime}\right)$</p>
+<p>$\phi_{\alpha}\left(p^{\prime}\right)=\left[\frac{1}{\sqrt{2 \pi \hbar}}\right] \int d x^{\prime} \exp \left(\frac{-i p^{\prime} x^{\prime}}{\hbar}\right) \psi_{\alpha}\left(x^{\prime}\right)$</p>
+<p>考虑一个高斯波包的例子。一个位置波函数$\left\langle x^{\prime} | \alpha\right\rangle=\left[\frac{1}{\pi^{1 / 4} \sqrt{d}}\right] \exp \left[i k x^{\prime}-\frac{x^{\prime 2}}{2 d^{2}}\right]$对应的$\langle x\rangle=0,\langle x^2\rangle=d^2/2,\langle p\rangle=\hbar k,\langle p^2\rangle=\hbar^2/2d^2+\hbar^2k^2$。可以看到，这个波包也满足海森堡不确定性原理。</p>
+<h3 id="第二章-量子动力学"><a href="#第二章-量子动力学" class="headerlink" title="第二章 量子动力学"></a>第二章 量子动力学</h3><p>1.</p>
+<p>现在通向万有理论的两条路中，最大的不可调和之一就是时空的问题：在量子力学当中，时间不是一个可观测量，而只是一个参数。在相对论性量子力学中，人们只是通过把位置x也降级成一个参数的形式来实现调和，而非把时间变为算符。因此，在我们的整个叙述当中，都需要注意：时间和空间是不平等的。</p>
+<p>2.</p>
+<p>定义时间的演化$\left|\alpha, t_{0} ; t\right\rangle=\mathscr{U}\left(t, t_{0}\right)\left|\alpha, t_{0}\right\rangle$。和之前处理$\mathscr{T}$时相似，直接写出$\mathscr{U}\left(t_{0}+d t, t_{0}\right)=1-i \Omega d t$，$\Omega$是厄密算符。同样与经典结果对比知道$\Omega=\frac{H}{\hbar}$，这里的因子也是$1/\hbar$，这是为了保持经典下的规律$\frac{d \mathbf{x}}{d t}=\frac{\mathbf{p}}{m}$。</p>
+<p>可以写出含时演化的薛定谔方程$i \hbar \frac{\partial}{\partial t} \mathscr{U}\left(t, t_{0}\right)=H \mathscr{U}\left(t, t_{0}\right)$。当$H$与时间无关的时候，容易解出$\mathscr{U}\left(t, t_{0}\right)=\exp \left[\frac{-i H\left(t-t_{0}\right)}{h}\right]$。我们在以下内容中基本上就只考虑这种情况。其他情况可以由带松级数来刻画。</p>
+<p>可以看出来能量本征态是不演化的，随着时间的推移，它只是变化振幅。同样，对一个可观测量取能量本征态下的期望，也是不变化的。所以我们管能量本征态叫定态。但是考虑一个能量本征态的叠加态$\left|\alpha, t_{0}=0\right\rangle=\sum_{a^{\prime}} c_{a^{\prime}}\left|a^{\prime}\right\rangle$，算符$B$在该态的期望演化为$\sum_{a^{\prime}} \sum_{a^{\prime \prime}} c_{a^{\prime \prime}}^{*} c_{a^{\prime \prime}}\left\langle a^{\prime}|B| a^{\prime \prime}\right\rangle \exp \left[\frac{-i\left(E_{a^{\prime \prime}}-E_{a^{\prime}}\right) t}{h}\right]$，不同本征态对应的振动频率不一样。</p>
+<p>考虑一个简单的例子。在自旋系统中取z方向的均匀磁场，$\omega \equiv \frac{|e| B}{m_{e} c}$，$H=\omega S_{z}$，$\mathscr{U}(t, 0)=\exp \left(\frac{-i \omega S_{z} t}{\hbar}\right)$。容易看出来，$\left|\alpha, t_{0}=0 ; t\right\rangle= c_{+} \exp \left(\frac{-i \omega t}{2}\right)|+\rangle+ c_{-} \exp \left(\frac{+i \omega t}{2}\right)|-\rangle$。如果初态取一个z方向的态，那么过多久还是同一个态。但是如果初态取一个x方向的态，例如$c_+=\pm c_-=\pm1/\sqrt{2}$，那么</p>
+<p>$\left|\left\langle S_{x} \pm | \alpha, t_{0}=0 ; t\right\rangle\right|^{2}=\left\{\begin{array}{ll}{\cos ^{2} \frac{\omega t}{2},} &amp; {\text { for } S_{x}+} \\ {\sin ^{2} \frac{\omega t}{2},} &amp; {\text { for } S_{x}-}\end{array}\right.$</p>
+<p>这个东西的物理意义类似于进动，实际上我们直接叫它自旋的进动。</p>
+<p>3.</p>
+<p>时间和能量也有一种不确定性关系，但是必须强调：这和海森堡不确定性关系完全是本质不同的。这里面也没有任何泊松括号。</p>
+<p>考虑两个态之间的关联振幅</p>
+<p>$\begin{aligned} C(t) &amp;=\left(\sum_{a^{\prime}} c_{a^{\prime}}^{*}\left\langle a^{\prime}\right|\right)\left[\sum_{a^{\prime \prime}} c_{a^{\prime \prime}} \exp \left(\frac{-i E_{a^{\prime \prime}} t}{\hbar}\right)\left|a^{\prime \prime}\right\rangle\right] \\ &amp;=\sum_{a^{\prime}}\left|c_{a^{\prime}}\right|^{2} \exp \left(\frac{-i E_{a^{\prime}} t}{\hbar}\right) \end{aligned}$</p>
+<p>我们假设能量连续分布，改写其为$C(t)=\int d E|g(E)|^{2} \rho(E) \exp \left(\frac{-i E t}{\hbar}\right)$。若它在$E_0$处取到一个峰，我们把$C(t)$写为</p>
+<p>$C(t)=\exp \left(\frac{-i E_{0} t}{h}\right) \int d E|g(E)|^{2} \rho(E) \exp \left[\frac{-i\left(E-E_{0}\right) t}{h}\right]$</p>
+<p>这个积分里的大部分都相互抵消，只有$|E-E_0|\simeq\hbar/t$ 的时候才不抵消。如果这个值比峰的宽度$\Delta E$小太多，还是没有用，还是会抵消掉。</p>
+<p>因此有不确定性关系$\Delta t \Delta E \simeq \hbar$。</p>
+<p>4.</p>
+<p>有两种常用的绘景：薛定谔和海森堡绘景。它们的区别在于分别把态和算符中的一个看做是含时演化的，另外一个则不动。不过，这只是数学/语法上的偏好，并不怎么影响物理。</p>
+<p>要注意在海森堡绘景里面，如果写$H^{H}=\mathscr{U}^{\dagger} H^{S} \mathscr{U}$，那么对于“定态”有$|a^{H}\rangle=\mathscr{U}^\dagger|a^{S}\rangle$。</p>
+<p>在海森堡绘景下，可以得出运动方程$\frac{d A^{(H)}}{d t}=\frac{1}{i \hbar}\left[A^{(H)}, H\right]$（注意，海森堡和哈密顿的首字母一样，可能造成混淆），与经典结果是一样的（除了泊松括号上的区别）。</p>
+<p>可以证明，$\begin{array}{c}{\left[x_{i}, F(\mathbf{p})\right]=i \hbar \frac{\partial F}{\partial p_{i}}} \\ {\left[p_{i}, G(\mathbf{x})\right]=-i \hbar \frac{\partial G}{\partial x_{i}}}\end{array}$。我们接下来考虑这样一种情况：势阱中的粒子。$H=\frac{\mathbf{p}^{2}}{2 m}+V(\mathbf{x})$。这时，由运动方程，可以知道$\frac{d p_{i}}{d t}=\frac{1}{i \hbar}\left[p_{i}, V(\mathbf{x})\right]=-\frac{\partial}{\partial x_{i}} V(\mathbf{x})$。回想起$dx_i/dt=p_i/m$，代入之，即可得到$m \frac{d^{2} \mathbf{x}}{d t^{2}}=-\nabla V(\mathbf{x})$，或写为埃仑菲斯特定理$m \frac{d^{2}}{d t^{2}}\langle\mathbf{x}\rangle=\frac{d\langle\mathbf{p}\rangle}{d t}=-\langle\nabla V(\mathbf{x})\rangle$。实际上，它只是给了我们一种牛顿第二定律在量子世界尚未失去它的权柄的慰藉。</p>
+<p>5.</p>
+<p>下面几节主要是介绍一些普遍的分析方法。它们代表着量子力学的三条进路：海森堡，薛定谔，费曼。</p>
+<ul>
+<li>升降算符</li>
+</ul>
+<p>升降算符是这门学科里的极其重要的工具，但以我目前的水平只能把它当做是一门技巧。我上量子力学这门课的时候，老师比较偏好于薛定谔方程，对这里近乎一笔带过。以至于即使我知道升降算符的广泛用处，却只会用它解一个问题。这问题就是$H=\frac{p^{2}}{2 m}+\frac{m \omega^{2} x^{2}}{2}$为哈密顿量的谐振子。</p>
+<p>定义$a=\sqrt{\frac{m \omega}{2 \hbar}}\left(x+\frac{i p}{m \omega}\right), \quad a^{\dagger}=\sqrt{\frac{m \omega}{2 \hbar}}\left(x-\frac{i p}{m \omega}\right)$，分别是降、升算符。可以看出$\left[a, a^{\dagger}\right]=\left(\frac{1}{2 \hbar}\right)(-i[x, p]+i[p, x])=1$和$N=a^{\dagger} a$两个性质。此外，注意到$[N, a]=-a$，$\left[N, a^{\dagger}\right]=a^{\dagger}$。记$N|n\rangle= n|n\rangle$，那么$H|n\rangle=\left(n+\frac{1}{2}\right) \hbar \omega|n\rangle$。注意这地方我们已经（没费什么力气地）得到了H的本征态。可见：</p>
+<p>$\begin{aligned} N a^{\dagger}|n\rangle &amp;=\left(\left[N, a^{\dagger}\right]+a^{\dagger} N\right)|n\rangle \\ &amp;=(n+1) a^{\dagger}|n\rangle \\ N a|n\rangle &amp;=([N, a]+a N)|n\rangle \\ &amp;=(n-1) a|n\rangle \end{aligned}$</p>
+<p>这意味着$a|n\rangle= c|n-1\rangle$，a可以把能量降一个级，所以叫降算符。同理$a^\dagger$。算一下归一化，知道</p>
+<p>$a|n\rangle=\sqrt{n}|n-1\rangle,a^{\dagger}|n\rangle=\sqrt{n+1}|n+1\rangle$</p>
+<p>于是</p>
+<p>$\begin{aligned}|1\rangle &amp;= a^{\dagger}|0\rangle \|2\rangle &amp;=\left(\frac{a^{\dagger}}{\sqrt{2}}\right)|1\rangle=\left[\frac{\left(a^{\dagger}\right)^{2}}{\sqrt{2}}\right]|0\rangle \|3\rangle &amp;=\left(\frac{a^{\dagger}}{\sqrt{3}}\right)|2\rangle=\left[\frac{\left(a^{\dagger}\right)^{3}}{\sqrt{3 !}}\right]|0\rangle \\ &amp; \vdots \|n\rangle &amp;=\left[\frac{\left(a^{\dagger}\right)^{n}}{\sqrt{n !}}\right] |0 \rangle \end{aligned}$</p>
+<p>现在，知道$a|0\rangle= 0$，就知道$\left\langle x^{\prime}|a| 0\right\rangle=\sqrt{\frac{m \omega}{2 h}}\left\langle x^{\prime}\left|\left(x+\frac{i p}{m \omega}\right)\right| 0\right\rangle= 0$。它是一个关于波函数的方程：$\left(x^{\prime}+x_{0}^{2} \frac{d}{d x^{\prime}}\right)\left\langle x^{\prime} | 0\right\rangle= 0$。可以解出来这波函数是$\left\langle x^{\prime} | 0\right\rangle=\left(\frac{1}{\pi^{1 / 4} \sqrt{x_{0}}}\right) \exp \left[-\frac{1}{2}\left(\frac{x^{\prime}}{x_{0}}\right)^{2}\right]$。以此类推，解出每一级的波函数</p>
+<p>$\left\langle x^{\prime} | n\right\rangle=\left(\frac{1}{\pi^{1 / 4} \sqrt{2^{n} n !}}\right)\left(\frac{1}{x_{0}^{n+1 / 2}}\right)\left(x^{\prime}-x_{0}^{2} \frac{d}{d x^{\prime}}\right)^{n} \exp \left[-\frac{1}{2}\left(\frac{x^{\prime}}{x_{0}}\right)^{2}\right]$</p>
+<p>另外，使用</p>
+<p>$\left\langle n^{\prime}|a| n\right\rangle=\sqrt{n} \delta_{n^{\prime}, n-1}, \quad\left\langle n^{\prime}\left|a^{\dagger}\right| n\right\rangle=\sqrt{n+1} \delta_{n^{\prime}, n+1}$</p>
+<p>以及</p>
+<p>$x=\sqrt{\frac{\hbar}{2 m \omega}}\left(a+a^{\dagger}\right), \quad p=i \sqrt{\frac{m h \omega}{2}}\left(-a+a^{\dagger}\right)$</p>
+<p>可以得到各种东西的期望值。</p>
+<p>考虑谐振子的含时演化。$\frac{d a}{d t}=\sqrt{\frac{m \omega}{2 \hbar}}\left(\frac{p}{m}-i \omega x\right)=-i \omega a$，解出来$a(t)=a(0) \exp (-i \omega t)$。是故$x(t)+\frac{i p(t)}{m \omega}=x(0) \exp (-i \omega t)+i\left[\frac{p(0)}{m \omega}\right] \exp (-i \omega t)$，对比实部虚部，可以知道x和p的含时演化。</p>
+<p>对于初学者来说，升降算符是一个非常天马行空的主意。樱井似乎也没有给出一个相对自然的动机，只是表示“看到它的作用你们就知道这么构造的物理意义了”。我学的时候没学明白，现在在此揣测一下。首先把哈密顿量无量纲化，写成$H=\frac{x’^2+p’^2}{2}$，一方面，我们希望能找到一个算符$A$，使得它作用于H的一个本征态能够得到一个新的本征态。这个事情等价于$[H,A]\propto A$。同时我们又知道$dA/dt=[H,A]/i\hbar$。所以我们只需要找到一个量，其对时间的导数正比于它自己乘以$i$。另一方面，人们可能会习惯性地把H分解为$((p’-ix’)/\sqrt{2})((p’-ix’)/\sqrt{2})^*$，进而留意到$((p’-ix’)/\sqrt{2})$对时间的导数正是它自己乘以$i$。至于这样找出来的本征态是不是完备，大概有数学家保驾护航，我就懒得考虑了。</p>
+<p>需要留意的是，能量本征态是“定态”，这些态是不振的，叠加态才“振”。实际上，降算符$a$的本征态才对应经典谐振子。这态被称为相干态。</p>
+<p>6.</p>
+<ul>
+<li>薛定谔方程</li>
+</ul>
+<p>在学习经典力学的时候，我曾经了解到薛定谔方程和波动力学的灵感来源是经典力学里的哈密顿-雅克比方程。该方程把光的波动行为和粒子的行为联系在了一起。</p>
+<p>写下波函数$\psi\left(\mathbf{x}^{\prime}, t\right)=\left\langle\mathbf{x}^{\prime} | \alpha, t_{0} ; t\right\rangle$，取哈密顿量$H=\frac{\mathbf{p}^{2}}{2 m}+V(\mathbf{x})$，其中势能满足$\left\langle\mathbf{x}^{\prime \prime}|V(\mathbf{x})| \mathbf{x}^{\prime}\right\rangle= V\left(\mathbf{x}^{\prime}\right) \delta^{3}\left(\mathbf{x}^{\prime}-\mathbf{x}^{\prime \prime}\right)$。从含时演化的薛定谔方程知道$\left\langle\mathbf{x}^{\prime}\left|\frac{\mathbf{p}^{2}}{2 m}\right| \alpha, t_{0} ; t\right\rangle=-\left(\frac{\hbar^{2}}{2 m}\right) \nabla^{\prime 2}\left\langle\mathbf{x}^{\prime} | \alpha, t_{0} ; t\right\rangle$，代入该式即得薛定谔方程</p>
+<p>$i \hbar \frac{\partial}{\partial t} \psi\left(\mathbf{x}^{\prime}, t\right)=-\left(\frac{\hbar^{2}}{2 m}\right) \nabla^{\prime 2} \psi\left(\mathbf{x}^{\prime}, t\right)+V\left(\mathbf{x}^{\prime}\right) \psi\left(\mathbf{x}^{\prime}, t\right)$</p>
+<p>概率密度是$\rho=|\psi|^2$。连续性方程要求$\frac{\partial \rho}{\partial t}+\nabla \cdot \mathbf{j}=0$。容易算出流j为$\left(\frac{h}{m}\right) \operatorname{Im}\left(\psi^{*} \nabla \psi\right)$。它和动量联系紧密：$\int d^{3} x \mathbf{j}(\mathbf{x}, t)=\frac{\langle\mathbf{p}\rangle_{t}}{m}$。</p>
+<p>我们把波函数换种写法：</p>
+<p>$\psi(\mathbf{x}, t)=\sqrt{\rho(\mathbf{x}, t)} \exp \left[\frac{i S(\mathbf{x}, t)}{h}\right]$</p>
+<p>我们暂时还不知道相位的物理意义。但是注意到$\psi^{*} \nabla \psi=\sqrt{\rho} \nabla(\sqrt{\rho})+\left(\frac{i}{h}\right) \rho \nabla S$，我们发现</p>
+<p>$\mathbf{j}=\rho\nabla S/m$</p>
+<p>我们可以把$\nabla S/m$理解成某种速度。如果我们把它换成v，连续性方程就完全具有流体力学里的形式了：$\frac{\partial \rho}{\partial t}+\nabla \cdot\left(\rho\mathbf{v}\right)=0$。</p>
+<p>记住这个物理意义。我们重新把薛定谔方程按这个波函数的写法，变成</p>
+<p>$\begin{array}{l}{-\left(\frac{h^{2}}{2 m}\right)} \\ {\quad \times\left[\nabla^{2} \sqrt{\rho}+\left(\frac{2 i}{\hbar}\right)(\nabla \sqrt{\rho}) \cdot(\nabla S)-\left(\frac{1}{\hbar^{2}}\right) \sqrt{\rho}|\nabla S|^{2}+\left(\frac{i}{h}\right) \sqrt{\rho} \nabla^{2} S\right]+\sqrt{\rho} V} \\ {\quad=i \hbar\left[\frac{\partial \sqrt{\rho}}{\partial t}+\left(\frac{i}{h}\right) \sqrt{\rho} \frac{\partial S}{\partial t}\right]}\end{array}$</p>
+<p>认为普朗克常数是小量：$\hbar\ll1,\hbar\left|\nabla^{2} S\right| \ll|\nabla S|^{2}$，得到</p>
+<p>$\frac{1}{2 m}|\nabla S(\mathbf{x}, t)|^{2}+V(\mathbf{x})+\frac{\partial S(\mathbf{x}, t)}{\partial t}=0$</p>
+<p>这就是经典力学里的哈密顿-雅克比方程。原来，波函数的相位就是作用量。以后，我们还会在路径积分里碰见这件事——我甚至觉得，这件事就是路径积分的动机之一。当然，确认无误的是，这就是启发薛定谔创立波动力学的动机。德布罗意的物质波的想法和普朗克的量子化的想法让薛定谔在十九世纪力学的基础上向前走了一大步。从这个意义上说，量子力学比统计力学更配叫做“mechanics”。</p>
+<p>考虑一个能量E的定态。这个时候，可以把作用量里面分出一个哈密顿特征函数$W(x)=S(x,t)+Et$。那么经典的动量是$\mathbf{p}_{\text { class }}=\nabla S=\nabla W$。注意这和平面波$e^{-i\mathbf{k}\cdot\mathbf{x}-i\omega t}$的联系。</p>
+<p>7.</p>
+<p>解薛定谔方程的一个近似方法是半经典近似（WKB近似）。考虑定态下</p>
+<p>$\begin{aligned} S(x, t) &amp;=W(x)-E t \\ &amp;=\pm \int^{x} d x^{\prime} \sqrt{2 m\left[E-V\left(x^{\prime}\right)\right]}-E t \end{aligned}$</p>
+<p>这时候$\rho$得是个定值，根据$\frac{\partial \rho}{\partial t}+\frac{1}{m} \frac{\partial}{\partial x}\left(\rho \frac{\partial S}{\partial x}\right)=0$，必须得$\rho \frac{d W}{d x}=\pm \rho \sqrt{2 m[E-V(x)]}=\text { constant }$。因此得到解</p>
+<p>$\begin{aligned} \psi(x, t) \simeq &amp;\left\{\frac{\text { constant }}{[E-V(x)]^{1 / 4}}\right\} \\ &amp; \times \exp \left[ \pm\left(\frac{i}{h}\right) \int^{x} d x^{\prime} \sqrt{2 m\left[E-V\left(x^{\prime}\right)\right]}-\frac{i E t}{h}\right] \end{aligned}$</p>
+<p>常数用归一化来定。</p>
+<p>注意：我们的近似要求$h\left|\frac{d^{2} W}{d x^{2}}\right| \ll\left|\frac{d W}{d x}\right|^{2}$，即</p>
+<p>$(\lambda/4\pi)(|dV/dx|)\ll E-V(x)$</p>
+<p>意思是，在物质波多个波长的范围内，势能得没啥变化。我们的解在$E&lt;V$的部分应该相应的变为</p>
+<p>$\psi(\mathbf{x}, t)=\left\{\frac{\text { constant }}{[V(x)-E]^{1 / 4}}\right\} \exp \left[ \pm\left(\frac{1}{h}\right) \int^{x} d x^{\prime} \sqrt{2 m\left[V\left(x^{\prime}\right)-E\right]}-\frac{i E t}{h}\right]$</p>
+<p>在$V=E$的附近，有一套标准流程：在E=V的根附近对V做线性的近似；在这根处求更近似的薛定谔方程$\frac{d^{2} u_{E}}{d x^{2}}-\left(\frac{2 m}{\hbar^{2}}\right)\left(\frac{d V}{d x}\right)_{x=x_{0}}\left(x-x_{0}\right) u_{E}=0$的严格解（贝塞尔），取到某个特定的阶；用连续性条件确定这个解的一些参数。说实话，这部分我完全不懂。</p>
+<p>作者算了一个例子：自由落体的能级。</p>
+<p><img src="https://i.loli.net/2019/07/30/5d404d40eeab954113.jpg" alt=""></p>
+<p>容易知道，在I区和III区都可以写$\left\{\frac{1}{[V(x)-E]^{1 / 4}}\right\} \exp \left[-\left(\frac{1}{h}\right) \int_{x}^{x_{1}} d x^{\prime} \sqrt{2 m\left[V\left(x^{\prime}\right)-E\right]}\right]$和$\left\{\frac{1}{[V(x)-E]^{1 / 4}}\right\} \exp \left[-\left(\frac{1}{h}\right) \int_{x_{2}}^{x} d x^{\prime} \sqrt{2 m\left[V\left(x^{\prime}\right)-E\right]}\right]$。从I区到II区，为了使解能够相容，把I区的解在复平面上绕过$x_1$延拓，这个过程由于分母里$(V-E)^{1/4}$的存在，会贡献一个$-\pi/4$的相位。从II到II，同理。这两个条件一约束，我们必须有分立的能级$\int_{x_{1}}^{x_{2}} d x \sqrt{2 m[E-V(x)]}=\left(n+\frac{1}{2}\right) \pi \hbar$（注意，左边实际上就是$\int pdq$，这个形式和索末菲的量子化$\oint p d q=n h$很像）。</p>
+<p>这么个能级，据作者所说，能够在夸克偶素的研究中派上用场。</p>
+<p>8.</p>
+<ul>
+<li>传播子和路径积分</li>
+</ul>
+<p>取一个量子态，用能量本征态展开：</p>
+<p>$\begin{aligned}\left|\alpha, t_{0} ; t\right\rangle &amp;=\exp \left[\frac{-i H\left(t-t_{0}\right)}{h}\right]\left|\alpha, t_{0}\right\rangle \\ &amp;=\sum_{a^{\prime}}\left|a^{\prime}\right\rangle\left\langle a^{\prime} | \alpha, t_{0}\right\rangle \exp \left[\frac{-i E_{a^{\prime}}\left(t-t_{0}\right)}{h}\right] \end{aligned}$</p>
+<p>左乘一个位置的bra，得到$\left\langle\mathbf{x}^{\prime} | \alpha, t_{0} ; t\right\rangle=\sum_{a^{\prime}}\left\langle\mathbf{x}^{\prime} | a^{\prime}\right\rangle\left\langle a^{\prime} | \alpha, t_{0}\right\rangle \exp \left[\frac{-i E_{a^{\prime}}\left(t-t_{0}\right)}{h}\right]$。将它写成$\psi\left(\mathbf{x}^{\prime}, t\right)=\sum_{a^{\prime}} c_{a^{\prime}}\left(t_{0}\right) u_{a^{\prime}}\left(\mathbf{x}^{\prime}\right) \exp \left[\frac{-i E_{a^{\prime}}\left(t-t_{0}\right)}{h}\right]$，并注意到$c_{a^{\prime}}\left(t_{0}\right)=\int d^{3} x^{\prime} u_{a^{\prime}}^{*}\left(\mathbf{x}^{\prime}\right) \psi\left(\mathbf{x}^{\prime}, t_{0}\right)$，我们可以将新的波函数写成旧的波函数的积分变换的形式：</p>
+<p>$\psi\left(\mathbf{x}^{\prime \prime}, t\right)=\int d^{3} x^{\prime} K\left(\mathbf{x}^{\prime \prime}, t ; \mathbf{x}^{\prime}, t_{0}\right) \psi\left(\mathbf{x}^{\prime}, t_{0}\right)$</p>
+<p>其中</p>
+<p>$K\left(\mathbf{x}^{\prime \prime}, t ; \mathbf{x}^{\prime}, t_{0}\right)=\sum_{a^{\prime}}\left\langle\mathbf{x}^{\prime \prime} | a^{\prime}\right\rangle\left\langle a^{\prime} | \mathbf{x}^{\prime}\right\rangle \exp \left[\frac{-i E_{a^{\prime}}\left(t-t_{0}\right)}{h}\right]$</p>
+<p>就是传播子。实际上，从这个积分变换的形式可以看出来，传播子其实是薛定谔方程的格林函数，它正是方程</p>
+<p>$\left[-\left(\frac{h^{2}}{2 m}\right) \nabla^{\prime \prime 2}+V\left(\mathbf{x}^{\prime \prime}\right)-i \hbar \frac{\partial}{\partial t}\right] K\left(\mathbf{x}^{\prime \prime}, t ; \mathbf{x}^{\prime}, t_{0}\right)=-i \hbar \delta^{3}\left(\mathbf{x}^{\prime \prime}-\mathbf{x}^{\prime}\right) \delta\left(t-t_{0}\right)$</p>
+<p>在边界条件$K\left(\mathbf{x}^{\prime \prime}, t ; \mathbf{x}^{\prime}, t_{0}\right)=0, \quad t&lt;t_{0}$之下的解。</p>
+<p>举一个例子：考虑自由粒子，$H=p^2/2m$，其能量本征态也是动量本征态。考虑到$\langle x’|p’\rangle=e^{ip’x’/\hbar}$，我们可以解出传播子$K\left(x^{\prime \prime}, t ; x^{\prime}, t_{0}\right)=\left(\frac{1}{2 \pi \hbar}\right) \int_{-\infty}^{\infty} d p^{\prime} \exp \left[\frac{i p^{\prime}\left(x^{\prime \prime}-x^{\prime}\right)}{\hbar}-\frac{i p^{\prime 2}\left(t-t_{0}\right)}{2 m \hbar}\right]$。</p>
+<p>易知该积分的结果是$K\left(x^{\prime \prime}, t ; x^{\prime}, t_{0}\right)=\sqrt{\frac{m}{2 \pi i h\left(t-t_{0}\right)}} \exp \left[\frac{i m\left(x^{\prime \prime}-x^{\prime}\right)^{2}}{2 \hbar\left(t-t_{0}\right)}\right]$。</p>
+<p>传播子的一些性质值得考虑。</p>
+<ul>
+<li><p>如果$t_0=0,$x’=x’’。这时候的传播子记为</p>
+<p>$\begin{aligned} G(t) &amp; \equiv \int d^{3} x^{\prime} K\left(\mathbf{x}^{\prime}, t ; \mathbf{x}^{\prime}, 0\right) \\ &amp;=\int d^{3} x^{\prime} \sum_{a^{\prime}}\left|\left\langle\mathbf{x}^{\prime} | a^{\prime}\right\rangle\right|^{2} \exp \left(\frac{-i E_{a^{t}} t}{h}\right) \\ &amp;=\sum_{a^{\prime}} \exp \left(\frac{-i E_{a^{\prime}} t}{h}\right) \end{aligned}$</p>
+<p>具有与配分函数类似的形式。事实上，传播子（和路径积分）确实在统计力学里也发挥作用（我记得kardar讲了，可是一直没去看。。。）。</p>
+</li>
+<li><p>对上述$G(t)$做傅里叶-拉普拉斯变换：</p>
+<p>$\begin{aligned} \tilde{G}(E) &amp; \equiv-i \int_{0}^{\infty} d t G(t) \exp (i E t / \hbar) / \hbar \\ &amp;=-i \int_{0}^{\infty} d t \sum_{a^{\prime}} \exp \left(-i E_{a} t / \hbar\right) \exp (i E t / \hbar) / \hbar \end{aligned}$</p>
+<p>mathematica告诉我1）你需要回去复习复变积分，2）这玩意是$\tilde{G}(E)=\sum_{a^{\prime}} \frac{1}{E-E_{a^{\prime}}}$。所以说了解了$G$的奇点就了解了系统的能谱。</p>
+</li>
+</ul>
+<p>另外一方面，在海森堡的绘景下，传播子被表为</p>
+<p>$\begin{aligned} K\left(\mathbf{x}^{\prime \prime}, t ; \mathbf{x}^{\prime}, t_{0}\right) &amp;=\sum_{a^{\prime}}\left\langle\mathbf{x}^{\prime \prime} | a^{\prime}\right\rangle\left\langle a^{\prime} | \mathbf{x}^{\prime}\right\rangle \exp \left[\frac{-i E_{a^{\prime}}\left(t-t_{0}\right)}{h}\right] \\ &amp;=\sum_{a^{\prime}}\left\langle\mathbf{x}^{\prime \prime}\left|\exp \left(\frac{-i H t}{\hbar}\right)\right| a^{\prime}\right\rangle\left\langle a^{\prime} |\operatorname{exp}\left(\frac{i H t_{0}}{\hbar}\right) | \mathbf{x}^{\prime}\right\rangle \\ &amp;=\left\langle\mathbf{x}^{\prime \prime}, t | \mathbf{x}^{\prime}, t_{0}\right\rangle \end{aligned}$</p>
+<p>在这个写法下，我们会发现</p>
+<p>$\begin{aligned}\left\langle x_{N}, t_{N} | x_{1}, t_{1}\right\rangle=&amp; \int d x_{N-1} \int d x_{N-2} \cdots \int d x_{2}\left\langle x_{N}, t_{N} | x_{N-1}, t_{N-1}\right\rangle \\ &amp; \times\left\langle x_{N-1}, t_{N-1} | x_{N-2}, t_{N-2}\right\rangle \cdots\left\langle x_{2}, t_{2} | x_{1}, t_{1}\right\rangle \end{aligned}$</p>
+<p>传说，费曼在读狄拉克的书的时候，注意到一个表述：</p>
+<p>“$\exp \left[i \int_{t_{1}}^{t_{2}} \frac{d t L_{\text { classical }}(x, \dot{x})}{\hbar}\right]$ corresponds to $\left\langle x_{2}, t_{2} | x_{1}, t_{1}\right\rangle$”</p>
+<p>他开始思考这个correspondence具体代表着什么。然后他就发明了路径积分。可以看到，这个指数项就是$e^{iS/\hbar}$也就是波函数的相位（的变化）。费曼记$S(n, n-1) \equiv \int_{t_{n-1}}^{t_{n}} d t L_{\mathrm{classical}}(x, \dot{x})$，对空间中每一条可能的路线，都有</p>
+<p>$\prod_{n=2}^{N} \exp \left[\frac{i S(n, n-1)}{h}\right]=\exp \left[\left(\frac{i}{h}\right) \sum_{n=2}^{N} S(n, n-1)\right]=\exp \left[\frac{i S(N, 1)}{h}\right]$</p>
+<p>然后传播子是这个相位变化对所有路径的积分。可以看到，对于大多数情况，相位振动剧烈，积分抵消；但是在$\delta S=0$附近的路径，则不抵消。因此这直接导致了经典理论中的最小作用量原理。</p>
+<p>考虑一个势能$V(x)$。其具有</p>
+<p>$\begin{aligned} S(n, n-1) &amp;=\int_{t_{n-1}}^{t_{n}} d t\left[\frac{m \dot{x}^{2}}{2}-V(x)\right] \\ &amp;=\Delta t\left\{\left(\frac{m}{2}\right)\left[\frac{\left(x_{n}-x_{n-1}\right)}{\Delta t}\right]^{2}-V\left(\frac{\left(x_{n}+x_{n-1}\right)}{2}\right)\right\} \end{aligned}$</p>
+<p>其传播子的微元$\left\langle x_{n}, t_{n} | x_{n-1}, t_{n-1}\right\rangle=\left[\frac{1}{w(\Delta t)}\right] \exp \left[\frac{i m\left(x_{n}-x_{n-1}\right)^{2}}{2 \hbar \Delta t}\right]$。由于$\Delta\to0$的时候这东西趋于对$\Delta x$的$\delta$函数，可以算出$\frac{1}{w(\Delta t)}=\sqrt{\frac{m}{2 \pi i \hbar \Delta t}}$。这样，我们就可以定义一个算子</p>
+<p>$\int_{x_{1}}^{x_{N}} \mathscr{D}[x(t)] \equiv \lim _{N \rightarrow \infty}\left(\frac{m}{2 \pi i \hbar \Delta t}\right)^{(N-1) / 2} \int d x_{N-1} \int d x_{N-2} \cdots \int d x_{2}$</p>
+<p>并写出</p>
+<p>$\left\langle x_{N}, t_{N} | x_{1}, t_{1}\right\rangle=\int_{x_{1}}^{x_{N}} \mathscr{D}[x(t)] \exp \left[i \int_{t_{1}}^{t_{N}} d t \frac{L_{\text { classical }}(x, \dot{x})}{h}\right]$</p>
+<p>这就是费曼的路径积分。</p>
+<p>9.</p>
+<p>我们来考虑规范变换下的量子力学。</p>
+<ul>
+<li><p>首先，考虑一个势能零点的变化<script type="math/tex">\tilde{V}(\mathbf{x})=V(\mathbf{x})+V_{0}</script>。这个时候对于波函数的影响是<script type="math/tex">\begin{aligned} \widehat{\left|\alpha, t_{0} ; t\right\rangle} &=\exp \left[-i\left(\frac{\mathbf{p}^{2}}{2 m}+V(x)+V_{0}\right) \frac{\left(t-t_{0}\right)}{\hbar}\right]|\boldsymbol{\alpha}\rangle \\ &=\exp \left[\frac{-i V_{0}\left(t-t_{0}\right)}{\hbar}\right]\left|\boldsymbol{\alpha}, t_{0} ; t\right\rangle \end{aligned}</script></p>
+<p>这个影响仅涉及到相位。从它的形式上来看，经典效应（通过最小作用量原理）不能够展现这个变化的效果。但是考虑如下例子：一束粒子分两束，其一走高处，其二走低处，最终汇合时将产生干涉。这实验早已经做成了，它体现出重力的量子效应。特别的，由于相位差里面包括有质量，这告诉我们：在量子力学尺度上，重力并非纯粹的几何效应。</p>
+</li>
+<li><p>接下来，考虑电磁场的规范变换。</p>
+<ul>
+<li><p>在此之前，先把电磁场量子化：有哈密顿量$H=\frac{1}{2 m}\left(\mathbf{p}-\frac{e \mathbf{A}}{c}\right)^{2}+e \phi$，注意A和p并不对易（p是整个系统的动量，矢势A是电磁场部分的动量），因此平方项要写成$p^{2}-\left(\frac{e}{c}\right)(\mathbf{p} \cdot \mathbf{A}+\mathbf{A} \cdot \mathbf{p})+\left(\frac{e}{c}\right)^{2} \mathbf{A}^{2}$。注意到<script type="math/tex">\frac{d x_{t}}{d t}=\frac{\left[x_{i}, H\right]}{i \hbar}=\frac{\left(p_{t}-e A_{i} / c\right)}{m}</script>，取系统中粒子的动量$\Pi \equiv m \frac{d \mathbf{x}}{d t}=\mathbf{p}-\frac{e \mathbf{A}}{c}$，验证可得$\left[\Pi_{i}, \Pi_{j}\right]=\left(\frac{i \hbar e}{c}\right) \varepsilon_{i j k} B_{k}$。把H写成</p>
+<p>$\left[\Pi_{i}, \Pi_{J}\right]=\left(\frac{i \hbar e}{c}\right) \varepsilon_{i j k} B_{k}$</p>
+<p>并定义量子版本的洛伦兹力</p>
+<p>$m \frac{d^{2} \mathbf{x}}{d t^{2}}=\frac{d \Pi}{d t}=[\Pi,H]/i\hbar=e\left[\mathbf{E}+\frac{1}{2 c}\left(\frac{d \mathbf{x}}{d t} \times \mathbf{B}-\mathbf{B} \times \frac{d \mathbf{x}}{d t}\right)\right]$</p>
+<p>薛定谔方程便成了</p>
+<p>$\frac{1}{2 m}\left[-i \hbar \nabla^{\prime}-\frac{e \mathbf{A}\left(\mathbf{x}^{\prime}\right)}{c}\right] \cdot\left[-i \hbar \nabla^{\prime}-\frac{e \mathbf{A}\left(\mathbf{x}^{\prime}\right)}{c}\right]\left\langle\mathbf{x}^{\prime} | \alpha, t_{0} ; t\right\rangle$<br>$+ e \phi\left(\mathbf{x}^{\prime}\right)\left\langle\mathbf{x}^{\prime} | \alpha, t_{0} ; t\right\rangle= i \hbar \frac{\partial}{\partial t}\left\langle\mathbf{x}^{\prime} | \alpha, t_{0} ; t\right\rangle$</p>
+<p>注意这个时候此方程对应的守恒流在变换$\nabla^{\prime} \rightarrow \nabla^{\prime}-\left(\frac{i e}{\hbar c}\right) \mathbf{A}$下成了$\mathbf{j}=\left(\frac{\hbar}{m}\right) \operatorname{Im}\left(\psi^{*} \nabla^{\prime} \psi\right)-\left(\frac{e}{m c}\right) \mathbf{A}|\psi|^{2}$。换种写法，$\mathbf{j}=\left(\frac{\rho}{m}\right)\left(\nabla S-\frac{e \mathbf{A}}{c}\right)$</p>
+</li>
+<li><p>现在考虑规范变换$\phi \rightarrow \phi, \quad \mathbf{A} \rightarrow \mathbf{A}+\nabla \Lambda$。（“规范变换”在电磁学里面指的是$\phi \rightarrow \phi-\frac{1}{c} \frac{\partial \Lambda}{\partial t}, \quad \mathbf{A} \rightarrow \mathbf{A}+\nabla \Lambda$，但在本书中我们不考虑随时间变化的势能形式）令$\tilde{\mathbf{A}}=\mathbf{A}+\nabla \Lambda$，我们要求</p>
+<p>$\langle\alpha|\mathbf{x}| \alpha\rangle=\langle\tilde{\alpha}|\mathbf{x}| \tilde{\alpha}\rangle$<br>$\left\langle\alpha\left|\left(\mathbf{p}-\frac{e \mathbf{A}}{c}\right)\right| \alpha\right\rangle=\left\langle\tilde{\alpha}\left|\left(\mathbf{p}-\frac{e \tilde{\mathbf{A}}}{c}\right)\right| \tilde{\alpha}\right\rangle$</p>
+<p>$\langle\alpha | \alpha\rangle=\langle\tilde{\alpha} | \tilde{\alpha}\rangle$</p>
+<p>前两式是因为粒子的轨迹是不受规范变换影响的。可以得到$|\tilde{\boldsymbol{\alpha}}\rangle=\mathscr{G}|\alpha\rangle$中的变换G满足$\mathscr{G}=\exp \left[\frac{i e \Lambda(\mathbf{x})}{\hbar c}\right]$.从波函数的形式可以推出来变换导致$S \rightarrow S+\frac{e \Lambda}{c}$，这正好使得流 j 是规范不变的。</p>
+</li>
+<li><p>阿哈罗诺夫-玻姆效应是一个很好的例子。它体现了矢势作为物理实体而非一种数学工具的效应。</p>
+<p><img src="https://i.loli.net/2019/08/04/fraYujysmJ97GNW.jpg" alt=""></p>
+<p>考虑这个情况。磁场（磁感线）被限制在圆柱壳里面（但圆柱外面有矢势，其值可以算得为$\mathbf{A}=\left(\frac{B \rho_{a}^{2}}{2 \rho}\right) \hat{\phi}$），而从圆柱上方和下方走的粒子将会受到矢势的影响。</p>
+<p>从电磁学的结果，可以知道对于电磁场中的粒子，其拉氏量多了一项$\frac{e}{c} \frac{d \mathbf{x}}{d t} \cdot \mathbf{A}$，其作用量多了一项$\frac{e}{c} \int_{t_{n-1}}^{t_{n}} d t\left(\frac{d \mathbf{x}}{d t}\right) \cdot \mathbf{A}$。在路径积分中，这带来的影响是$\Pi \exp \left[\frac{i S^{(0)}(n, n-1)}{\hbar}\right] \rightarrow\left\{\Pi \exp \left[\frac{i S^{(0)}(n, n-1)}{\hbar}\right]\right\} \exp \left(\frac{i e}{\hbar c} \int_{\mathbf{x}_{1}}^{\mathbf{x}_{N}} \mathbf{A} \cdot d \mathbf{s}\right)$</p>
+<p>因此，从上面走的粒子的相位变化是$\left\{\exp \left[\left(\frac{i e}{\hbar c}\right) \int_{\mathbf{x}_{1}}^{\mathbf{x}_{N}} \mathbf{A} \cdot d \mathbf{s}\right]_{\text { above }}\right\}$，从下面走的粒子的相位变化是$\left\{\exp \left[\left(\frac{i e}{\hbar c}\right) \int_{\mathbf{x}_{1}}^{\mathbf{x}_{N}} \mathbf{A} \cdot d \mathbf{s}\right]_{\text { below }}\right\}$。发生干涉地点的相位差，即二者之差恰好是</p>
+<p>$\left[\left(\frac{e}{\hbar c}\right) \int_{\mathbf{x}_{1}}^{\mathbf{x}_{N}} \mathbf{A} \cdot d \mathbf{s}\right]_{\text { above }}-\left[\left(\frac{e}{\hbar c}\right) \int_{\mathbf{x}_{1}}^{\mathbf{x}_{N}} \mathbf{A} \cdot d \mathbf{s}\right]_{\text { below }}=\left(\frac{e}{\hbar c}\right) \oint \mathbf{A} \cdot d \mathbf{s}$</p>
+<p>正是圆柱体内的磁通量。从这个意义上来说，矢势是比磁感应强度更基本的物理量。</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>在这边谈起规范变换，好像总是一个波函数相位的变换，但是所谓规范的gauge，实际上是从德语Eich来的，意为度量。考虑函数$F(x)$，其在某点处展开为$F(x+dx)=F(x)+(\nabla F(x))dx$。现在做“规范”变换，让$1|_x=(1+\Sigma(x)dx)|_{x+dx}$，那么$F(x+dx)=F(x)+[(\nabla+\Sigma)F]|_xdx$。这里和因子$\mathscr{G}=\exp \left[\frac{i e \Lambda(\mathbf{x})}{\hbar c}\right]$对比的就是$e^{\Sigma}$。这才是规范变换原本的含义。现在虽然意义不完全一样了，但是规范变换的名字还是留着。</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/LIBRE/" rel="tag"># LIBRE</a>
+          
+            <a href="/tags/FISICA/" rel="tag"># FISICA</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/08/04/2019-8-3/" rel="next" title="2019-8-3-成都二日游">
+                <i class="fa fa-chevron-left"></i> 2019-8-3-成都二日游
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC80NDg0Ny8yMTM2OA=="></div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="https://i.loli.net/2019/01/19/5c4290acb14e1.jpg" alt="Miralem">
+            
+              <p class="site-author-name" itemprop="name">Miralem</p>
+              <p class="site-description motion-element" itemprop="description">曾用名 Miralem Andre Pimpo。</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">49</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:wzh41807@126.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.facebook.com/andrepimpo" target="_blank" title="FB Page">
+                      
+                        <i class="fa fa-fw fa-facebook"></i>FB Page</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="skype:wzh41807?call|chat" target="_blank" title="Skype">
+                      
+                        <i class="fa fa-fw fa-skype"></i>Skype</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://music.163.com/#/user/home?id=102264001" target="_blank" title="网易云">
+                      
+                        <i class="fa fa-fw fa-wangyiyun"></i>网易云</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links Interestings
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.preposterousuniverse.com/blog/" title="Preposterous Universe" target="_blank">Preposterous Universe</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.andrewsun.net/panta_rhei/" title="Anything Goes" target="_blank">Anything Goes</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://bactra.org/weblog/" title="Three-Toed Sloth" target="_blank">Three-Toed Sloth</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://changhai.org/" title="Changhai Lu" target="_blank">Changhai Lu</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=27591598&auto=0&height=66"></iframe>
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#第一章-基本概念"><span class="nav-number">1.</span> <span class="nav-text">第一章 基本概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第二章-量子动力学"><span class="nav-number">2.</span> <span class="nav-text">第二章 量子动力学</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Miralem</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">Site words total count&#58;</span>
+    
+    <span title="Site words total count">123.2k</span>
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
+
+
+<span id="timeDate">��������...</span>
+<span id="times">����ʱ����...</span> 
+<script> 
+    var now = new Date(); 
+    function createtime() {
+    var grt= new Date("01/07/2019 12:00:00");
+    now.setTime(now.getTime()+250); 
+    days = (now - grt ) / 1000 / 60 / 60 / 24; 
+    dnum = Math.floor(days); hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); 
+    hnum = Math.floor(hours); 
+    if(String(hnum).length ==1 ){
+        hnum = "0" + hnum;
+    } 
+    minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+    mnum = Math.floor(minutes); if(String(mnum).length ==1 )
+    {
+       mnum = "0" + mnum;
+    } 
+    seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+    snum = Math.round(seconds);
+    if(String(snum).length ==1 ){snum = "0" + snum;} 
+    document.getElementById("timeDate").innerHTML = " Run for " dnum+" days ";
+    document.getElementById("times").innerHTML = hnum + " hours " + mnum + " mins " + snum + " secs";
+} 
+    setInterval("createtime()",250); 
+</script>
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+
+</body>
+</html>
