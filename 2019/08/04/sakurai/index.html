@@ -91,7 +91,7 @@
 <meta property="og:image" content="https://i.loli.net/2019/07/29/5d3e9fac170c242647.jpg">
 <meta property="og:image" content="https://i.loli.net/2019/07/30/5d404d40eeab954113.jpg">
 <meta property="og:image" content="https://i.loli.net/2019/08/04/fraYujysmJ97GNW.jpg">
-<meta property="og:updated_time" content="2019-08-04T08:49:33.759Z">
+<meta property="og:updated_time" content="2019-08-16T02:45:04.024Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="sakurai - modern qm">
 <meta name="twitter:description" content="看懂了书却⑧会做题等于白看  ——樱井纯，本书序言 我的量子力学学得非常不好，很多基本的东西都没有理解（讽刺的是，成绩却是最高的）。所以必须要回炉重造。 2019.8.4 更新到前两章">
@@ -307,7 +307,7 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-08-04T16:47:14+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-08-04T03:47:14-05:00">
                 2019-08-04
               </time>
             
@@ -339,7 +339,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  9.9k words
+                  13.6k words
                 </span>
               
 
@@ -355,7 +355,7 @@
                   <span class="post-meta-item-text">Reading time &asymp;</span>
                 
                 <span title="Reading time">
-                  47 minutes
+                  63 minutes
                 </span>
               
             </div>
@@ -405,7 +405,7 @@
 <p>两个观测量的泊松括号取零，说明它们compatible。这词的意思是说对一个量的测量行为不会对另一个量造成影响（显然，不同方向的自旋不compatible）。这词同时意味着这两个量的算符具有同一组基。利用这件事，我们可以把这组基记为collective index $K’$。很多时候，某个量的某个本征值对应不止一个态，区分它们就得靠另一个compatible的量的本征值。</p>
 <p><img src="https://i.loli.net/2019/07/29/5d3e9fac170c242647.jpg" alt=""></p>
 <p>不compatible的量的测量行为，例如自旋，是很奇特的。上图里（a）情况是加入测量仪器B，但每次都放出不同的$\left|b’\right&gt;$再取平均，那么在最初滤过来$\left|a’\right&gt;$的情况下，在最右边测量到$\left|c’\right&gt;$的概率为$\left.\sum_{b^{\prime}}\left|\left\langle c^{\prime} | b^{\prime}\right\rangle\right|^{2}\left\langle b^{\prime} | a^{\prime}\right\rangle\right|^{2}=\sum_{b^{\prime}}\left\langle c^{\prime} | b^{\prime}\right\rangle\left\langle b^{\prime} | a^{\prime}\right\rangle\left\langle a^{\prime} | b^{\prime}\right\rangle\left\langle b^{\prime} | c^{\prime}\right\rangle$。但在（b）中没有测量仪器B，该概率为（式中加入了一个值为1 的因子）$\left|\sum_{b^{\prime}}\left\langle c^{\prime} | b^{\prime}\right\rangle\left\langle b^{\prime} | a^{\prime}\right\rangle\right|^{2}=\sum_{b^{\prime}} \sum_{b^{\prime \prime}}\left\langle c^{\prime} | b^{\prime}\right\rangle\left\langle b^{\prime} | a^{\prime}\right\rangle\left\langle a^{\prime} | b^{\prime \prime}\right\rangle\left\langle b^{\prime \prime} | c^{\prime}\right\rangle$。</p>
-<p>要想它们相等，非得B和A或C compatible才行。</p>
+<p>要想它们相等，非得B和A或C compatible才行。对于不对易的物理量，测量似乎提供了，或者说产生了一个时间箭头的作用。</p>
 <p>5.</p>
 <p>海森堡有一个不确定性原理。我们知道，A的dispersion为$\left\langle(\Delta A)^{2}\right\rangle=\left\langle\left(A^{2}-2 A\langle A\rangle+\langle A\rangle^{2}\right)\right\rangle=\left\langle A^{2}\right\rangle-\langle A\rangle^{2}$。对两个不同量来说，$\left\langle(\Delta A)^{2}\right\rangle\left\langle(\Delta B)^{2}\right\rangle \geq\left|\langle\Delta A \Delta B \rangle\right|^{2}$（schwarz不等式），而</p>
 <p>$\begin{array}{c}{\langle\Delta A \Delta B\rangle=\frac{1}{2}\langle[A, B]\rangle+\frac{1}{2}\langle\{\Delta A, \Delta B\}\rangle} \\ {\text { .             imaginary            real}}\end{array}$</p>
@@ -472,6 +472,7 @@
 <p>$x=\sqrt{\frac{\hbar}{2 m \omega}}\left(a+a^{\dagger}\right), \quad p=i \sqrt{\frac{m h \omega}{2}}\left(-a+a^{\dagger}\right)$</p>
 <p>可以得到各种东西的期望值。</p>
 <p>考虑谐振子的含时演化。$\frac{d a}{d t}=\sqrt{\frac{m \omega}{2 \hbar}}\left(\frac{p}{m}-i \omega x\right)=-i \omega a$，解出来$a(t)=a(0) \exp (-i \omega t)$。是故$x(t)+\frac{i p(t)}{m \omega}=x(0) \exp (-i \omega t)+i\left[\frac{p(0)}{m \omega}\right] \exp (-i \omega t)$，对比实部虚部，可以知道x和p的含时演化。</p>
+<p>这个地方的操作步骤是，首先把H除以一个能量子来无量纲化（算是马后炮），然后拆出升降算符，重新相乘得到H和$\hbar\omega aa^{\dagger}$之间的关系，写出升降的结果，确定下界$a|1\rangle=|0\rangle$，这时已经知道了能谱了；然后再递推各波函数，并用埃尔米特多项式表示；最后从升降算符的性质解含时演化。</p>
 <p>对于初学者来说，升降算符是一个非常天马行空的主意。樱井似乎也没有给出一个相对自然的动机，只是表示“看到它的作用你们就知道这么构造的物理意义了”。我学的时候没学明白，现在在此揣测一下。首先把哈密顿量无量纲化，写成$H=\frac{x’^2+p’^2}{2}$，一方面，我们希望能找到一个算符$A$，使得它作用于H的一个本征态能够得到一个新的本征态。这个事情等价于$[H,A]\propto A$。同时我们又知道$dA/dt=[H,A]/i\hbar$。所以我们只需要找到一个量，其对时间的导数正比于它自己乘以$i$。另一方面，人们可能会习惯性地把H分解为$((p’-ix’)/\sqrt{2})((p’-ix’)/\sqrt{2})^*$，进而留意到$((p’-ix’)/\sqrt{2})$对时间的导数正是它自己乘以$i$。至于这样找出来的本征态是不是完备，大概有数学家保驾护航，我就懒得考虑了。</p>
 <p>需要留意的是，能量本征态是“定态”，这些态是不振的，叠加态才“振”。实际上，降算符$a$的本征态才对应经典谐振子。这态被称为相干态。</p>
 <p>6.</p>
@@ -577,12 +578,83 @@
 <p>从电磁学的结果，可以知道对于电磁场中的粒子，其拉氏量多了一项$\frac{e}{c} \frac{d \mathbf{x}}{d t} \cdot \mathbf{A}$，其作用量多了一项$\frac{e}{c} \int_{t_{n-1}}^{t_{n}} d t\left(\frac{d \mathbf{x}}{d t}\right) \cdot \mathbf{A}$。在路径积分中，这带来的影响是$\Pi \exp \left[\frac{i S^{(0)}(n, n-1)}{\hbar}\right] \rightarrow\left\{\Pi \exp \left[\frac{i S^{(0)}(n, n-1)}{\hbar}\right]\right\} \exp \left(\frac{i e}{\hbar c} \int_{\mathbf{x}_{1}}^{\mathbf{x}_{N}} \mathbf{A} \cdot d \mathbf{s}\right)$</p>
 <p>因此，从上面走的粒子的相位变化是$\left\{\exp \left[\left(\frac{i e}{\hbar c}\right) \int_{\mathbf{x}_{1}}^{\mathbf{x}_{N}} \mathbf{A} \cdot d \mathbf{s}\right]_{\text { above }}\right\}$，从下面走的粒子的相位变化是$\left\{\exp \left[\left(\frac{i e}{\hbar c}\right) \int_{\mathbf{x}_{1}}^{\mathbf{x}_{N}} \mathbf{A} \cdot d \mathbf{s}\right]_{\text { below }}\right\}$。发生干涉地点的相位差，即二者之差恰好是</p>
 <p>$\left[\left(\frac{e}{\hbar c}\right) \int_{\mathbf{x}_{1}}^{\mathbf{x}_{N}} \mathbf{A} \cdot d \mathbf{s}\right]_{\text { above }}-\left[\left(\frac{e}{\hbar c}\right) \int_{\mathbf{x}_{1}}^{\mathbf{x}_{N}} \mathbf{A} \cdot d \mathbf{s}\right]_{\text { below }}=\left(\frac{e}{\hbar c}\right) \oint \mathbf{A} \cdot d \mathbf{s}$</p>
-<p>正是圆柱体内的磁通量。从这个意义上来说，矢势是比磁感应强度更基本的物理量。</p>
+<p>正比于圆柱体内的磁通量。从这个意义上来说，矢势是比磁感应强度更基本的物理量。</p>
 </li>
 </ul>
 </li>
 </ul>
 <p>在这边谈起规范变换，好像总是一个波函数相位的变换，但是所谓规范的gauge，实际上是从德语Eich来的，意为度量。考虑函数$F(x)$，其在某点处展开为$F(x+dx)=F(x)+(\nabla F(x))dx$。现在做“规范”变换，让$1|_x=(1+\Sigma(x)dx)|_{x+dx}$，那么$F(x+dx)=F(x)+[(\nabla+\Sigma)F]|_xdx$。这里和因子$\mathscr{G}=\exp \left[\frac{i e \Lambda(\mathbf{x})}{\hbar c}\right]$对比的就是$e^{\Sigma}$。这才是规范变换原本的含义。现在虽然意义不完全一样了，但是规范变换的名字还是留着。</p>
+<h3 id="关于解薛定谔方程"><a href="#关于解薛定谔方程" class="headerlink" title="关于解薛定谔方程"></a>关于解薛定谔方程</h3><p>出于实用的考虑，我来写一下一些作者认为比较简单的情形中关于薛定谔方程的相关事情。参考资料是朗道的卷3.</p>
+<h4 id="自由粒子的薛定谔方程"><a href="#自由粒子的薛定谔方程" class="headerlink" title="自由粒子的薛定谔方程"></a>自由粒子的薛定谔方程</h4><p>它的解是$\psi\propto e^{i/\hbar\cdot(\mathbf{p}\cdot\mathbf{r}-Et)}$，一个平面波。它正是该粒子的德布罗意物质波。</p>
+<h4 id="薛定谔方程中关于势能的基本性质"><a href="#薛定谔方程中关于势能的基本性质" class="headerlink" title="薛定谔方程中关于势能的基本性质"></a>薛定谔方程中关于势能的基本性质</h4><ul>
+<li>波函数在整个空间必须得是单值的，连续的。一般来讲，导数也是连续的。不过，V达到无穷大，则波函数必须取0，在界面上也是这样。在界面上的导数一般不连续。</li>
+<li>V不发散，或在某一点发散但不超过$-1/r^s,s&lt;2$，则波函数也不发散。事实上，考虑原点附近一个有坐标不确定度$r_0$的波包，它相当于在$r_0$内取有限值，在外为0。那么其动量不确定度$\sim \hbar/r_0$，动能的不确定度或均值$\sim 1/r_0^2$，故总能量在$s&lt;2$并不能成任意大的负值。</li>
+<li>若V在无穷远消失，则其所有负能量态都是束缚态，离散谱。因为任何连续谱中的定态都对应于无限运动。</li>
+<li>假定无穷远处势能为负并按$r^{-s}$趋于0.这个时候，如果$s&lt;2$，则对于离原点足够远的情况，总有能量为负的情况开始出现，并最终收敛到0. 离散谱中有无穷多个能级，它们越来越密集地挤向0. 反之，离散谱的能级数目则是有限的。</li>
+<li>对于s=2的情形需要在后面单独讨论。</li>
+</ul>
+<h4 id="一维运动的一般性质"><a href="#一维运动的一般性质" class="headerlink" title="一维运动的一般性质"></a>一维运动的一般性质</h4><p>考虑薛定谔方程$d_{xx}\psi+2m/\hbar^2(E-V)\psi=0$。</p>
+<ul>
+<li>所有离散谱能级均无简并。</li>
+<li>假定波函数在数轴两头收敛。为了方便，写$V(\infty)=0$，$V(-\infty)=V_0&gt;0$。离散谱对应$V_{min}&lt;E&lt;0$。对于连续谱，在$E\in(0,V_0)$内，波函数在右侧显示出驻波$a\cos(kx+\delta)$，在左侧显示出指数衰减$be^{\kappa x}$。最后，在$V_0$以上，显示出两个方向的波$a_!e^{ikx}+a_2e^{-ikx}$。</li>
+<li>如果想把波函数按着能量的$\delta$函数归一化，那么把其渐进表达式写成$A(e^{i(kx+\delta)}+e^{-i(kx+\delta)})$，然后让能运动到无穷远处的平面波（们）的概率流密度之和为$1/2\pi\hbar$以求出归一化系数。该流密度满足刘维尔方程$\partial_{t}|\psi|^2+\nabla\cdot j=0$。这个系数（$\propto1/\sqrt{2\pi\hbar v}$）的来源就是从x变到p的傅里叶变换的$2\pi$，从k到p的$\hbar$，以及从p到E的$\sqrt{v}$。</li>
+</ul>
+<h4 id="方势阱"><a href="#方势阱" class="headerlink" title="方势阱"></a>方势阱</h4><ul>
+<li>对于有限深度的势阱，使用连续性条件$\psi’/\psi$连续可以简化计算。</li>
+</ul>
+<h4 id="透射系数"><a href="#透射系数" class="headerlink" title="透射系数"></a>透射系数</h4><ul>
+<li><p>考虑一个相互作用的尺度a，势能$V(x)$在$|x|\gg a$时迅速减小。可以求$E\to0$时透射系数趋于零的规律。如下作：取从左边入射，在右边渐进式为$Ae^{ikx}$，左边渐进式为$e^{ikx}+Be^{-ikx}$，$k=\sqrt{2mE}/\hbar$。如果在$k|x|\ll1, |x|\gg a$的区域，能量和势能都可以略去，薛定谔方程的解在x为正或负时的$\psi=a_{1, 2}+b_{1, 2}x$。由中间的诸段$\psi$的形式可以从各种分界处条件得到$a_1=\rho a_2+\mu b_2,b_1=\nu a_2+\tau b_2$。这些希腊字母都是和能量无关的实数（因为薛定谔方程中已经没有能量了）。另一方面，渐进式的展开必须能够与这一次函数形式的波函数对齐，所以$a_1=1+B,b_1=ik(1-B),a_2=A,b_2=ikA$，在k较小时，可以解得$A\approx 2ik/\nu$，透射系数$D\propto k^2\propto E$。</p>
+<p>故它与能量成正比地趋于0。</p>
+</li>
+</ul>
+<h3 id="有心力场"><a href="#有心力场" class="headerlink" title="有心力场"></a>有心力场</h3><p><em>NOTE：这个地方本来应该是引入一点对称性和群论的最好的时机（樱井也是这么做的），但是我感到复（预）习的紧迫，而不得不暂时丧掉学习的热情，从一些别的课本里面（他们把对称性放在很后面来讲）来学这一段。</em></p>
+<p>旋转的不变性产生了角动量的守恒量，假设旋转的无穷小变化有形式$1-iRd\phi$，$iR=r\times\nabla$，$\hbar l=r\times p =-i\hbar r\times\nabla$。这个量纲还是选择在p里面放一个hbar的结果。容易得到$[l_i, A_k]=i\epsilon_{ikl}A_l$，$[l^2, l_i]=0$。</p>
+<p>一般来说角动量的问题都是用球坐标来算。在这个时候$z$轴下面的角动量的算符的表示特别好（$l_z=-i\partial_\phi$），这部分的本征函数就直接是$\Phi_m=\frac{1}{\sqrt{2\pi}}e^{im\phi},m\in\mathbb{Z}$。所以一般首先特别关心哪个方向的角动量就把它设成z轴。另外一方面，由于z轴可以随便取，量子数m只能取整数的要求看起来可能不合理，但是注意——两个方向上的角动量是不对易的，除非其同时为0。这样的不对易性质一般要求能级的简并：取$l_x$的一个本征态$\psi$，$l_y\psi$和$\psi$不是一个态，却有相同的本征值。</p>
+<p>可以证明，在这种问题下$l_z$和$l^2$就构成一个compatible set。其中$l^2$可以证明是对应$\nabla_{\theta, \phi}/(-r^2)$，那个算符的意思是laplacian的角部。对于具有确定的总角动量的系统，肯定存在着一些简并的$\Phi_m$，这是从z轴的对称性得知的。人们在解这系统的时候使用与振子问题中相似的升降算符。我们把$l^2$拆开，写成$l^2=l_+l_-+l_z^2-l_z$，其中$l_\pm=l_x\pm l_y$。容易得到$[l_z,l_\pm]=\pm l_\pm$。知道这些信息之后，就针对性地得到$l_zl_\pm\psi_m=(m\pm1)l_\pm\psi_m$。在振子问题中，是找降不动的态来确定本征值的，现在我们看升不动的态（总角动量给定，$l^2-l_z^2$不能是负的，限制m的值）。$l_+\psi_l=0$，左乘一个$l_-$，可以算出$l(l+1)$，其中$l$是m能取的上限。</p>
+<p>我们称一个系统的角动量为l，其含义为其总角动量的平方的本征值是l(l+1)。从$l^2,l_z$对角化的表象下计算$l_{x,y}$的矩阵元，可以先算$l_\pm$的矩阵元。容易知道：$l^2$，$l_z$都对角化了，$l_\pm$非零的矩阵元只有对角线上(下)相邻的一条。已知有</p>
+<p>$l^2=l_+l_-+l_z^2-l_z$</p>
+<p>两边取对角元</p>
+<p>$l(l+1)=\langle m|l_+|m-1\rangle\langle m-1|l_-|m\rangle+m^2-m=|\langle m|l_+|m-1\rangle|^2+m^2-m$</p>
+<p>因此$\langle m|l_+|m-1\rangle=\sqrt{(l+m)(l-m+1)}$。剩下的步骤都非常简单了。</p>
+<p>不加证明，但可以理解地写出角动量的本征函数$Y_{lm}=\Theta_{lm}\Phi_m=(-)^{(m+|m|)/2}i^l\sqrt{\frac{2l+1}{4\pi}\frac{(l-|m|)!}{(l+|m|)!}}P_l^{|m|}(\cos\theta)e^{im\phi}$，其中$P$是连带勒让德多项式。</p>
+<p>这节叫“有心力场”，所以先跳过选择定则和角动量相加之类的东西。我们来看径向波函数怎么算。首先，两个相互作用的粒子，其哈密顿量为$H=-\frac{\hbar^{2}}{2 m_{1}} \Delta_{1}-\frac{\hbar^{2}}{2 m_{2}} \Delta_{2}+U(r)$。用惯常的办法，分解成$H=-\frac{\hbar^{2}}{2\left(m_{1}+m_{2}\right)} \triangle_{R}-\frac{\hbar^{2}}{2 m} \triangle+U(r)$，m是约化质量。除去重心运动对应的自由粒子部分之外，薛定谔方程$\Delta \psi+\left(2 m / \hbar^{2}\right)[E-U(r)] \psi=0$，改写为球坐标下的</p>
+<p>$\frac{1}{r^{2}} \frac{\partial}{\partial r}\left(r^{2}{\frac{\partial \psi}{\partial r}}\right)+\frac{1}{r^{2}}\left[\frac{1}{\sin \theta} \frac{\partial}{\partial \theta}\left(\sin \theta \frac{\partial \psi}{\partial \theta}\right)+\frac{1}{\sin ^{2} \theta} \frac{\partial^{2} \psi}{\partial \phi^{2}}\right]+\frac{2 m}{\hbar^{2}}[E-U(r)] \psi=0$</p>
+<p>在式中带入$l^2$对应的东西，大大简化求解流程：$\frac{\hbar^{2}}{2 m}\left[-\frac{1}{r^{2}} \frac{\partial}{\partial r}\left(r^{2} \frac{\partial \psi}{\partial r}\right)+\frac{l^2}{r^{2}} \psi\right]+U(r) \psi=E \psi$</p>
+<p>现在我们定着l和m来求解径向波函数，其满足$\psi=R(r)Y_{lm}(\theta,\phi)$。解这个东西的操作是做变换$R(r)=\chi(r) / r$然后得到</p>
+<p>$\frac{\mathrm{d}^{2} \chi}{\mathrm{d} r^{2}}+\left[\frac{2 m}{\hbar^{2}}(E-U)-\frac{l(l+1)}{r^{2}}\right] \chi=0$</p>
+<p>这相当于在方程里面加了一项离心能$\frac{l^2\hbar^2}{2mr^2}$。函数$\chi$的归一化由$\int_0^\infty|\chi|^2dr=1$确定。径向波函数的能谱用下标n表示。一般管nml分别叫径量子数，角量子数，磁量子数。</p>
+<ul>
+<li><p>原点附近，如果满足$U(r)r^2\to0$，方程可以简化成$\mathrm{d}\left(r^{2} \mathrm{d} R / \mathrm{d} r\right) / \mathrm{d} r-l(l+1) R=0$，解出来$R\sim r^l$。</p>
+</li>
+<li><p>球面波。类比平面波的情形，$U=0$。略去解的过程，其径向波函数正比于球贝塞尔函数：</p>
+<p>$\begin{aligned} R_{k l}=&amp; \sqrt{(  2 \pi k / r )} J_{l+1 / 2}(k r)=2 k j_{l}(k r) \\ j_{l}(x) &amp;=\sqrt{(\pi/2 x )} J_{l+1 / 2}(x) \end{aligned}$</p>
+<p>该函数在远处的渐进行为是$\frac{2 \sin \left(k r-\frac{1}{2} l \pi\right)}{r}$。</p>
+</li>
+<li><p>现在考虑$U\sim -\beta/r^2$的特殊情况。在原点附近的行为满足$R^{\prime \prime}+2 R^{\prime} / r+\gamma R / r^{2}=0$，其中$\gamma=2 m \beta / \hbar^{2}-l(l+1)$。取$R\sim r^s$，可以解s的二次方程。若有两实根，则粒子不落入力心。反之，则落入力心。</p>
+</li>
+<li><p>考虑库仑势的情形：$\frac{\mathrm{d}^{2} R}{\mathrm{d} r^{2}}+\frac{2}{r} \frac{\mathrm{d} R}{\mathrm{d} r}-\frac{l(l+1)}{r^{2}} R+\frac{2 m}{\hbar^{2}}\left(E+\frac{\alpha}{r}\right) R=0$。这相当于解氢原子的波函数，薛定谔一开始就是做的这事。做法是这样的：</p>
+<ul>
+<li>按着库伦单位制把方程变掉：$\frac{\mathrm{d}^{2} R}{\mathrm{d} r^{2}}+\frac{2}{r} \frac{\mathrm{d} R}{\mathrm{d} r}-\frac{l(l+1)}{r^{2}} R+2\left(E+\frac{1}{r}\right) R=0$</li>
+<li><p>引入参量$n=1 / \sqrt{( -2 E )}, \quad \rho=2 r / n$，变成$R^{\prime \prime}+\frac{2}{\rho} R^{\prime}+\left[-\frac{1}{4}+\frac{n}{\rho}-\frac{l(l+1)}{\rho^{2}}\right] R=0$</p>
+</li>
+<li><p>考虑在远处的渐进行为：$R’’=R/4$。加上在原点附近已知的渐进行为，可以知道$R=\rho^{l} e^{-\rho / 2} w(\rho)$。</p>
+</li>
+<li>方程$\rho w^{\prime \prime}+(2 l+2-\rho) w^{\prime}+(n-l-1) w=0$的解是合流超几何函数$w=F(-n+l+1,2 l+2, \rho)$，并且要求$-(-n+l+1)\in\mathbb{N}$。据此知道$l=0, \cdots, n-1$，总的简并度可以求出是$n^2$。（离散部分）能谱转换回SI单位制的话是$E=-m \alpha^{2} / 2 \hbar^{2} n^{2}$。</li>
+</ul>
+</li>
+<li><p>（<em>以下两小点需要了解更多的数学知识之后补充</em>）可观测量的本征谱的简并对应着体系的某种对称性，这是一个可以严格描述和证明的事情。现在暂时就理解成简并对应着需要塞进来凑成compatible set的额外的守恒量好了。在这个例子中，额外的简并度（$n^2&gt;2l+1$，后者是SO(3)的不可约表示维数）对应着$r^{-1}$势的一个额外的守恒量：LRL（拉龙楞）矢量。（实际上，朗道指出，通过LRL矢量和角动量的线性组合，我们可以凑出来两个三维物理量，它们满足两个<em>独立</em>的三维角动量矢量的对易关系。。LRL矢量的存在让这个问题更像SO(4)了，但是我觉得这个地方并没有SO(4)的物理意义。）</p>
+</li>
+<li><p>更进一步的，由贝特朗定理，只有径向谐振子和库仑势下的粒子，其轨道在微扰下闭合。也只有这两种有心力下会产生额外的对称性，进而导致额外的简并度。</p>
+</li>
+</ul>
+<h3 id="微扰"><a href="#微扰" class="headerlink" title="微扰"></a>微扰</h3><p>同样，这部分也是出于预习的考虑。</p>
+<p>现在只讨论与时间无关的微扰。考虑某一给定系统，具有哈密顿量$H=H_0+V$。$V$可以被看做微扰项的必要条件是$V_{mn}\ll|E_m-E_n|$，之后将证明这个结论。我们如果已知没有能级简并的精确解$H_0\psi^0_n=E^0_n \psi^0_n$，要求$H\psi_n=E_n\psi_n$的近似解，则首先把$\psi$展开为$\psi_n=\sum c_{nm}\psi^0_m$，代入，并左乘一个$\psi^0_k$，得到</p>
+<p>$\left(E_n-E_{k}^{0}\right) c_{nk}=\sum V_{k m} c_{nm}$</p>
+<p>把$E_n$和$c_{nm}$写成级数，此时可以令$c_{nm}=\delta_{nm}$。（kronecker delta）求第一级近似时，注意到V本身也是一个一阶小，得到$k=n$时$E_n^{(1)}=V_{nn}$，$k\neq n$时$c_{nk}^{(1)}=V_{kn}/(E_n^{(0)}-E_k^{(0)})$。在这里就可以看到那个必要条件的合理性。还差$c_{nn}^{(1)}$没有选取，由于$\psi_n^{(0)}+\psi_n^{(1)}$归一化的要求，这个量必须为0.</p>
+<p>可以算出物理量f的微扰值。利用$\psi_{n}^{(1)}=\sum_{m}^{m\neq n} \frac{V_{m n}}{E_{n}^{(0)}-E_{m}^{(0)}} \psi_{m}^{(0)}$，可以得到$f_{n m}=f_{n m}^{(0)}+\sum_{k}^{k\neq n} \frac{V_{n k} f_{k m}^{(0)}}{E_{n}^{(0)}-E_{k}^{(0)}}+\sum_{k}^{k\neq m} \frac{V_{k m} f_{n k}^{(0)}}{E_{m}^{(0)}-E_{k}^{(0)}}$。</p>
+<p>如果有简并，展开就要麻烦些：我们可以把一个能级下的所有本征函数写成它们的另一组任意的线性组合。但是，在微扰下保持改变很小的限制下，这个线性组合不再是任意的了。选取$\psi_{nl}^0$为第n个能级的第l个本征态，正确的第k个零级近似波函数应该是$\sum c_{k,ln}^{(0)}\psi_{nl}^{0}$。考虑最低阶近似，$V\sum c_{k,ln}^{(0)}\psi_{nl}^{(0)}=E_n^{(1)}\sum c_{k,ln}^{(0)}\psi_{nl}^{(0)}$，变为$E_n^{(1)}c_{k,l’n}^{(0)}=\sum V_{nl’l}c_{k,ln}^{(0)}$。于是</p>
+<p>$\sum(V_{nl’l}-E_n^{(1)}\delta_{l’l})c_{k,l’n}^{(0)}=0$</p>
+<p>我们先解它的系数行列式（让它为0以确保有非零解），解出能量一级修正，再带回去算出线性组合的系数c。我们注意到，简并被微扰所解除了。</p>
 
       
     </div>
@@ -615,7 +687,7 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/08/04/2019-8-3/" rel="next" title="2019-8-3-成都二日游">
+              <a href="/2019/08/03/2019-8-3/" rel="next" title="2019-8-3-成都二日游">
                 <i class="fa fa-chevron-left"></i> 2019-8-3-成都二日游
               </a>
             
@@ -624,6 +696,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/08/09/2019-8-10/" rel="prev" title="2019-8-10-谈第三次知乎被封号">
+                2019-8-10-谈第三次知乎被封号 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -707,7 +783,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">49</span>
+                  <span class="site-state-item-count">50</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -788,6 +864,10 @@
                     <a href="https://changhai.org/" title="Changhai Lu" target="_blank">Changhai Lu</a>
                   </li>
                 
+                  <li class="links-of-blogroll-item">
+                    <a href="http://math.ucr.edu/home/baez/FUN.html/" title="Baez's fun stuff" target="_blank">Baez's fun stuff</a>
+                  </li>
+                
               </ul>
             </div>
           
@@ -809,7 +889,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#第一章-基本概念"><span class="nav-number">1.</span> <span class="nav-text">第一章 基本概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第二章-量子动力学"><span class="nav-number">2.</span> <span class="nav-text">第二章 量子动力学</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#第一章-基本概念"><span class="nav-number">1.</span> <span class="nav-text">第一章 基本概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第二章-量子动力学"><span class="nav-number">2.</span> <span class="nav-text">第二章 量子动力学</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#关于解薛定谔方程"><span class="nav-number">3.</span> <span class="nav-text">关于解薛定谔方程</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#自由粒子的薛定谔方程"><span class="nav-number">3.1.</span> <span class="nav-text">自由粒子的薛定谔方程</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#薛定谔方程中关于势能的基本性质"><span class="nav-number">3.2.</span> <span class="nav-text">薛定谔方程中关于势能的基本性质</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#一维运动的一般性质"><span class="nav-number">3.3.</span> <span class="nav-text">一维运动的一般性质</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#方势阱"><span class="nav-number">3.4.</span> <span class="nav-text">方势阱</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#透射系数"><span class="nav-number">3.5.</span> <span class="nav-text">透射系数</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#有心力场"><span class="nav-number">4.</span> <span class="nav-text">有心力场</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#微扰"><span class="nav-number">5.</span> <span class="nav-text">微扰</span></a></li></ol></div>
             
 
           </div>
@@ -843,7 +923,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">123.2k</span>
+    <span title="Site words total count">122.2k</span>
   
 </div>
 
