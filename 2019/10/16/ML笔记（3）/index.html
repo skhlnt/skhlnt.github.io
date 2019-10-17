@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="RANDOM,PLAIN,">
+  <meta name="keywords" content="Hexo, NexT">
 
 
 
@@ -79,18 +79,17 @@
 
 
 
-<meta name="description" content="10">
-<meta name="keywords" content="RANDOM,PLAIN">
+<meta name="description" content="week 5,6">
 <meta property="og:type" content="article">
-<meta property="og:title" content="一个极度愚蠢的meme">
-<meta property="og:url" content="http://yoursite.com/2019/01/13/一个极度愚蠢的meme/index.html">
+<meta property="og:title" content="ML笔记（3）">
+<meta property="og:url" content="http://yoursite.com/2019/10/16/ML笔记（3）/index.html">
 <meta property="og:site_name" content="Miralem 的博客">
-<meta property="og:description" content="10">
+<meta property="og:description" content="week 5,6">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-01-13T08:35:36.501Z">
+<meta property="og:updated_time" content="2019-10-17T03:11:50.756Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="一个极度愚蠢的meme">
-<meta name="twitter:description" content="10">
+<meta name="twitter:title" content="ML笔记（3）">
+<meta name="twitter:description" content="week 5,6">
 
 
 
@@ -120,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/01/13/一个极度愚蠢的meme/">
+  <link rel="canonical" href="http://yoursite.com/2019/10/16/ML笔记（3）/">
 
 
 
 
 
-  <title>一个极度愚蠢的meme | Miralem 的博客</title>
+  <title>ML笔记（3） | Miralem 的博客</title>
   
 
 
@@ -273,7 +272,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/01/13/一个极度愚蠢的meme/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/16/ML笔记（3）/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Miralem">
@@ -290,7 +289,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">一个极度愚蠢的meme</h1>
+          <h1 class="post-title" itemprop="name headline">ML笔记（3）</h1>
         
 
         <div class="post-meta">
@@ -302,8 +301,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-01-13T02:23:36-06:00">
-                2019-01-13
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-10-16T22:11:09+08:00">
+                2019-10-16
               </time>
             
 
@@ -334,7 +333,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  372 words
+                  2.1k words
                 </span>
               
 
@@ -350,7 +349,7 @@
                   <span class="post-meta-item-text">Reading time &asymp;</span>
                 
                 <span title="Reading time">
-                  1 minutes
+                  9 minutes
                 </span>
               
             </div>
@@ -371,12 +370,87 @@
       
 
       
-        <p>10</p>
-<a id="more"></a>
-<p>今天看到一个人提到说老挝宪法里写了外交、军事上受越南指导。我有点好奇，拉下来看看其他人的意见，想知道这大致是真是假。结果最高亮的回复是“是真的，我就是签订宪法的那支笔”这种话。接下来的许多回复让我确定：这事还真就是真的。</p>
-<p>这种meme我见到好多次了。在我看来，只有当你一眼看出来这是假的，还想嘲讽作者一下的话，这样说话才是合理的，而且虽然合理，总免不了撕起来。可是现在许多人无论在哪里都随手这样用。说话的基本逻辑呢？</p>
-<p>蛤学未艾，六学方兴。人们的用典需求很旺盛，因此是个还算有点笑果的典故就能烂大街。但是用典水平可看不出来有什么提升，微博的狗头就让我非常反感，因为这培养了一批只会机械看狗头而没有语文理解能力的网民。这批人活动的地方，永远是“先打死，再厚葬”，令人不胜其扰。</p>
-<p>用典在巧。如果像文体两开花一样，用在哪里都没有风险，体现不出恰当性的话，还有什么意思呢？六学火不长久的。迟早要和狗头一样，沦为标记拙劣用典的工具和消解对话的手段。</p>
+        <h3 id="week-5-6"><a href="#week-5-6" class="headerlink" title="week 5,6"></a>week 5,6</h3><a id="more"></a>
+<h4 id="lecture"><a href="#lecture" class="headerlink" title="lecture"></a>lecture</h4><ul>
+<li><p>9.24</p>
+<ul>
+<li><p>今天讲的是无向图的spectral clustering。开了个头。</p>
+</li>
+<li><p>记号：图$G=(V, E)$，其各边权重w，各点degree为权重之和d。子图A，其补集$\bar{A}$。那么有两种方式定义一个子图的size：</p>
+<p>$|A| :=$ the number of vertices in $A$<br>$\operatorname{vol}(A) :=\sum_{i \in A} d_{i}$</p>
+</li>
+<li><p>Graph laplacian的性质。首先，$f^{t} L f=\frac{1}{2} \sum_{i, j=1}^{n} w_{i j}\left(f_{i}-f_{j}\right)^{2}$，L半正定，具有trivial的本征值0和本征向量$\mathbb{I}$。假设其具有互不连通的子图$\{A_i\}$，那么$ker(L)=span(\mathbb{I}_{A_i})$。</p>
+</li>
+<li><p>Clustering。步骤是确定的：首先从feature构建图（比如最近邻或距离范围），确定希望聚成k类，然后求出L的前（对应最小的一些本征值）k个本征向量$V=(v_0, \cdots, v_{k-1})$，该矩阵的第i行就是$\mathbb{R}^k$中embed的第i个点的坐标。最后，用k-means或者别的算法在欧氏空间中聚类。</p>
+</li>
+<li><p>为什么使用$L_{rw}$优于$L,L_{sym}$?</p>
+<ul>
+<li><p>$L_{sym}$的问题在于，其本征向量并非L的本征向量$v_i$，而是$D^{1/2}v_i$。这样的话，degree小了容易吃亏，被embed的太靠近原点（而其本身未必如此），所以必须对每行归一化，这也不是没有损失的。</p>
+</li>
+<li><p>L的问题要复杂一些。首先，我们考虑一个问题：<strong>图的分割。</strong>我们想把图切成两部分，它们之间联系尽量少。定义图的一个割是$\operatorname{cut}(A, B)=\sum_{i \in A, j \in B} w_{i j}$，为了避免只切下来一个点这种trivial的错误，我们实际上minimized的不少一个cut，而是</p>
+<ul>
+<li>$\operatorname{RatioCut}\left(A_{1}, \ldots, A_{k}\right)=\sum_{i=1}^{k} \frac{\operatorname{cut}\left(A_{i}, \overline{A}_{i}\right)}{\left|A_{i}\right|}$</li>
+<li>$\operatorname{Ncut}\left(A_{1}, \ldots, A_{k}\right)=\sum_{i=1}^{k} \frac{\operatorname{cut}\left(A_{i}, \overline{A}_{i}\right)}{\operatorname{vol}\left(A_{i}\right)}$</li>
+</ul>
+<p>其中N代表归一化。我们觉得后者在原理上更优，是因为考虑到$vol(A_i)=\sum_{l\in A_i}d_l=\sum_{l\in A_i}\sum_{k\in A_i}w_{lk}+\sum_{l\in A_i}\sum_{k\notin A_i}w_{lk}$，所以$cut/vol=cut/(\overline{cut}+cut)$，后者更自然。我们接下来证明，前者对应L，后者对应$L_{rw}$，因此L不如$L_{rw}$。</p>
+<p>令</p>
+<p>$f_{i}=\left\{\begin{array}{ll}{\sqrt{|\overline{A}| /|A|}} &amp; {\text { if } v_{i} \in A} \\ {-\sqrt{|A| /|\overline{A}|}} &amp; {\text { if } v_{i} \in \overline{A}}\end{array}\right.$</p>
+<p>则有</p>
+<p>$\begin{aligned} f^{\prime} L f &amp;=\sum_{i, j=1}^{n} w_{i j}\left(f_{i}-f_{j}\right)^{2} \\ &amp;=\sum_{i \in A, j \in \overline{A}} w_{i j}(\sqrt{\frac{|\overline{A}|}{|A|}}+\sqrt{\frac{|A|}{|\overline{A}|}})^{2}+\sum_{i \in \overline{A}, j \in A} w_{i j}(-\sqrt{\frac{|\overline{A}|}{|A|}}-\sqrt{\frac{|A|}{|\overline{A}|}})^{2} \\ &amp;=2 \operatorname{cut}(A, \overline{A})\left(\frac{|\overline{A}|}{|A|}+\frac{|A|}{|\overline{A}|}+2\right) \\ &amp;=2 \operatorname{cut}(A, \overline{A})\left(\frac{|A|+|\overline{A}|}{|A|}+\frac{|A|+|\overline{A}|}{|\overline{A}|}\right) \\ &amp;=2|V| \cdot \operatorname{Ratio} \operatorname{Cut}(A, \overline{A}) \end{aligned}$</p>
+<p>因此，RatioCut的优化对应于$f^tLf$在约束（可以观察得到）$f \perp \mathbb{1},|f|=\sqrt{n}$下的优化问题，而对这我们已经熟悉了。</p>
+<p>同理，令</p>
+<p>$f_{i}=\left\{\begin{array}{ll}{\sqrt{\frac{\operatorname{vol}(\overline{A})}{\operatorname{vol} A}}} &amp; {\text { if } i \in A} \\ {-\sqrt{\frac{\operatorname{vol}(A)}{\operatorname{vol}(\overline{A})}}} &amp; {\text { if } i \in \overline{A}}\end{array}\right.$</p>
+<p>则有： $f^tLf=2\operatorname{vol}(V) \operatorname{Ncut}(A, \overline{A})$，受约束$D f \perp \mathbb{1}, f^{\prime} D f=\operatorname{vol}(V)$。从我们对于Rayleigh Quotient的知识可以知道，这对应的广义本征值问题就是$Lf=\lambda Df$，即$L_{rw}f=\lambda f$。</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>10.1</p>
+<ul>
+<li><p>今天讲了两个东西：SNE和t-SNE。后者是对前者的改进。SNE是stochastic neighbor embedding，是从概率分布的角度建立的一种数据降维的方法。具体来说，找一个高维的数据集$S=\{\vec{x_1}\cdots\vec{x_n}\}$，取从xi到xj的概率为$p_{j|i}=\frac{1}{Z}\exp(-||x_i-x_j||_2^2/2\sigma_i)$，其中$Z=\sum_{j,j\neq i}\exp(-||x_i-x_j||_2^2/2\sigma_i)$，这是一个先验的分布。现在我们把$\vec{x}$嵌入低维的$\vec{y}$。取在低维的先验分布是$q_{j|i}\propto\exp(-||y_i-y_j||_2^2)$，我们利用梯度下降法优化两个优化之间的KL散度$Cost:=C=KL(P|Q)=E_P(log(P/Q))$，取得最好的$\{\vec{y}\}$。具体来说，$\nabla_{y_i}C=2\sum_{j\neq i}(p_{j|i}-q_{j|i}+p_{i|j}-q_{i|j})(\vec{y_i}-\vec{y_j})$。</p>
+</li>
+<li><p>优化过程中，还有一些超参数值得讨论。例如先验分布的参数$\sigma_i$。优化的办法是基于实践的：我们从熵的定义，约认为$Perplexity(P_i)=2^{-\sum_j p\log p}$代表系统的自由度，我们取$\sigma_i$，使得先验分布的自由度在10左右。另外还应该讨论梯度下降的学习率$\eta$，但并没有讲。</p>
+</li>
+<li><p>SNE也有它的一些问题，比如</p>
+<ul>
+<li><p>KL是不对称的。在这个情境下，这可能会导致把离得较远的x给map到离得较近的y上。</p>
+<p>但是这可以通过选取对称的jensen-shannon散度（$\mathrm{JSD}(P | Q)=\frac{1}{2} D(P | M)+\frac{1}{2} D(Q | M)$，其中$M=\frac{1}{2}(P+Q)$）来部分的解决。</p>
+</li>
+<li><p>梯度下降一个方向一次要计算四个概率，很伤。</p>
+</li>
+</ul>
+</li>
+<li><p>t-SNE是一种改进。具体来说，主要就是把在低维的先验分布扽出一个肥尾，变成t分布，$q_{i,j}\propto(1+||y_i-y_j||_2^2)^{-1}$。另外，在高维的情况下，先验分布的配分函数改成$Z=\sum_{j,i,j\neq i}\exp(-||x_i-x_j||_2^2/2\sigma)$。这时候</p>
+<ul>
+<li>$\nabla_{y_i}C=4\sum_{j\neq i}(p_{ij}-q_{ij})(y_i-y_j)(1+||y_i-y_j||^2)^{-1}$。注意最后一项，它会通过惩罚离得太近的点避免SNE的第一个问题。</li>
+<li>它一次只要计算两个概率。</li>
+</ul>
+</li>
+<li><p>在实际应用中，我们一般用PCA这样的方法来发现feature，用t-SNE这样的方法来发现community structure。具体来说，后者在聚类方面表现不错，但是其坐标轴的旋转是不会改变结果的，因为我们一直在处理2-norm。也就是说，我们没办法确定哪些是feature代表的方向。</p>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="reading-material"><a href="#reading-material" class="headerlink" title="reading material"></a>reading material</h4><ul>
+<li><p>Laurens van der Maaten et Geoff Hinton, t-SNE, 2008</p>
+<p>这是 Hinton 2008年提出t-SNE的文章。</p>
+<ul>
+<li><p>首先指出，以往的主流数据降维方法大多数是线性的，例如PCA，MDS等。这些方法落到操作上都是在矩阵的谱上做文章。然而，属于新时代的数据集呈现出越来越高维的特点，它们一般都处在一个高维的、非线性的流形上，因此，对这些数据集的降维需要更有效的手段。作者指出，一个指导思想是聚焦于clustering，保持离得较近的点仍然离得较近。</p>
+</li>
+<li><p>SNE的介绍与缺陷。值得注意的是，SNE同样是Hinton提出来的。。。</p>
+<p>除了lecture部分提到的不对称带来的问题之外，还要考虑crowding问题：在高维，例如十维空间，可以有11个点，其两两等距。因此，我们现在假设有一个半径适中的九维球面，上有分布得较稀疏的点。直接降维到二维之后，如果还是和球心离得这么近，这些点一下子被挤在一起，非常密集，cluster结构就没有了。如果调大半径，一下子被弄得非常远，Cost的梯度又不答应。这个问题除了SNE，很多类似的降维方法都深受其害。</p>
+</li>
+<li><p>改进的思路。</p>
+<ul>
+<li>SNE里面的配分函数本来是$\sum_{k,k \neq i} \exp \left(-\left|x_{i}-x_{k}\right|^{2} / 2 \sigma_{i}^{2}\right)$，现在我们把它变成对称的$\sum_{k \neq l} \exp \left(-\left|x_{k}-x_{l}\right|^{2} / 2 \sigma^{2}\right)$。这依然有问题，因为一个离群的x对应的p将会非常小，对于Cost几乎没有影响，这是我们不希望看到的。</li>
+<li>我们可以换一种做法，$p_{i j}=\frac{p_{j | i}+p_{i | j}}{2 n}$，避免这个问题，同时保证配分函数仍然是对称的。</li>
+<li>为了解决crowding problem，我们可以让低维的分布更均匀些，或是尾巴更肥些，这样避免优化Cost的时候把球面上的那些点全挤在一起。于是，就选中t分布，取参数最简单的一种情形。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 
       
     </div>
@@ -392,14 +466,6 @@
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/RANDOM/" rel="tag"># RANDOM</a>
-          
-            <a href="/tags/PLAIN/" rel="tag"># PLAIN</a>
-          
-        </div>
-      
 
       
       
@@ -409,8 +475,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/01/09/京沪高考分数线论/" rel="next" title="京沪高考分数线论">
-                <i class="fa fa-chevron-left"></i> 京沪高考分数线论
+              <a href="/2019/09/24/ML笔记（2）/" rel="next" title="ML笔记（2）">
+                <i class="fa fa-chevron-left"></i> ML笔记（2）
               </a>
             
           </div>
@@ -419,8 +485,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/01/19/世界语音简述/" rel="prev" title="世界语音简述">
-                世界语音简述 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/10/16/同学调查/" rel="prev" title="同学调查">
+                同学调查 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -478,8 +544,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -592,6 +667,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#week-5-6"><span class="nav-number">1.</span> <span class="nav-text">week 5,6</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#lecture"><span class="nav-number">1.1.</span> <span class="nav-text">lecture</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#reading-material"><span class="nav-number">1.2.</span> <span class="nav-text">reading material</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
