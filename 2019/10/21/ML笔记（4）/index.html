@@ -1,0 +1,1097 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="FISICA,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="week 7, 8">
+<meta name="keywords" content="FISICA">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ML笔记（4）">
+<meta property="og:url" content="http://yoursite.com/2019/10/21/ML笔记（4）/index.html">
+<meta property="og:site_name" content="Miralem 的博客">
+<meta property="og:description" content="week 7, 8">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-10-21T23:16:12.792Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="ML笔记（4）">
+<meta name="twitter:description" content="week 7, 8">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/10/21/ML笔记（4）/">
+
+
+
+
+
+  <title>ML笔记（4） | Miralem 的博客</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Miralem 的博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Miralemi r'ykdisykhr</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            About
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-jokes">
+          <a href="/jokes/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br>
+            
+            jokes
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-maktaba">
+          <a href="/libre/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br>
+            
+            maktaba
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/21/ML笔记（4）/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Miralem">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://i.loli.net/2019/01/19/5c4290acb14e1.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Miralem 的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">ML笔记（4）</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-10-21T05:15:34-05:00">
+                2019-10-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  4.4k words
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Reading time &asymp;</span>
+                
+                <span title="Reading time">
+                  20 minutes
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="week-7-8"><a href="#week-7-8" class="headerlink" title="week 7, 8"></a>week 7, 8</h3><a id="more"></a>
+<h4 id="lecture"><a href="#lecture" class="headerlink" title="lecture"></a>lecture</h4><ul>
+<li><p>10.8</p>
+<p>不小心翘掉了一节课。所幸，此课时基本上没有说什么特别重要而我又不太知道，并且没有在今天的summary中覆盖到的部分。</p>
+<p>现在开始搞RKHS了。关于这个东西的定义和一些理论，都写在notes 0里面了，包括Moore-Aronszajn定理，Cauchy Sequence，Completion of Hilbert space 等等。基本上，上节课讲的东西的主要内容，就是在有限维空间的情况下证明Moore-Aronszajn定理。为了叙事的连贯性，我还是在这个文件里把必要的地方都说明一下吧。</p>
+<ul>
+<li><p>RK是如此的一个kernel，即满足</p>
+<script type="math/tex; mode=display">
+\bullet \forall x \in \mathcal{X}, \quad k(\cdot, x) \in \mathcal{H}\\
+\bullet \forall x \in \mathcal{X}, \forall f \in \mathcal{H}, \quad\langle f, k(\cdot, x)\rangle_{\mathcal{H}}=f(x)</script><p>者。它有一个重要的等价性质，是说evaluation functional在对应的这个RKHS里面连续。这个性质同时也正是RKHS的定义。</p>
+</li>
+<li><p>可以首先在有限维的情况下考虑RKHS的性质。比如说取一个建立了内积的$V\subset\mathbb{R}^m $。那么这时候一个核实际上可以被写成是（作用在基的函数）上的双线性函数$K\in\mathbb{R}^{m\times m}$。上节课给出如下结论，以下诸命题等价：</p>
+<ul>
+<li>K是V上的RK。</li>
+<li>存在V上一组正交归一基u使得$K=\sum u_iu_i^t$。</li>
+<li>$\text{columnspan}(K)=V$并且$K_{ij}=\langle k_i,k_j\rangle$。</li>
+</ul>
+<p>这看上去是可以接受的。我无意追寻具体的证明。接下来，可以用这结论证明简单版的MA定理。</p>
+</li>
+<li><p>定理：有限维的时候，对于任意的半正定函数$K:X\times X\to\mathbb{R}$，存在唯一的RKHS使得K是其RK。</p>
+<p>这个时候，我们取K的columnspan是V，那么对V中的元素v,w,有$v=K\alpha, w=K\beta$。我们建立一个内积，$\langle v,w\rangle=\alpha^tK\beta$。基于K的正定性和以上的结论，我们可以证明这的确是一个内积，并且K是V上的RK，V是唯一的。</p>
+<p>关于RK，只需注意到K的第i行是$Ke_i$，$(v,Ke_i)=\alpha^tKe_i=e_i^tK\alpha=v_i=\delta_iv$.</p>
+<p>有限维的情况下，相当于整个核只管着m个数据点的变换，但是要搞feature map，要从data manifold嵌入到HS，那就得是无穷维的RKHS。</p>
+<p>在向无穷维推广的过程中，主要的问题是V不一定是HS，所以要先从半正定的K出发构造pre-HS，从简单版的情形可以想到，它的元素大概长成$f(x)=\sum_{i=1}^{n} \alpha_{i} k\left(x_{i}, x\right)$这个样子。我们使得evaluation连续，并且所有逐点收敛到0的cauchy seq在pre-HS的norm的意义上也收敛到0——这点很重要，因为下一步要做completion，弄出HS来。</p>
+<p>以上是我今天听懂了的全部内容。。。</p>
+</li>
+</ul>
+</li>
+<li><p>10.9</p>
+<ul>
+<li><p>无穷维的Riesz表示定理；</p>
+</li>
+<li><p>Moore-Aronszajn定理的思路；</p>
+</li>
+<li><p>kernel的构造；</p>
+</li>
+<li><p>Mercer Kernel；</p>
+<p>这里补充了一个例子。考虑微分方程$L\psi=f$，那么可以取积分算子T，$\psi=T(f)=\int G(x,y)f(y)dy$，考虑到$L\psi_n=\lambda_n\psi_n$，$\psi_n/\lambda_n=T\psi_n$，T具有和L相对应的eigenset，因此我们可以利用这一点直接求出格林函数G。</p>
+<p>比如，取$L=\partial_x^2$，$G(x,y)=\sum\frac{2\sin n\pi x\sin n\pi y}{-(n\pi)^2}$。</p>
+<p>再比如，考虑三维的传热方程$\partial_{t} \phi(x, t)=\Delta \phi(x, t)$，</p>
+<p>$\phi(x, t)=e^{t \Delta} \phi_{0}(x)=\int_{S^{2}} K(x, y ; t) \phi_{0}(y) d y \equiv T\left(\phi_{0}\right)$</p>
+<p>我们知道本征函数是球谐函数，那么可以求出</p>
+<p>$K(x, y ; t)=\sum_{\ell=0}^{\infty} \sum_{m=-\ell}^{\ell} e^{-\ell(\ell+1) t} Y_{\ell m}(x) Y_{\ell m}(y)^{*}$</p>
+<p>这就是$S^2$上的heat kernel。</p>
+<p>当然，用这种微分方程格林函数对应出来的种种kernel基本上也就图一乐，真学技术还得看别的。具体问题很少有能对应到好解的微分方程上的，那么就难以知道本征函数，就难以写出mercer kernel。</p>
+</li>
+</ul>
+</li>
+<li><p>10.15</p>
+<ul>
+<li><p>线性回归</p>
+</li>
+<li><p>贝叶斯/岭回归</p>
+<p>我们把$\beta$拔擢为随机变量，希望求得最大化$P(Y|X)$。</p>
+<p>$P(Y|X)=\int P(Y,\beta|X)d\beta=\int P(Y|X, \beta)P(\beta|X)d\beta$。</p>
+<p>现在我们认为先验分布是</p>
+<p>$P(Y|X,\beta)\sim N(X\beta,\sigma^2I)$</p>
+<p>$P(\beta|X)\sim N(0,\eta^2)$</p>
+<p>则可以做优化</p>
+<p>$\nabla_\beta(maximizer)=0$即$\nabla(|\boldsymbol{Y}-\boldsymbol{X} \boldsymbol{\beta}|_{2}^{2}+\alpha|\beta|_{2}^{2})=0$，$\alpha=\sigma^2/\eta^2$。通过cross validation，选取好的$\alpha$，使得效果达到最好。此时，</p>
+<p>$\hat{\boldsymbol{\beta}}=\left(\boldsymbol{X}^{t} \boldsymbol{X}+\alpha \boldsymbol{I}_{n \times n}\right)^{-1} \boldsymbol{X}^{t} \boldsymbol{Y}$</p>
+</li>
+</ul>
+</li>
+<li><p>10.17</p>
+<p>内容全在讲义里。</p>
+</li>
+</ul>
+<h4 id="reading-material"><a href="#reading-material" class="headerlink" title="reading material"></a>reading material</h4><ul>
+<li><p>lecture notes: RKHS and kernel regression</p>
+<ul>
+<li><p>RKHS: 定义；性质。RKHS是一个很重要的概念，虽然它的实际用处在这个阶段还没有显现出来。</p>
+</li>
+<li><p>我们将会证明，</p>
+<blockquote>
+<p>对于一个函数$\kappa: X \times X \rightarrow\mathbb{R}$，以下命题等价：</p>
+<ul>
+<li>它是半正定的</li>
+<li>它是X上一个RKHS的RK</li>
+<li>它是一个kernel</li>
+</ul>
+</blockquote>
+<p>我们先考察有限维空间上的RK，再推广到无穷维的情况。这时对evaluation的定义比较简单，令$E_{i}(v)=e_{i}^{t} v, \forall v \in \mathbb{R}^{X}$即可。考虑到RK的定义，我们这个时候不妨把k直接当做是一个半正定的矩阵。这个时候，可以把Riesz表示定理写成</p>
+<blockquote>
+<p>线性泛函$\phi \in V^{*}$可以被表示成$\langle\cdot, v\rangle$，其中$v=\sum_{i=1}^{n} \phi\left(e_{i}\right) e_{i}$。</p>
+</blockquote>
+<p>然而，在无穷维的情况下，这结论只对连续的线性泛函成立。以后我们将看到，对无穷维HS，加上这种限制的对偶空间叫topological dual，而由所有线性泛函组成的叫algebraic dual。</p>
+<p>在特定的operator norm下，V和V*构成isometric isomorphism：</p>
+<p>$|\psi(v)|_{V, 1}=\sup _{|w|_{V}=1}|\psi(v)(w)|=\sup _{|w|_{V}=1}|\langle w, v\rangle| \leq \sup _{|w|_{V}=1}|w|_{V}|v|_{V}=|v|_{V}$</p>
+</li>
+<li><p>下面讨论（有限维情况下）RK的构造。</p>
+<p>我们可以证明，</p>
+<blockquote>
+<p>内积空间V。以下等价：</p>
+<ul>
+<li>K是V上的RK</li>
+<li>$K=\sum_{j=1}^{n} u_{j} u_{j}^{t}$，其中U是一组幺正基</li>
+<li>$\text{columnspan}(K)=V$并且$K_{ij}=\langle \kappa_i,\kappa_j\rangle$</li>
+</ul>
+</blockquote>
+<p>有了HS，我们就有了RK。反过来呢？</p>
+<p>有定理：</p>
+<blockquote>
+<p>对正定m维方阵K，存在唯一的带内积的$V \in \mathbb{R}^{m}$使得K为其RK。</p>
+</blockquote>
+<p>张开K的columns，这空间里元素都可写成是$v=K \alpha$的格式。现在定义内积$\langle v, w\rangle \equiv \alpha^{t} K \beta$。需要证明，这个内积不会因为v可以被表为不同的$K\alpha$和$K\alpha’$而变化——事实的确如此。这时候，很容易知道$\left\langle k_{i}, k_{j}\right\rangle= K_{i j}$也是满足的，因此K确实是RK。唯一性是因为无论如何V都是K的columnspan，并且其中的内积也一样。</p>
+</li>
+<li><p>Intrinsic和Extrinsic坐标。</p>
+<p>V的元素v=(v1, …vm)（$v \in V \subset \mathbb{R}^{X}$）可以表示成函数v作用在给定的数据集$X=\{x_1, \cdots, x_m\}$上的结果。不过，如果V只是欧氏空间的一个真子集，函数v的值域有可能超出V。因此，使用这一套extrinsic坐标参数化V并不好。</p>
+<p>但是，如果使用K，那么$v=K \alpha$，所有的$\alpha \in \mathbb{R}^{m}$都会被映到V里面。</p>
+</li>
+<li><p>无穷维的情况</p>
+<p>先讨论一些背景。量子力学里面，关键的假设是$\psi(x)=\sum_{k=1} \alpha_{k} \psi_{k}(x)$收敛。用数学的话说，$f_{n}=\sum_{k=1}^{n} \alpha_{k} \psi_{k}$ 是一个cauchy sequence。回忆曾经在lecture notes中第一章看到的，如果所有柯西列都收敛到本空间内的点，那么这空间就算是完备的；完备赋范，谓之banach；完备内积，谓之hilbert。如果一个HS有可数的幺正基，那么就算是separable的。所有separable的HS都isometrically isomorphic to $\mathbb{R}^{n},$ for some $n \geq 0,$ or to $\ell^{2}$。</p>
+<p>其中，$\ell^2$指的是$\sum_{n=1}^{\infty} f_{n}^{2}&lt;\infty$的序列的集合，其内积定义为$\left\langle\left\{f_{n}\right\},\left\{g_{n}\right\}\right\rangle=\sum_{n=1}^{\infty} f_{n} g_{n}$。</p>
+<p>这样一来，就把同为HS的 $L^2[a,b]$(是波函数生活的空间，对应薛定谔的波动力学)和$\ell^2$（对应矩阵力学）对应起来。</p>
+<p>注意到，$L^2$并非RKHS，而$\ell^{2}$却是，这并不违反什么，只是说明RKHS的RK性质在HS上加了一层结构，这个额外的结构可以用feature space X来表示。</p>
+<p>Moore-Aronszajn定理（无穷维）的证明与有限维的情况类似，从feature space里面取X，$\mathcal{H}_{0}=\operatorname{span}\{k(\cdot, x)\}_{x \in X}$，那么把V中的元素类似地写成$f=\sum_{i=1}^{n} \alpha_{i} K\left(\cdot, x_{i}\right)$，内积也类似地定义为</p>
+<p>$\langle f, g\rangle=\sum_{i=1}^{n} \sum_{j=1}^{m} \alpha_{i} K\left(x_{i}, x_{j}\right) \beta_{j}$，</p>
+<p>那么就得到pre-Hilbert space。然后，作completion，得到我们想要的HS。</p>
+</li>
+<li><p>关于kernel construction，基本上已经在notes 0里面写过了。Mercer Kernel还没有写，故在此补充一下。有定理</p>
+<blockquote>
+<p>$T: \mathcal{H} \rightarrow \mathcal{H}$是separable HS上的紧的算子。那么，存在两组不一定完备的幺正基和一组正实数，满足</p>
+<p>$T=\sum_{n=1}^{N} \lambda_{n} \phi_{n}\left\langle\psi_{n}, \cdot,\right\rangle$</p>
+</blockquote>
+<p>这个式子的意义就是无穷维HS的奇异值分解，这组正实数也就叫奇异值。</p>
+<p>进一步的，如果T还是自伴的，那么$\phi$和$\psi$就是同一组，而且还完备，对应的本征值有$n\to\infty$时$\lambda_n\to0$。</p>
+<p>Mercer的定理：</p>
+<blockquote>
+<p>X是n维欧氏空间的紧的子集。$K: X \times X \rightarrow \mathbb{R}$是一对称，连续，半正定函数，那么有核</p>
+<p>$K(x, y)=\sum_{n} \lambda_{n} \phi_{n}(x) \phi_{n}(y)$</p>
+<p>对应$T(f)(x)=\int_{X} K(x, y) f(y) d y$，其中$\lambda$和$\phi$对应的是T的eigenset。</p>
+</blockquote>
+<p>关于应用和例子，写在lecture部分了，因为这块lecture稍微多讲了一点。</p>
+</li>
+<li><p>线性回归：普通线性回归</p>
+<p>假如我们有随机变量$\left(X_{1}, \ldots, X_{n}\right) \in \mathbb{R}^{n}$，我们想通过它们预测 response Y。现在，我们规定（由MLE可以推出来）损失函数是$E\left[\left(Y-f\left(X_{1}, \ldots, X_{n}\right)\right)^{2}\right]$，其中predictor f是$f\left(x_{1}, \ldots, x_{n}\right)=E\left[Y | X_{1}=x_{1}, \ldots, X_{n}=x_{n}\right]$。</p>
+<p>在线性回归中，我们认为Y服从以$\beta X$为均值，$\sigma^2$为方差（各向同性）的高斯分布。写出来就是</p>
+<p>$\boldsymbol{Y}=\left(\begin{array}{c}{y_{1}} \\ {y_{2}} \\ {\vdots} \\ {y_{m}}\end{array}\right), \boldsymbol{X}=\left(\begin{array}{ccccc}{1} &amp; {x_{11}} &amp; {x_{12}} &amp; {\cdots} &amp; {x_{1 n}} \\ {1} &amp; {x_{21}} &amp; {x_{22}} &amp; {\cdots} &amp; {x_{2 n}} \\ {\vdots} &amp; {\vdots} &amp; {\vdots} &amp; {\vdots} &amp; {\vdots} \\ {1} &amp; {x_{m 1}} &amp; {x_{m 2}} &amp; {\cdots} &amp; {x_{m n}}\end{array}\right) \quad$ and $\boldsymbol{\beta}=\left(\begin{array}{c}{\beta_{0}} \\ {\beta_{1}} \\ {\vdots} \\ {\beta_{n}}\end{array}\right)$</p>
+<p>$\boldsymbol{Y}=\boldsymbol{X} \boldsymbol{\beta}+\boldsymbol{e}$</p>
+<p>$\begin{aligned} \boldsymbol{Y} | \boldsymbol{X} &amp; \sim \mathcal{N}\left(\boldsymbol{X} \boldsymbol{\beta}, \sigma^{2} \boldsymbol{I}_{m \times m}\right) \\ \boldsymbol{e} &amp; \sim \mathcal{N}\left(0, \sigma^{2} \boldsymbol{I}_{m \times m}\right) \end{aligned}$</p>
+<p>用MLE，可以求出来最优的$\hat{\boldsymbol{\beta}}=\left(\boldsymbol{X}^{T} \boldsymbol{X}\right)^{-1} \boldsymbol{X}^{T} \boldsymbol{Y}$。我们对此比较熟悉。如果$\boldsymbol{X}^{T} \boldsymbol{X}$不可逆，那么用MP伪逆代替。</p>
+<p>$E[\hat{\boldsymbol{\beta}}]=\left(\boldsymbol{X}^{T} \boldsymbol{X}\right)^{-1} \boldsymbol{X}^{T} E[\boldsymbol{Y}]=\left(\boldsymbol{X}^{T} \boldsymbol{X}\right)^{-1} \boldsymbol{X}^{T} \boldsymbol{X} \boldsymbol{\beta}=\boldsymbol{\beta}$</p>
+<p>所以是无偏估计。这过程里面，X看做是给定的，测出来的；Y是随机变量。</p>
+<p>类似的，</p>
+<p>$\operatorname{var}(\hat{\boldsymbol{\beta}})=\left(\boldsymbol{X}^{T} \boldsymbol{X}\right)^{-1} \boldsymbol{X}^{T} \operatorname{var}(\boldsymbol{Y}) \boldsymbol{X}\left(\boldsymbol{X}^{T} \boldsymbol{X}\right)^{-1}=\left(\boldsymbol{X}^{T} \boldsymbol{X}\right)^{-1} \sigma^{2}$</p>
+<p>在几何上，线性回归的结果的意义如下：</p>
+<p>$\hat{\boldsymbol{Y}}=\boldsymbol{X}\left(\boldsymbol{X}^{T} \boldsymbol{X}\right)^{-1} \boldsymbol{X}^{T} \boldsymbol{Y}=\boldsymbol{H} \boldsymbol{Y}$</p>
+<p>其中H满足对称和幂等的性质，是投影算符。H把Y投影到X的列张成的空间上。</p>
+<p>误差和prediction满足</p>
+<p>$\hat{\boldsymbol{Y}} \sim \mathcal{N}\left(\boldsymbol{X} \boldsymbol{\beta}, \sigma^{2} \boldsymbol{H}\right)$<br>$\hat{\boldsymbol{e}} \sim \mathcal{N}\left(0, \sigma^{2}(\boldsymbol{I}-\boldsymbol{H})\right)$</p>
+<p>并且$\operatorname{cov}[\hat{\boldsymbol{e}}, \hat{\boldsymbol{Y}}]=(\boldsymbol{I}-\boldsymbol{H}) \sigma^{2} \boldsymbol{H}=0$。</p>
+</li>
+<li><p>贝叶斯回归/岭回归</p>
+<p>见lecture，不写这个的话周二的lecture没得写了</p>
+</li>
+<li><p>Kernel regression</p>
+<p>$\hat{\boldsymbol{\beta}}=\left(\boldsymbol{X}^{t} \boldsymbol{X}+\alpha \boldsymbol{I}_{n \times n}\right)^{-1} \boldsymbol{X}^{t} \boldsymbol{Y}$可以写成</p>
+<p>$\hat{\boldsymbol{\beta}}=\boldsymbol{X}^{t}\left(\boldsymbol{X} \boldsymbol{X}^{t}+\alpha \boldsymbol{I}_{m \times m}\right)^{-1} \boldsymbol{Y}$，于是</p>
+<p>$\hat{\boldsymbol{Y}}=\boldsymbol{X} \hat{\boldsymbol{\beta}}=\boldsymbol{X} \boldsymbol{X}^{t}\left(\boldsymbol{X} \boldsymbol{X}^{t}+\alpha \boldsymbol{I}_{m \times m}\right)^{-1} \boldsymbol{Y}$</p>
+<p>对于一个点来说，就是</p>
+<p>$\hat{y}=x \boldsymbol{X}^{t}\left(\boldsymbol{X} \boldsymbol{X}^{t}+\alpha \boldsymbol{I}_{m \times m}\right)^{-1} \boldsymbol{Y}$</p>
+<p>所谓kernel trick 就是用K代替复杂的gram矩阵$XX^t$，这时有$\hat{y}=\kappa(x, \cdot)\left(\boldsymbol{K}+\alpha \boldsymbol{I}_{m \times m}\right)^{-1} \boldsymbol{Y}$。</p>
+<p>一个比较常见的选择是$\kappa\left(x_{1}, x_{2}\right)=\exp \left(-\left(x_{1}-x_{2}\right)^{2} / 2 \sigma^{2}\right)$。</p>
+</li>
+</ul>
+</li>
+<li><p>lecture notes: Multilayer graphs and grassmannian manifolds</p>
+<ul>
+<li><p>spectral embedding只能处理一张图的嵌入。如果有多张图怎么办？这讲义只讨论这一个问题，并给出行之有效的recipe。</p>
+</li>
+<li><p>Spectral Embedding 可以叙述为：最小化$\operatorname{tr}\left(V^{t} L V\right)$，其中$V^{t} V=I_{k \times k}$。V的行给出欧式空间中的嵌入。</p>
+<p>在此情形之下，一个想当然的推广是最小化</p>
+<p>$\operatorname{tr}\left(\sum_{i=1}^{\ell} V^{t} L_{i} V\right)=\operatorname{tr}\left(V^{t}\left(\sum_{i=1}^{\ell} L_{i}\right) V\right)$</p>
+<p>但是，如果$L_i$的scale区别很大，这个过程就会沦为对某一张图的嵌入。这是不行的。</p>
+</li>
+<li><p>Stiefel和Grassmannian流形。定义Stiefel Manifold $V(k,n)$是$\mathbb{R}^{n}$上所有k-frame的集合，frame就是一组有序的幺正基。令W是一个给定的$n \times k$矩阵，其列为幺正基，那么</p>
+<p>$\forall W^{\prime} \in V(k, n), \exists U \in O(n),$ such that $W^{\prime}=U W$。注意到，U的选取不是唯一的：任何在$\perp W$的部分旋转的U都不会改变什么东西。这部分空间共$n-k$维。所以</p>
+<p>$V(k, n) \cong O(n) / O(n-k)$</p>
+<p>其中，$O(n)$的维数是$C_n^2$。因为一个旋转对应一个平面。</p>
+<p>定义格拉斯曼流形$\operatorname{Gr}(k, n)$为$\mathbb{R}^n$上所有k维子空间的集合。在子空间内部的旋转当然也不会搞出一个新的子空间来，所以</p>
+<p>$G r(k, n)=V(k, n) / O(n)=O(n) /(O(n-k) \times O(k))$</p>
+<p>我觉得可以把这玩意当成是旋转的一种推广。</p>
+</li>
+<li><p>Principle Angles</p>
+<p>取$A, B \in G r(k, n)$。递归定义主向量</p>
+<p>$\left(p_{i}, q_{i}\right)=\arg \quad \quad \max \quad \quad p^{t} q$<br>$p \in A, q \in B$<br>$p \perp p_{j}, q \perp q_{j}, j=1, \ldots, i-1$<br>$|p|_{2}=1,|q|_{2}=1$</p>
+<p>然后，principle angle 为$\theta_{i}=\cos ^{-1}\left(p_{i}^{t} q_{i}\right), i=1, \ldots, k$。</p>
+<p>取$A \in \operatorname{Gr}(k, n)$ and $B \in \operatorname{Gr}(l, n)$。那么，可以用矩阵把他们表示为$A \in \mathbb{R}^{n \times k}$ and $B \in \mathbb{R}^{n \times l}$。写下</p>
+<p>$A^{t} B=U \Sigma V^{t}$</p>
+<p>那么这个SVD分解出来的奇异值$\sigma_{1} \geq \sigma_{2} \geq \ldots \sigma_{r} \geq 0$（$r=\min (k, l)$）就对应主角$\theta_{i}=\cos ^{-1} \sigma_{i}, \quad i=1, \ldots, r$。这件事情从原则上是可以理解的，所以我就不证明它了。</p>
+<p>定义 Chordal(Projection) 距离：</p>
+<p>$d_{c}(A, B)=\sqrt{\sum_{i=1}^{r} \sin ^{2} \theta_{i}}$——</p>
+</li>
+<li><p>——那么，就可以进行multilayer的spectral clustering。取lagrangian</p>
+<p>$\mathcal{L}=\operatorname{tr}\left(V^{t}\left(\sum_{i=1}^{\ell} L_{i}\right) V\right)+\alpha \sum_{i=1}^{\ell} d_{c}^{2}\left(V, V_{i}\right)$</p>
+<p>可以证明，</p>
+<p>$\begin{aligned} \mathcal{L} &amp;=\operatorname{tr}\left(V^{t}\left(\sum_{i=1}^{\ell} L_{i}\right) V\right)+\alpha \sum_{i=1}^{\ell}\left(k-\operatorname{tr}\left(V^{t} V_{i} V_{i}^{t} V\right)\right) \\ &amp;=\operatorname{tr}\left(V^{t}\left[\sum_{i=1}^{\ell}\left(L_{i}-\alpha V_{i} V_{i}^{t}\right)\right] V\right)+\alpha k \ell \end{aligned}$</p>
+<p>这里面$\alpha$是超参数，一般也是用cross-validation之类的办法确定的。实际上，这个recipe看上去还是挺随意，它的合法性基本上是它的效用决定的。</p>
+</li>
+<li><p>Courant-Fischer 定理说，M是$n \times n$的对称阵。它有由小到大排列的本征值$\lambda_{1}, \ldots, \lambda_{n}$。那么，</p>
+<p>$\lambda_{k}=\min _{V \in \operatorname{Gr}(k, n)}\left(\max _{v \in V \backslash\{0\}} \frac{v^{t} M v}{v^{t} v}\right)=\max _{V \in \operatorname{Gr}(n-k+1, n)}\left(\min _{v \in V \backslash\{0\}} \frac{v^{t} M v}{v^{t} v}\right)$。</p>
+<p>从这里，可以知道，对于对称阵M，</p>
+<p>$\min _{V \in \mathbb{R}^{n \times k}, V^{t} V=I_{k \times k}} \operatorname{tr}\left(V^{t} M V\right)=\sum_{i=1}^{k} \lambda_{i}$。原因是：</p>
+<p>取$v_{i}=\arg \max _{v \in S,|v|_{2}=1, v \perp v_{i+1}, \ldots, v_{k}} v^{t} M v$，</p>
+<p>由于求迹对旋转不变，$\operatorname{tr}\left(V^{t} M V\right)=\sum_{i=1}^{k} v_{i}^{t} M v_{i}$。</p>
+<p>由Courant-Fischer, $v_{i}^{t} M v_{i} \geq \lambda_{i}$。</p>
+</li>
+<li><p>Pareto优化：</p>
+<p>对于所有图，用某种方式算某个特定嵌入的loss。如果嵌入1在所有图的表现都不差于嵌入2，且至少在一个图表现更好，那么就说1比2好。现有生成的一大堆嵌入，若不存在比嵌入3更好的，就说3在pareto front上。由此构建pareto front。</p>
+</li>
+</ul>
+</li>
+</ul>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/FISICA/" rel="tag"># FISICA</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/10/16/同学调查/" rel="next" title="同学调查">
+                <i class="fa fa-chevron-left"></i> 同学调查
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC80NDg0Ny8yMTM2OA=="></div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="https://i.loli.net/2019/01/19/5c4290acb14e1.jpg" alt="Miralem">
+            
+              <p class="site-author-name" itemprop="name">Miralem</p>
+              <p class="site-description motion-element" itemprop="description">曾用名 Miralem Andre Pimpo。</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">56</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:wzh41807@126.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.facebook.com/andrepimpo" target="_blank" title="FB Page">
+                      
+                        <i class="fa fa-fw fa-facebook"></i>FB Page</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="skype:wzh41807?call|chat" target="_blank" title="Skype">
+                      
+                        <i class="fa fa-fw fa-skype"></i>Skype</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://music.163.com/#/user/home?id=102264001" target="_blank" title="网易云">
+                      
+                        <i class="fa fa-fw fa-wangyiyun"></i>网易云</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links Interestings
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.preposterousuniverse.com/blog/" title="Preposterous Universe" target="_blank">Preposterous Universe</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.andrewsun.net/panta_rhei/" title="Anything Goes" target="_blank">Anything Goes</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://bactra.org/weblog/" title="Three-Toed Sloth" target="_blank">Three-Toed Sloth</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://changhai.org/" title="Changhai Lu" target="_blank">Changhai Lu</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://math.ucr.edu/home/baez/FUN.html/" title="Baez's fun stuff" target="_blank">Baez's fun stuff</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=27591598&auto=0&height=66"></iframe>
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#week-7-8"><span class="nav-number">1.</span> <span class="nav-text">week 7, 8</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#lecture"><span class="nav-number">1.1.</span> <span class="nav-text">lecture</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#reading-material"><span class="nav-number">1.2.</span> <span class="nav-text">reading material</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Miralem</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">Site words total count&#58;</span>
+    
+    <span title="Site words total count">140.6k</span>
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
+
+
+<span id="timeDate">��������...</span>
+<span id="times">����ʱ����...</span> 
+<script> 
+    var now = new Date(); 
+    function createtime() {
+    var grt= new Date("01/07/2019 12:00:00");
+    now.setTime(now.getTime()+250); 
+    days = (now - grt ) / 1000 / 60 / 60 / 24; 
+    dnum = Math.floor(days); hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); 
+    hnum = Math.floor(hours); 
+    if(String(hnum).length ==1 ){
+        hnum = "0" + hnum;
+    } 
+    minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+    mnum = Math.floor(minutes); if(String(mnum).length ==1 )
+    {
+       mnum = "0" + mnum;
+    } 
+    seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+    snum = Math.round(seconds);
+    if(String(snum).length ==1 ){snum = "0" + snum;} 
+    document.getElementById("timeDate").innerHTML = " Run for " dnum+" days ";
+    document.getElementById("times").innerHTML = hnum + " hours " + mnum + " mins " + snum + " secs";
+} 
+    setInterval("createtime()",250); 
+</script>
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+
+</body>
+</html>
