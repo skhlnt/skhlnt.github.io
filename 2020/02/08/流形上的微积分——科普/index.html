@@ -86,7 +86,7 @@
 <meta property="og:site_name" content="Miralem 的博客">
 <meta property="og:description" content="这两天看数理方法的书学了一点最基本的流形上的微积分的知识，稍微对这方面和物理的关系有了一点了解。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-02-09T01:14:55.159Z">
+<meta property="og:updated_time" content="2020-02-09T01:16:38.823Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="流形上的微积分——自我科普">
 <meta name="twitter:description" content="这两天看数理方法的书学了一点最基本的流形上的微积分的知识，稍微对这方面和物理的关系有了一点了解。">
@@ -374,7 +374,7 @@
 <a id="more"></a>
 <h4 id="流形"><a href="#流形" class="headerlink" title="流形"></a>流形</h4><p>流形就是一个空间，这个空间的局部长得像$\mathbb{R^n}$。这些局部通过一些地方缝起来盖满整个流形，每一个局部都通过一个参数化对应到Rn，这个参数化就叫chart，所有chart在一起叫atlas。流形的定义还要求所有缝合的地方都是$C^\infty$的。由于局部像Rn，所以可以看成流形每一个点都长着一个切着的向量空间，叫切空间。</p>
 <h4 id="切空间"><a href="#切空间" class="headerlink" title="切空间"></a>切空间</h4><p>流形上每一点都长出一个切空间，称呼这些向量空间为流形上长出来的一个向量丛（bundle）。为什么叫bundle呢？因为不同的点的向量不在同一个空间里，是不能加减的，相当于不是一类的对象。就好像一捆柴火里有很多根一样。切向量一般写成$X=X^{\mu} \partial_{\mu}$。可见它的分量系数是逆变的。</p>
-<p>但是这种数学家的概念游戏听着还是有些不放心。考虑一些实际的例子。经典力学系统的位形空间一般叫M，即$\{q^i\}$，但完整描述系统需要$\left(q^{1}, q^{2}, \ldots, q^{n} ; \dot{q}^{1}, \dot{q}^{2}, \ldots, \dot{q}^{n}\right)$，后面一组动量坐标实际上就是生活在切空间中的。</p>
+<p>但是这种数学家的概念游戏听着还是有些不放心。考虑一些实际的例子。经典力学系统的位形空间一般叫M，即$\{q^i\}$，但完整描述系统需要$\left(q^{1}, q^{2}, \ldots, q^{n} ; \dot{q}^{1}, \dot{q}^{2}, \ldots, \dot{q}^{n}\right)$，后面一组坐标实际上就是生活在切空间中的。</p>
 <h4 id="余切空间"><a href="#余切空间" class="headerlink" title="余切空间"></a>余切空间</h4><p>还有余切空间。这个就是切空间的对偶空间，基用dx表示。Cartan规定了一个记号约定：$d x^{\mu}\left(\partial_{\nu}\right)=\delta_{\nu}^{\mu}$。那么余切向量的分量系数就是协变的。余切丛在数学上看是一个连体婴儿的另一半，是很重要的东西。物理上，我刚学经典力学的时候觉得勒让德变换很鸡肋，像是买一送一的便宜货，但事实上却重要得很。怎么联系勒让德变换和切空间、余切空间呢？</p>
 <ul>
 <li>勒让德变换：对f(x)，求导，写成p。有$x=g(p)$。而勒让德变换就是$f^*(x)=pg-f(g)$。</li>
