@@ -88,7 +88,7 @@
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://cdn.mathpix.com/snip/images/3Pp0TGCD1NQYu2siX5ObZzVBIV8vd1nU-0DqPJvgsUY.original.fullsize.png">
 <meta property="og:image" content="https://cdn.mathpix.com/snip/images/Lo5WoQQT7kx1_LOV6d1tCxY05ZhjMjDnZv5OYzsw3X0.original.fullsize.png">
-<meta property="og:updated_time" content="2020-02-20T23:54:54.537Z">
+<meta property="og:updated_time" content="2020-02-29T23:57:29.462Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="流形上的微积分——自我科普">
 <meta name="twitter:description" content="这两天看数理方法的书学了一点最基本的流形上的微积分的知识，稍微对这方面和物理的关系有了一点了解。">
@@ -336,7 +336,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  6.9k words
+                  7k words
                 </span>
               
 
@@ -459,6 +459,7 @@
 </ul>
 <p>从后两条就可以看出来这个定义是skew-symmetric的。同样的，从向量定义体积，也是一个办法，也具有skew symmetry。因此，排列这些向量的顺序不可忽视。我们管这个顺序叫定向。如果我们想要在流形上做积分，至少需要先保证能够找到一个定向。但是，有些流形是不可定向的。比如克莱因瓶儿。最简单的一个确保定向存在的办法是找到全局缓变的一组基，但是这只是一个充分条件，比如球面就找不到这组基，这就是为什么我们的头发总有旋。在旋的中心，总是不能缓变的。所以退而求其次，对每个覆盖（chart）都找这组基，然后用图册（atlas）把流形盖起来，确保任意两个覆盖的交集都是连通的。老实说，这部分太数学了，就图一乐，有个感觉就好。</p>
 <p>做积分的话，拿2-形式的积分来说，就是在流形上每一个点都有一组向量场的基，我们在每一点都用积分微元这个2-形式作用于这里的两个向量，并且把结果加起来，得到$\sum_{x \in \Omega} \omega\left(\mathbf{v}_{1}(x), \mathbf{v}_{2}(x)\right)$。</p>
+<p>这个定义上，我们可以看到一点使用p-form的语言的好处。因为这时候面积元就变成了一个通向实数的映射，这使得我很久以前纠结过的jacobian的量纲问题不值得担心了。</p>
 <p>如果遇到要做坐标变换的情况，由于此时$d x^{1} d x^{2}=\left(\frac{\partial x^{1}}{\partial y^{1}} \frac{\partial x^{2}}{\partial y^{2}}-\frac{\partial x^{2}}{\partial y^{1}} \frac{\partial x^{1}}{\partial y^{2}}\right) d y^{1} d y^{2}$，我们稍微一想，就知道它就是jacobian。</p>
 <p>还有一点值得说明。流形嵌在一个高维空间$\mathbb{R}^d$里面，这个空间自带的度规也给了一个面积/体积/etc.的定义。如果高维空间的坐标有$x^{a}\left(\xi^{1}, \ldots, \xi^{p}\right)$，那么我们说这个高维空间诱导的度规为：$ d s^{2} {\equiv} g(\cdot, \cdot) \equiv g_{\mu \nu} d \xi^{\mu} \otimes d \xi^{\nu}$，其元为$g_{\mu \nu}=\sum_{a=1}^{d} \frac{\partial x^{a}}{\partial \xi^{\mu}} \frac{\partial x^{a}}{\partial \xi^{\nu}}$。而所谓volume-form就是$d(\text { Volume })=\sqrt{g} d \xi^{1} \cdots d \xi^{p}$，可以验证，这个东西作为一个整体对坐标变换不变，这也表明了这个定义是靠谱的。</p>
 <p>流形上的微积分的核心定理是斯托克斯定理</p>
@@ -636,7 +637,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">73</span>
+                  <span class="site-state-item-count">74</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -779,7 +780,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">191.5k</span>
+    <span title="Site words total count">193.5k</span>
   
 </div>
 
