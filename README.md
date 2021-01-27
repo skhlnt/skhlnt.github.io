@@ -1,4 +1,4 @@
 # ClaudioMarchisio.github.io
 personal website
 
-# Literally a personal website, proudly pure gibberish, zero science involved
+# Literally a personal website, proudly presented pure gibberish, zero science involved
