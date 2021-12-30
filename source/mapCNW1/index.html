@@ -1,3 +1,9 @@
+---
+layout: false
+---
+
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,13 +12,13 @@
 <script type="text/javascript" src="http://api.map.baidu.com/api?v=1.2"></script>
 </head>
 <body>
-<div id="map" style="width:800px;height:540px"></div>
+<div id="map" style="width:800px;height:800px"></div>
 <script type="text/javascript">
 var tileLayer = new BMap.TileLayer();
 tileLayer.getTilesUrl = function(tileCoord, zoom) {
     var x = tileCoord.x;
     var y = tileCoord.y;
-    return 'tiles/' + zoom + '/tile-' + x + '_' + y + '.png';
+    return 'https://github.com/ClaudioMarchisio/ClaudioMarchisio.github.io/blob/hexo/source/mapCNW1/tiles/' + zoom + '/tile-' + x + '_' + y + '.png?raw=true';
 }
 var MyMap = new BMap.MapType('MyMap', tileLayer, {minZoom: 4, maxZoom: 10});
 var map = new BMap.Map('map', {mapType: MyMap});
