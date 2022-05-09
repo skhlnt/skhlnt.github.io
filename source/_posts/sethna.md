@@ -1,7 +1,8 @@
 ---
 title: Sethna 统计物理学课本 读书笔记
 date: 2019-07-23 00:34:06
-tags: [笔记]
+categories: [笔记, 理学]
+tags: [统计物理]
 ---
 
 2019-7-28 先更到前八章
@@ -156,7 +157,7 @@ $S(E, V, N)=\frac{5}{2} N k_{B}+N k_{B} \log \left[\frac{V}{N h^{3}}\left(\frac{
 
 这章的习题也很有启发性。
 
-### 第四章：相空间动力学与各态历经 
+### 第四章：相空间动力学与各态历经
 
 1.
 
@@ -271,33 +272,33 @@ $k_{B}\left(\frac{\hbar \omega}{k_{B} T}\right)^{2} \frac{e^{-\hbar \omega / k_{
 我们为了方便处理使用巨正则系综。
 
 - 玻色系统第k能级的巨正则配分函数是
-
+  
   $\Xi_{k}^{\mathrm{boson}}=\sum_{n_{k}=0}^{\infty} e^{-\beta\left(\epsilon_{k}-\mu\right) n_{k}}=\sum_{n_{k}=0}^{\infty}\left(e^{-\beta\left(\epsilon_{k}-\mu\right)}\right)^{n_{k}}=\frac{1}{1-e^{-\beta\left(\epsilon_{k}-\mu\right)}}$
-
+  
   （注意到，取$\epsilon_k=\hbar\omega, \mu=0$，则它和一个谐振子的正则配分函数只差一个零点能$\hbar\omega/2$。这大概是我们把简正模看做是玻色子的原因之一吧？）
-
+  
   相应的粒子数分布是
-
+  
   $\left\langle n_{k}\right\rangle=-\frac{\partial \Phi_{k}^{\mathrm{boson}}}{\partial \mu}=-k_{B} T \frac{-\beta e^{-\beta\left(\epsilon_{k}-\mu\right)}}{1-e^{-\beta\left(\epsilon_{k}-\mu\right)}}=\frac{1}{e^{\beta\left(\epsilon_{k}-\mu\right)}-1}$
 
 - 费米系统第k能级的巨正则配分函数是
-
+  
   $\Xi_{k}^{\text { fermion }}=\sum_{n_{k}=0}^{1} e^{-\beta\left(\epsilon_{k}-\mu\right) n_{k}}=1+e^{-\beta\left(\epsilon_{k}-\mu\right)}$
-
+  
   相应的粒子数分布是
-
+  
   $\left\langle n_{k}\right\rangle=\frac{\sum_{n_{k}=0}^{1} n_{k} \exp \left(-\beta\left(\epsilon_{k}-\mu\right) n_{k}\right)}{\sum_{n_{k}=0}^{1} n_{k} \exp \left(-\beta\left(\epsilon_{k}-\mu\right)\right.}=\frac{e^{-\beta\left(\epsilon_{k}-\mu\right)}}{1+e^{-\beta\left(\epsilon_{k}-\mu\right)}}=\frac{1}{e^{\beta\left(\epsilon_{k}-\mu\right)}+1}$
 
 - 经典（带有吉布斯的修正因子$1/N!$）的麦克斯韦-玻尔兹曼系统的单粒子配分函数是
-
+  
   $Z_{1}=\sum_{k} e^{-\beta \epsilon_{k}}$
-
+  
   其巨正则配分函数是通过巧妙地利用指数函数的泰勒展开而得到的
-
+  
   $\begin{aligned} \boldsymbol{\Xi}^{\mathrm{NI}, \mathrm{MB}} &=\sum_{M} \frac{1}{M !}\left(Z_{M}^{\mathrm{NI}, \mathrm{MB}}\right)^{M} e^{M \beta \mu}=\sum_{M} \frac{1}{M !}\left(\sum_{k} e^{-\beta \epsilon_{k}}\right)^{M} e^{M \beta \mu} \\ &=\sum_{M} \frac{1}{M}\left(\sum_{k} e^{-\beta\left(\epsilon_{k}-\mu\right)}\right)^{M}=\sum_{M} e^{\sum_{k} e^{-\beta\left(\epsilon_{k}-\mu\right)}} \\ &=\prod_{k} e^{-\beta\left(\epsilon_{k}-\mu\right)} \end{aligned}$
-
+  
   相应的粒子数分布是
-
+  
   $\langle n\rangle_{\mathrm{MB}}=-\frac{\partial \Phi}{\partial \mu}=e^{-\beta(\epsilon-\mu)}$
 
 5.
@@ -383,42 +384,3 @@ $\rho(t) \propto(\lambda)^{1000 t} \rho_{\lambda} \approx e^{-\frac{2000 t}{N(N+
 对称性破缺后占劣势细菌的数目的半衰期约为347小时。
 
 ### 第九章：序参量，对称破缺及其拓扑
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

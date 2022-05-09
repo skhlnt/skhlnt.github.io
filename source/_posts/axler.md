@@ -1,7 +1,9 @@
 ---
 title: 便签：最近复习线性代数
 date: 2019-07-23 00:35:31
-tags: [笔记, 水]
+categories: 
+- [笔记, 理学]
+tags: [代数]
 ---
 
 把 Sheldon Axler 的 *Linear Algebra Done Right* 复习了一遍。

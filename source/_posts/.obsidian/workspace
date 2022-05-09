@@ -1,0 +1,103 @@
+{
+  "main": {
+    "id": "7fc68b5be52db09f",
+    "type": "split",
+    "children": [
+      {
+        "id": "ef7e2db3d33e1ee2",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "2022-05-06.md",
+            "mode": "source",
+            "source": false
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "ac28b30db411a768",
+    "type": "split",
+    "children": [
+      {
+        "id": "969c5761b4677220",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "cb40d06772c85199",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "193f2584593109ec",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "b22a314d5967a1d7",
+    "type": "split",
+    "children": [
+      {
+        "id": "72acce445fb52ac7",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "05f771601453b0c5",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "2022-05-06.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "ef7e2db3d33e1ee2",
+  "lastOpenFiles": [
+    "2022-05-06.md",
+    "2020-5-15-3.md",
+    "fonttest.md",
+    "ML笔记（4）.md",
+    "ML笔记（1）.md",
+    "ML笔记（5）.md",
+    "ML笔记（3）.md",
+    "2020-2-20.md",
+    "歪诗一首，迁移自不可说.md",
+    "流形上的微积分——科普.md"
+  ]
+}

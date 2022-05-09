@@ -1,7 +1,8 @@
 ---
 title: Feb24-2019
 date: 2019-02-24 19:46:59
-tags: [笔记]
+categories: [笔记, 理学]
+tags: [统计物理]
 ---
 
 Today I read a 2006 article by JP Sethna's group talking about the predetermined "sloppiness" of models, which means that in many models plenty of parameters could be largely varied without producing any apparent changes to the models' results, which may rely delicately on other parameters.

@@ -1,8 +1,8 @@
 ---
 title: 朗道和金兹堡的相变理论
 date: 2019-03-03 16:15:26
-tags: [笔记]
-mathjax: true
+categories: [笔记, 理学]
+tags: [Landau-Ginzburg, 统计物理]
 ---
 
 我简单地把这件事说一遍，但是越往后细节越少，部分原因是打公式很累

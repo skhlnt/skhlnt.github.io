@@ -1,7 +1,8 @@
 ---
 title: Interpretable machine learning
 date: 2019-03-24 22:00:55
-tags: [笔记, 水]
+categories: [评论, 书]
+tags: [机器学习]
 ---
 
 我是在知乎上看到这个的。我甚至还给量子位的广告文章点了个赞。

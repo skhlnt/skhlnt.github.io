@@ -1,7 +1,8 @@
 ---
 title: sakurai - modern qm
 date: 2019-08-04 16:47:14
-tags: [笔记]
+categories: [笔记, 理学]
+tags: [量子力学]
 ---
 
 > 看懂了书却⑧会做题等于白看
@@ -291,15 +292,15 @@ $\left[-\left(\frac{h^{2}}{2 m}\right) \nabla^{\prime \prime 2}+V\left(\mathbf{x
 传播子的一些性质值得考虑。
 
 - 如果$t_0=0,$x'=x''。这时候的传播子记为
-
+  
   $\begin{aligned} G(t) & \equiv \int d^{3} x^{\prime} K\left(\mathbf{x}^{\prime}, t ; \mathbf{x}^{\prime}, 0\right) \\ &=\int d^{3} x^{\prime} \sum_{a^{\prime}}\left|\left\langle\mathbf{x}^{\prime} | a^{\prime}\right\rangle\right|^{2} \exp \left(\frac{-i E_{a^{t}} t}{h}\right) \\ &=\sum_{a^{\prime}} \exp \left(\frac{-i E_{a^{\prime}} t}{h}\right) \end{aligned}$
-
+  
   具有与配分函数类似的形式。事实上，传播子（和路径积分）确实在统计力学里也发挥作用（我记得kardar讲了，可是一直没去看。。。）。
 
 - 对上述$G(t)$做傅里叶-拉普拉斯变换：
-
+  
   $\begin{aligned} \tilde{G}(E) & \equiv-i \int_{0}^{\infty} d t G(t) \exp (i E t / \hbar) / \hbar \\ &=-i \int_{0}^{\infty} d t \sum_{a^{\prime}} \exp \left(-i E_{a} t / \hbar\right) \exp (i E t / \hbar) / \hbar \end{aligned}$
-
+  
   mathematica告诉我1）你需要回去复习复变积分，2）这玩意是$\tilde{G}(E)=\sum_{a^{\prime}} \frac{1}{E-E_{a^{\prime}}}$。所以说了解了$G$的奇点就了解了系统的能谱。
 
 另外一方面，在海森堡的绘景下，传播子被表为
@@ -339,47 +340,47 @@ $\left\langle x_{N}, t_{N} | x_{1}, t_{1}\right\rangle=\int_{x_{1}}^{x_{N}} \mat
 我们来考虑规范变换下的量子力学。
 
 - 首先，考虑一个势能零点的变化$$\tilde{V}(\mathbf{x})=V(\mathbf{x})+V_{0}$$。这个时候对于波函数的影响是$$\begin{aligned} \widehat{\left|\alpha, t_{0} ; t\right\rangle} &=\exp \left[-i\left(\frac{\mathbf{p}^{2}}{2 m}+V(x)+V_{0}\right) \frac{\left(t-t_{0}\right)}{\hbar}\right]|\boldsymbol{\alpha}\rangle \\ &=\exp \left[\frac{-i V_{0}\left(t-t_{0}\right)}{\hbar}\right]\left|\boldsymbol{\alpha}, t_{0} ; t\right\rangle \end{aligned}$$
-
+  
   这个影响仅涉及到相位。从它的形式上来看，经典效应（通过最小作用量原理）不能够展现这个变化的效果。但是考虑如下例子：一束粒子分两束，其一走高处，其二走低处，最终汇合时将产生干涉。这实验早已经做成了，它体现出重力的量子效应。特别的，由于相位差里面包括有质量，这告诉我们：在量子力学尺度上，重力并非纯粹的几何效应。
 
 - 接下来，考虑电磁场的规范变换。
-
+  
   - 在此之前，先把电磁场量子化：有哈密顿量$H=\frac{1}{2 m}\left(\mathbf{p}-\frac{e \mathbf{A}}{c}\right)^{2}+e \phi$，注意A和p并不对易（p是整个系统的动量，矢势A是电磁场部分的动量），因此平方项要写成$p^{2}-\left(\frac{e}{c}\right)(\mathbf{p} \cdot \mathbf{A}+\mathbf{A} \cdot \mathbf{p})+\left(\frac{e}{c}\right)^{2} \mathbf{A}^{2}$。注意到$$\frac{d x_{t}}{d t}=\frac{\left[x_{i}, H\right]}{i \hbar}=\frac{\left(p_{t}-e A_{i} / c\right)}{m}$$，取系统中粒子的动量$\Pi \equiv m \frac{d \mathbf{x}}{d t}=\mathbf{p}-\frac{e \mathbf{A}}{c}$，验证可得$\left[\Pi_{i}, \Pi_{j}\right]=\left(\frac{i \hbar e}{c}\right) \varepsilon_{i j k} B_{k}$。把H写成
-
+    
     $\left[\Pi_{i}, \Pi_{J}\right]=\left(\frac{i \hbar e}{c}\right) \varepsilon_{i j k} B_{k}$
-
+    
     并定义量子版本的洛伦兹力
-
+    
     $m \frac{d^{2} \mathbf{x}}{d t^{2}}=\frac{d \Pi}{d t}=[\Pi,H]/i\hbar=e\left[\mathbf{E}+\frac{1}{2 c}\left(\frac{d \mathbf{x}}{d t} \times \mathbf{B}-\mathbf{B} \times \frac{d \mathbf{x}}{d t}\right)\right]$
-
+    
     薛定谔方程便成了
-
+    
     $\frac{1}{2 m}\left[-i \hbar \nabla^{\prime}-\frac{e \mathbf{A}\left(\mathbf{x}^{\prime}\right)}{c}\right] \cdot\left[-i \hbar \nabla^{\prime}-\frac{e \mathbf{A}\left(\mathbf{x}^{\prime}\right)}{c}\right]\left\langle\mathbf{x}^{\prime} | \alpha, t_{0} ; t\right\rangle$
     $+ e \phi\left(\mathbf{x}^{\prime}\right)\left\langle\mathbf{x}^{\prime} | \alpha, t_{0} ; t\right\rangle= i \hbar \frac{\partial}{\partial t}\left\langle\mathbf{x}^{\prime} | \alpha, t_{0} ; t\right\rangle$
-
+    
     注意这个时候此方程对应的守恒流在变换$\nabla^{\prime} \rightarrow \nabla^{\prime}-\left(\frac{i e}{\hbar c}\right) \mathbf{A}$下成了$\mathbf{j}=\left(\frac{\hbar}{m}\right) \operatorname{Im}\left(\psi^{*} \nabla^{\prime} \psi\right)-\left(\frac{e}{m c}\right) \mathbf{A}|\psi|^{2}$。换种写法，$\mathbf{j}=\left(\frac{\rho}{m}\right)\left(\nabla S-\frac{e \mathbf{A}}{c}\right)$
-
+  
   - 现在考虑规范变换$\phi \rightarrow \phi, \quad \mathbf{A} \rightarrow \mathbf{A}+\nabla \Lambda$。（“规范变换”在电磁学里面指的是$\phi \rightarrow \phi-\frac{1}{c} \frac{\partial \Lambda}{\partial t}, \quad \mathbf{A} \rightarrow \mathbf{A}+\nabla \Lambda$，但在本书中我们不考虑随时间变化的势能形式）令$\tilde{\mathbf{A}}=\mathbf{A}+\nabla \Lambda$，我们要求
-
+    
     $\langle\alpha|\mathbf{x}| \alpha\rangle=\langle\tilde{\alpha}|\mathbf{x}| \tilde{\alpha}\rangle$
     $\left\langle\alpha\left|\left(\mathbf{p}-\frac{e \mathbf{A}}{c}\right)\right| \alpha\right\rangle=\left\langle\tilde{\alpha}\left|\left(\mathbf{p}-\frac{e \tilde{\mathbf{A}}}{c}\right)\right| \tilde{\alpha}\right\rangle$
-
+    
     $\langle\alpha | \alpha\rangle=\langle\tilde{\alpha} | \tilde{\alpha}\rangle$
-
+    
     前两式是因为粒子的轨迹是不受规范变换影响的。可以得到$|\tilde{\boldsymbol{\alpha}}\rangle=\mathscr{G}|\alpha\rangle$中的变换G满足$\mathscr{G}=\exp \left[\frac{i e \Lambda(\mathbf{x})}{\hbar c}\right]$.从波函数的形式可以推出来变换导致$S \rightarrow S+\frac{e \Lambda}{c}$，这正好使得流 j 是规范不变的。
-
+  
   - 阿哈罗诺夫-玻姆效应是一个很好的例子。它体现了矢势作为物理实体而非一种数学工具的效应。
-
+    
     ![](https://i.loli.net/2019/08/04/fraYujysmJ97GNW.jpg)
-
+    
     考虑这个情况。磁场（磁感线）被限制在圆柱壳里面（但圆柱外面有矢势，其值可以算得为$\mathbf{A}=\left(\frac{B \rho_{a}^{2}}{2 \rho}\right) \hat{\phi}$），而从圆柱上方和下方走的粒子将会受到矢势的影响。
-
+    
     从电磁学的结果，可以知道对于电磁场中的粒子，其拉氏量多了一项$\frac{e}{c} \frac{d \mathbf{x}}{d t} \cdot \mathbf{A}$，其作用量多了一项$\frac{e}{c} \int_{t_{n-1}}^{t_{n}} d t\left(\frac{d \mathbf{x}}{d t}\right) \cdot \mathbf{A}$。在路径积分中，这带来的影响是$\Pi \exp \left[\frac{i S^{(0)}(n, n-1)}{\hbar}\right] \rightarrow\left\{\Pi \exp \left[\frac{i S^{(0)}(n, n-1)}{\hbar}\right]\right\} \exp \left(\frac{i e}{\hbar c} \int_{\mathbf{x}_{1}}^{\mathbf{x}_{N}} \mathbf{A} \cdot d \mathbf{s}\right)$
-
+    
     因此，从上面走的粒子的相位变化是$\left\{\exp \left[\left(\frac{i e}{\hbar c}\right) \int_{\mathbf{x}_{1}}^{\mathbf{x}_{N}} \mathbf{A} \cdot d \mathbf{s}\right]_{\text { above }}\right\}$，从下面走的粒子的相位变化是$\left\{\exp \left[\left(\frac{i e}{\hbar c}\right) \int_{\mathbf{x}_{1}}^{\mathbf{x}_{N}} \mathbf{A} \cdot d \mathbf{s}\right]_{\text { below }}\right\}$。发生干涉地点的相位差，即二者之差恰好是
-
+    
     $\left[\left(\frac{e}{\hbar c}\right) \int_{\mathbf{x}_{1}}^{\mathbf{x}_{N}} \mathbf{A} \cdot d \mathbf{s}\right]_{\text { above }}-\left[\left(\frac{e}{\hbar c}\right) \int_{\mathbf{x}_{1}}^{\mathbf{x}_{N}} \mathbf{A} \cdot d \mathbf{s}\right]_{\text { below }}=\left(\frac{e}{\hbar c}\right) \oint \mathbf{A} \cdot d \mathbf{s}$
-
+    
     正比于圆柱体内的磁通量。从这个意义上来说，矢势是比磁感应强度更基本的物理量。
 
 在这边谈起规范变换，好像总是一个波函数相位的变换，但是所谓规范的gauge，实际上是从德语Eich来的，意为度量。考虑函数$F(x)$，其在某点处展开为$F(x+dx)=F(x)+(\nabla F(x))dx$。现在做“规范”变换，让$1|_x=(1+\Sigma(x)dx)|_{x+dx}$，那么$F(x+dx)=F(x)+[(\nabla+\Sigma)F]|_xdx$。这里和因子$\mathscr{G}=\exp \left[\frac{i e \Lambda(\mathbf{x})}{\hbar c}\right]$对比的就是$e^{\Sigma}$。这才是规范变换原本的含义。现在虽然意义不完全一样了，但是规范变换的名字还是留着。
@@ -415,7 +416,7 @@ $\left\langle x_{N}, t_{N} | x_{1}, t_{1}\right\rangle=\int_{x_{1}}^{x_{N}} \mat
 #### 透射系数
 
 - 考虑一个相互作用的尺度a，势能$V(x)$在$|x|\gg a$时迅速减小。可以求$E\to0$时透射系数趋于零的规律。如下作：取从左边入射，在右边渐进式为$Ae^{ikx}$，左边渐进式为$e^{ikx}+Be^{-ikx}$，$k=\sqrt{2mE}/\hbar$。如果在$k|x|\ll1, |x|\gg a$的区域，能量和势能都可以略去，薛定谔方程的解在x为正或负时的$\psi=a_{1, 2}+b_{1, 2}x$。由中间的诸段$\psi$的形式可以从各种分界处条件得到$a_1=\rho a_2+\mu b_2,b_1=\nu a_2+\tau b_2$。这些希腊字母都是和能量无关的实数（因为薛定谔方程中已经没有能量了）。另一方面，渐进式的展开必须能够与这一次函数形式的波函数对齐，所以$a_1=1+B,b_1=ik(1-B),a_2=A,b_2=ikA$，在k较小时，可以解得$A\approx 2ik/\nu$，透射系数$D\propto k^2\propto E$。
-
+  
   故它与能量成正比地趋于0。
 
 ### 有心力场
@@ -455,19 +456,21 @@ $\frac{\mathrm{d}^{2} \chi}{\mathrm{d} r^{2}}+\left[\frac{2 m}{\hbar^{2}}(E-U)-\
 - 原点附近，如果满足$U(r)r^2\to0$，方程可以简化成$\mathrm{d}\left(r^{2} \mathrm{d} R / \mathrm{d} r\right) / \mathrm{d} r-l(l+1) R=0$，解出来$R\sim r^l$。
 
 - 球面波。类比平面波的情形，$U=0$。略去解的过程，其径向波函数正比于球贝塞尔函数：
-
+  
   $\begin{aligned} R_{k l}=& \sqrt{(  2 \pi k / r )} J_{l+1 / 2}(k r)=2 k j_{l}(k r) \\ j_{l}(x) &=\sqrt{(\pi/2 x )} J_{l+1 / 2}(x) \end{aligned}$
-
+  
   该函数在远处的渐进行为是$\frac{2 \sin \left(k r-\frac{1}{2} l \pi\right)}{r}$。
 
 - 现在考虑$U\sim -\beta/r^2$的特殊情况。在原点附近的行为满足$R^{\prime \prime}+2 R^{\prime} / r+\gamma R / r^{2}=0$，其中$\gamma=2 m \beta / \hbar^{2}-l(l+1)$。取$R\sim r^s$，可以解s的二次方程。若有两实根，则粒子不落入力心。反之，则落入力心。
 
 - 考虑库仑势的情形：$\frac{\mathrm{d}^{2} R}{\mathrm{d} r^{2}}+\frac{2}{r} \frac{\mathrm{d} R}{\mathrm{d} r}-\frac{l(l+1)}{r^{2}} R+\frac{2 m}{\hbar^{2}}\left(E+\frac{\alpha}{r}\right) R=0$。这相当于解氢原子的波函数，薛定谔一开始就是做的这事。做法是这样的：
-
+  
   - 按着库伦单位制把方程变掉：$\frac{\mathrm{d}^{2} R}{\mathrm{d} r^{2}}+\frac{2}{r} \frac{\mathrm{d} R}{\mathrm{d} r}-\frac{l(l+1)}{r^{2}} R+2\left(E+\frac{1}{r}\right) R=0$
+  
   - 引入参量$n=1 / \sqrt{( -2 E )}, \quad \rho=2 r / n$，变成$R^{\prime \prime}+\frac{2}{\rho} R^{\prime}+\left[-\frac{1}{4}+\frac{n}{\rho}-\frac{l(l+1)}{\rho^{2}}\right] R=0$
-
+  
   - 考虑在远处的渐进行为：$R''=R/4$。加上在原点附近已知的渐进行为，可以知道$R=\rho^{l} e^{-\rho / 2} w(\rho)$。
+  
   - 方程$\rho w^{\prime \prime}+(2 l+2-\rho) w^{\prime}+(n-l-1) w=0$的解是合流超几何函数$w=F(-n+l+1,2 l+2, \rho)$，并且要求$-(-n+l+1)\in\mathbb{N}$。据此知道$l=0, \cdots, n-1$，总的简并度可以求出是$n^2$。（离散部分）能谱转换回SI单位制的话是$E=-m \alpha^{2} / 2 \hbar^{2} n^{2}$。
 
 - （*以下两小点需要了解更多的数学知识之后补充*）可观测量的本征谱的简并对应着体系的某种对称性，这是一个可以严格描述和证明的事情。现在暂时就理解成简并对应着需要塞进来凑成compatible set的额外的守恒量好了。在这个例子中，额外的简并度（$n^2>2l+1$，后者是SO(3)的不可约表示维数）对应着$r^{-1}$势的一个额外的守恒量：LRL（拉龙楞）矢量。（实际上，朗道指出，通过LRL矢量和角动量的线性组合，我们可以凑出来两个三维物理量，它们满足两个*独立*的三维角动量矢量的对易关系。。LRL矢量的存在让这个问题更像SO(4)了，但是我觉得这个地方并没有SO(4)的物理意义。）

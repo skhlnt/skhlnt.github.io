@@ -1,7 +1,8 @@
 ---
 title: ML笔记（end）
 date: 2019-12-13 23:53:43
-tags: [课程笔记]
+categories: [笔记, 理学]
+tags: [机器学习]
 ---
 
 ## week 13,14
@@ -13,104 +14,108 @@ tags: [课程笔记]
 #### 交叉熵
 
 - KL散度
-
+  
   $D\left(P_{1} \| P_{2}\right)=\sum_{x \in \mathcal{X}} P_{1}(x) \log _{2} \frac{P_{1}(x)}{P_{2}(x)}$
-
+  
   是一个度量两个分部之间相似程度的量。说实话，这个地方divergence看上去和“散度”并没有什么关系（因为此时并不存在与它对应的“旋度”的概念），更像是字面意义上的“分歧度”。它始终大于零，除非两个分布完全一样。
-
+  
   KL散度体现了我们对于“熵最大的分布是均匀分布”的认识。考虑$P_2=1/n$，
-
+  
   $D\left(P_{1} \| P_{2}\right)=-H(X)+\log _{2} n \geq 0 \Rightarrow \log _{2} n \geq H(X)$，
-
+  
   其中$H(X)=-\sum_{x \in \mathcal{X}} P(x) \log _{2} P(x)$是香农熵。如果我们进一步考虑能量守恒$\sum xP=\langle E\rangle$这个约束，最小化$D(P_1||P_2)$，就得到指数族，这很可以作为正则系综的一个解释。至于香农熵用来代表热力学熵的合法性，是来自于几个基本的直觉的，jaynes深入地讨论过。
-
+  
   坏处上，KL散度这个量是不对称的，而且也没归一化。作为一种改进，我们有
 
 - JS（jensen-shannon）散度：
-
+  
   $J\left(P_{1}, P_{2}\right)=\frac{1}{2} D\left(P_{1} \| P\right)+\frac{1}{2} D\left(P_{2} \| P\right)$
-
+  
   $P(x)=\frac{1}{2} P_{1}(x)+\frac{1}{2} P_{2}(x)$
-
+  
   这个量不仅对称，还被限制在0-1之间。引入一个变量$z=\{1, 2\}$，$P(z=i):=\pi_i$。在我们的例子中，$P_i(x)=P(x|z=i)$，$\pi\equiv0.5$。定义分布x和z的互信息
-
+  
   $I(x, z)=\sum_{x,z}p(x,z)\log_2\frac{p(x, z)}{p(x)p(z)}$
-
+  
   把它写成$H(z)-H(z|x)$，在我们的例子里就是$1-H(z|x)\leq 1$。
-
+  
   同时，还可以证明这个互信息，也就是$P_{1,2}$的平均的分布和均匀二点分布的互信息，正是JS散度。因此，可以证明JS散度是有上限的。
 
 - 交叉熵
-
+  
   $H_{c}(P, Q):=-\sum_{x \in \mathcal{X}} P(x) \log _{2} Q(x)=\sum_{x \in \mathcal{X}} P(x) \log _{2} \frac{1}{Q(x)}=H(P)+D(P \| Q)$
-
+  
   假如我们想拿一族分布Q去找$D(P||Q)$的最小值，处理$H_{c}(P, Q)$一般要方便些。例如，试图通过sample来计算积分
-
+  
   $f(z)=\int_{z}^{\infty} \frac{1}{\sqrt{2 \pi}} e^{-x^{2} / 2} d x=\int_{-\infty}^{\infty} I(x \geq z) p(x) d x$
-
+  
   我们想拿指数族$q(x ; \lambda)=\lambda e^{-\lambda(x-z)}$去做这个importance sampling的分布q。作极值问题
-
+  
   $\arg \min _{q}\left(-\int_{-\infty}^{\infty} \pi(x) \log _{2} q(x ; \lambda) d x\right)=\arg \max _{q} \int_{-\infty}^{\infty} I(x \geq z) p(x) \log q(x ; \lambda) d x$
-
+  
   解出来$\lambda$的取值是
-
+  
   $\frac{\int I(x\geq z)p(x)dx}{\int I(x\geq z)(x-z)p(x)dx}$
-
+  
   看起来很不妙，又回到原点。但是实际上，并不需要太担心：有迭代的算法。先随便找一个$\lambda_0$，比如说是1吧，稍微sample一下：
-
+  
   $\int_{-\infty}^{\infty} I(x \geq z) p(x) d x \approx \frac{1}{N} \sum_{i=1}^{N} I\left(x_{i} \geq z\right) \frac{p\left(x_{i}\right)}{q\left(x_{i} ; \lambda_{0}\right)}=\frac{1}{N} \sum_{i=1}^{N} \frac{p\left(x_{i}\right)}{q\left(x_{i} ; \lambda_{0}\right)}$
-
+  
   $\int_{-\infty}^{\infty}(x-z) I(x \geq z) p(x) d x \approx \frac{1}{N} \sum_{i=1}^{N}\left(x_{i}-z\right) I\left(x_{i} \geq z\right) \frac{p\left(x_{i}\right)}{q\left(x_{i} ; \lambda_{0}\right)}=\frac{1}{N} \sum_{i=1}^{N}\left(x_{i}-z\right) \frac{p\left(x_{i}\right)}{q\left(x_{i} ; \lambda_{0}\right)}$
-
+  
   就可得到
-
+  
   $\lambda_{t+1}=\frac{\sum_{i=1}^{N} \frac{p\left(x_{i}\right)}{q\left(x_{i} ; \lambda_{t}\right)}}{\sum_{i=1}^{N} \frac{p\left(x_{i}\right)}{q\left(x_{i} ; \lambda_{t}\right)}\left(x_{i}-z\right)}$
-
+  
   迭代到$\lambda$收敛即可。
 
 - 交叉熵方法的一些应用
-
+  
   首先是小概率事件的模拟（可以认为是上一节讲的方法的推广）：假设有个向量随机变量X服从分布$p$，一个标量函数S，想知道$P(S(X) \geq \gamma)=E_{p}[I(S(X) \geq \gamma)]$，然而$\{X | S(X) \geq \gamma\}$发生的概率极其之小。这个时候，仍然是做importance sampling：
-
+  
   $q^{\*}(x) \propto I(S(X) \geq \gamma) p(x)$
-
+  
   对分布族q猜一个$\theta_0$，求交叉熵
-
+  
   $H_{c}\left(q^{\*}, q_{\theta}\right) \propto-E_{p}\left[I(S(X) \geq \gamma) \log q_{\theta}(X)\right]=-E_{q_{\theta_{0}}}\left[I(S(X) \geq \gamma) W(X, \theta) \log q_{\theta}(X)\right]$
-
+  
   其中$W=p(X) / q_{\theta_{0}}(X)$。
-
+  
   同样是迭代。做法是这样的：
-
+  
   - 猜一个$\theta_{0}$；
-
+  
   - 从$q_{\theta_{t-1}}$sample一些数据$X_{1}, \ldots, X_{N}$；
+  
   - 从$\left\{S\left(X_{1}\right), \ldots, S\left(X_{N}\right)\right\}$中选取$1-\rho$百分位的值作为$\gamma_{t}$(我们希望从q中sample出来的X大多数都有$S(x)>\gamma$)；$\gamma_{t}>\gamma$就令$\gamma=\gamma_{t}$;
+  
   - $\theta_{t}=\arg \max _{\theta} \frac{1}{N} \sum_{i=1}^{N} I\left(S\left(X_{i}\right) \geq \gamma_{t}\right) W\left(X_{i} ; \theta_{t-1}\right) \log q_{\theta}\left(X_{i}\right)$
+  
   - $\gamma_{t} \geq \gamma$就中止循环；
+  
   - 做采样$\hat{E}_{q \theta_{t}}\left[I(S(X) \geq \gamma) W\left(X, \theta_{t}\right)\right]=\frac{1}{N} \sum_{i=1}^{N} I\left(S\left(X_{i}\right) \geq \gamma\right) W\left(X_{i}, \theta_{t}\right)$
-
+  
   参数$\rho$一般是选0.01到0.1之间，经验上选取$N \propto n / \rho$。
-
+  
   然后，还有一个关于组合优化问题的例子：令$\Omega$是一个不连续的位形空间（其实连续的也可以），$S: \Omega \rightarrow \mathbb{R}$是一个标量函数，我们现在想找$X^{\*}=\max _{X \in \Omega} S(X)$
-
+  
   这个问题的背景是网络的切割，或者（在位形空间连续的情况下）是流形的剖分（假设切流形费刀，怎么切损伤最小）。S就可以写成例如
-
+  
   $S=-\frac{vol(A_1\cap A_2)}{\min(vol(A_1), vol(A_2))}$
-
+  
   对于流形，这个截面积叫Cheeger's constant。我们怎样求呢？我们可以找一个分布$P_{\theta^{\*}}(X)$使得它堆在最优的$X^\*$附近。我们的目标就是使得$P_{\theta_t}$的$(1-\rho)$百分位$\gamma_t$越大越好。所以我们每次求交叉熵，都是力图优化下一个迭代的P，使得它尽量选上一个P里面最大的那部分S(X):
-
+  
   $H_{c}\left(I\left(S(X) \geq \gamma_{t}\right) P_{\theta_{t-1}}(X), P_{\theta}(X)\right)=-\frac{1}{N} \sum_{i=1}^{N} I\left(S\left(X_{i}\right) \geq \gamma_{t}\right) \log _{2} P_{\theta}\left(X_{i}\right)$
-
+  
   算法是这样的：
-
+  
   - 猜一个$\theta_{0}$；
   - 从$P_{\theta_{t-1}}$sample一些数据$X_{1}, \ldots, X_{N}$；
   - 从$\left\{S\left(X_{1}\right), \ldots, S\left(X_{N}\right)\right\}$中选取$1-\rho$百分位的值作为$\gamma_{t}$；
   - 交叉熵优化$\eta_{t}=\arg \max _{\theta} \sum_{i=1}^{N} I\left(S(X) \geq \gamma_{t}\right) \log P_{\theta}\left(X_{i}\right)$；
   - $\theta_{t}=\alpha \eta_{t}+(1-\alpha) \theta_{t-1}$（这么干是为了防止陷入局部极值，即函数-S有局部极小值）
   - $\theta_{t}=\theta_{t-1}=\cdots=\theta_{t-d}$即达到稳定的时候停止迭代。
-
+  
   很显然，这玩意让人想到梯度下降。
 
 #### 模拟退火
