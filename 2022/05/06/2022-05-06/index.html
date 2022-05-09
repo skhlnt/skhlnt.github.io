@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 5.4.2">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-placid.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-placid.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-placid.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.loli.net/css?family=Noto+Serif+SC:300,300italic,400,400italic,700,700italic%7CSource+Code+Pro:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" integrity="sha256-DfWjNxDkM94fVBWx1H5BMMp0Zq7luBlV8QRcSES7s+0=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"yoursite.com","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.11.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="前两天，我出于某种原因升级了本地的node.js。然后我就发现我的博客没法用了，网址打开是一片乱码。经过查询确认，我发现原来是因为hexo不支持高版本的node.js。当时我就折腾了半天版本上的事情。并且升级完之后，还不得不使用新版的next主题。新版主题不支持valine评论系统，所以我不久之前好不容易搞明白的评论系统就又没用了。经此一事，我觉得或许有必要对于自己的网站有更深的理解。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="被迫对博客做些改动">
+<meta property="og:url" content="http://yoursite.com/2022/05/06/2022-05-06/index.html">
+<meta property="og:site_name" content="Miralem 的博客">
+<meta property="og:description" content="前两天，我出于某种原因升级了本地的node.js。然后我就发现我的博客没法用了，网址打开是一片乱码。经过查询确认，我发现原来是因为hexo不支持高版本的node.js。当时我就折腾了半天版本上的事情。并且升级完之后，还不得不使用新版的next主题。新版主题不支持valine评论系统，所以我不久之前好不容易搞明白的评论系统就又没用了。经此一事，我觉得或许有必要对于自己的网站有更深的理解。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-05-06T09:33:27.000Z">
+<meta property="article:modified_time" content="2022-05-09T09:21:08.358Z">
+<meta property="article:author" content="Miralem">
+<meta property="article:tag" content="hexo">
+<meta property="article:tag" content="NexT">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://yoursite.com/2022/05/06/2022-05-06/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://yoursite.com/2022/05/06/2022-05-06/","path":"2022/05/06/2022-05-06/","title":"被迫对博客做些改动"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>被迫对博客做些改动 | Miralem 的博客</title>
+  
+
+
+
+
+<link rel="dns-prefetch" href="waline-server-phi.vercel.app">
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link href="https://cdn.bootcss.com/KaTeX/0.11.1/katex.min.css" rel="stylesheet" /></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Miralem 的博客</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Miralemi siheeriiniith</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9B%B4%E6%96%B0-next-%E4%B8%BB%E9%A2%98"><span class="nav-number">1.</span> <span class="nav-text">更新 NexT 主题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#next-%E4%B8%BB%E9%A2%98%E7%9A%84%E7%BE%8E%E5%8C%96"><span class="nav-number">2.</span> <span class="nav-text">NexT 主题的美化</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AE%BE%E7%BD%AE%E8%87%AA%E5%B7%B1%E7%9A%84%E7%BC%A9%E7%95%A5%E5%9B%BE"><span class="nav-number">2.1.</span> <span class="nav-text">设置自己的缩略图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE-next-%E4%B8%BB%E9%A2%98%E8%87%AA%E5%B8%A6%E7%9A%84%E6%90%9C%E7%B4%A2%E5%8A%9F%E8%83%BD"><span class="nav-number">2.2.</span> <span class="nav-text">配置 next 主题自带的搜索功能</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9B%B4%E6%94%B9%E5%AD%97%E4%BD%93"><span class="nav-number">2.3.</span> <span class="nav-text">更改字体</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B6%E4%BB%96"><span class="nav-number">2.4.</span> <span class="nav-text">其他</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#katex"><span class="nav-number">3.</span> <span class="nav-text">KaTeX</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85-katex"><span class="nav-number">3.1.</span> <span class="nav-text">安装 KaTeX</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#katex-%E5%AE%9E%E7%8E%B0%E5%BC%95%E7%94%A8%E5%85%AC%E5%BC%8F%E7%9A%84%E4%B8%80%E7%A7%8D%E5%8A%9E%E6%B3%95"><span class="nav-number">3.2.</span> <span class="nav-text">KaTeX 实现引用公式的一种办法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E4%BA%9B%E4%BB%A5%E5%89%8D%E6%B2%A1%E6%9C%89%E5%8F%91%E7%8E%B0%E7%9A%84%E5%8A%9F%E8%83%BD"><span class="nav-number">4.</span> <span class="nav-text">一些以前没有发现的功能</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F"><span class="nav-number">5.</span> <span class="nav-text">评论系统</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9B%B6%E6%95%B2%E7%A2%8E%E6%89%93"><span class="nav-number">6.</span> <span class="nav-text">零敲碎打</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Miralem"
+      src="/images/apple-touch-icon-placid.png">
+  <p class="site-author-name" itemprop="name">Miralem</p>
+  <div class="site-description" itemprop="description">黑龙江省双鸭山市宝清县东方红林场职业棕熊，每周一三五出摊</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">131</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">136</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="mailto:wzh41807@126.com" title="E-Mail → mailto:wzh41807@126.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.zhihu.com/people/di-ba-la-33" title="Zhihu → https:&#x2F;&#x2F;www.zhihu.com&#x2F;people&#x2F;di-ba-la-33" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>Zhihu</a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll site-overview-item animated">
+    <div class="links-of-blogroll-title">
+      Links
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://www.preposterousuniverse.com/blog/" title="https:&#x2F;&#x2F;www.preposterousuniverse.com&#x2F;blog&#x2F;" rel="noopener" target="_blank">Sean Carroll</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://www.andrewsun.net/panta_rhei/" title="http:&#x2F;&#x2F;www.andrewsun.net&#x2F;panta_rhei&#x2F;" rel="noopener" target="_blank">Andrew Sun</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://bactra.org/weblog/" title="http:&#x2F;&#x2F;bactra.org&#x2F;weblog&#x2F;" rel="noopener" target="_blank">3-toed sloth</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://coldison.github.io/" title="https:&#x2F;&#x2F;coldison.github.io&#x2F;" rel="noopener" target="_blank">Coldison</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://swampy.io/" title="https:&#x2F;&#x2F;swampy.io&#x2F;" rel="noopener" target="_blank">Swampy</a>
+        </li>
+    </ul>
+  </div>
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/05/06/2022-05-06/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/apple-touch-icon-placid.png">
+      <meta itemprop="name" content="Miralem">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Miralem 的博客">
+      <meta itemprop="description" content="黑龙江省双鸭山市宝清县东方红林场职业棕熊，每周一三五出摊">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="被迫对博客做些改动 | Miralem 的博客">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          被迫对博客做些改动
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2022-05-06 17:33:27" itemprop="dateCreated datePublished" datetime="2022-05-06T17:33:27+08:00">2022-05-06</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-05-09 17:21:08" itemprop="dateModified" datetime="2022-05-09T17:21:08+08:00">2022-05-09</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">笔记</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E7%AC%94%E8%AE%B0/%E7%90%86%E5%AD%A6/" itemprop="url" rel="index"><span itemprop="name">理学</span></a>
+        </span>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+    <span class="post-meta-item-icon">
+      <i class="far fa-comment"></i>
+    </span>
+    <span class="post-meta-item-text">Waline：</span>
+  
+    <a title="waline" href="/2022/05/06/2022-05-06/#waline" itemprop="discussionUrl">
+      <span class="post-comments-count waline-comment-count" data-path="/2022/05/06/2022-05-06/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>6.8k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>6 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>前两天，我出于某种原因升级了本地的node.js。然后我就发现我的博客没法用了，网址打开是一片乱码。经过查询确认，我发现原来是因为hexo不支持高版本的node.js。当时我就折腾了半天版本上的事情。并且升级完之后，还不得不使用新版的next主题。新版主题不支持valine评论系统，所以我不久之前好不容易搞明白的评论系统就又没用了。经此一事，我觉得或许有必要对于自己的网站有更深的理解。</p>
+<span id="more"></span>
+<details class="note default"><summary><p>本文中的版本</p>
+</summary>
+<ul>
+<li>hexo 5.4.2</li>
+<li>hexo-cli 4.3.0</li>
+<li>NexT 8.11.1</li>
+</ul>
+
+</details>
+<h2 id="更新-next-主题">更新 NexT 主题</h2>
+<p>更新了 Next 主题。看起来，它的 repo 位置有过几次改变，因此我的升级过程走了一些弯路。不过，<a target="_blank" rel="noopener" href="https://drifter-games.com/2021/nextupdate/">这里</a>提供了有用的知识。先不考虑自定义的那些东西，只是把它装上。我留了旧版的 next，然后把新版另起了一个文件夹。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/next-theme/hexo-theme-next themes/next-reload</span><br></pre></td></tr></table></figure>
+<p>这样，还要在根目录的<code>_config.yml</code>里面改变 theme 为 <code>theme: next-reload</code>。</p>
+<h2 id="next-主题的美化">NexT 主题的美化</h2>
+<p>以前，我习惯于把 next 主题的个性化设置直接写在<code>themes/next/_config.yml</code>里面，但是这隐含着一种悲观的预期，也就是说，我随时都要准备跑路，也觉得 next 这个主题也随时都要跑路，所以我才为了省事而假装我永远不需要更新 next，而一旦更新，我还需要手动把设置都弄回去。上次，我就忘了这回事，结果把个性化设置弄丢了，还要重新弄一遍。</p>
+<p>所以这次我参考了<a target="_blank" rel="noopener" href="https://github.com/theme-next/hexo-theme-next/blob/master/docs/zh-CN/DATA-FILES.md">官方文档</a>的说法，把 theme config 拉出来放在 hexo config 里面了。具体做法就是在根目录的<code>_config.yml</code>里面加入你想改变的个性化设置：</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Next theme config:</span></span><br><span class="line"><span class="attr">theme_config:</span></span><br><span class="line">  <span class="comment"># Schemes</span></span><br><span class="line">  <span class="attr">scheme:</span> <span class="string">Pisces</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># thumbnail</span></span><br><span class="line">  <span class="attr">favicon:</span></span><br><span class="line">    <span class="attr">small:</span> <span class="string">(place</span> <span class="string">where</span> <span class="string">you</span> <span class="string">put</span> <span class="string">the</span> <span class="string">images)</span></span><br><span class="line">    <span class="string">other</span> <span class="string">configs...</span></span><br></pre></td></tr></table></figure>
+<h3 id="设置自己的缩略图">设置自己的缩略图</h3>
+<p>一般来讲，浏览器里显示的网页标签包含标题和缩略图两部分。使用 next 主题时，默认的缩略图是 next 主题的标志，一个六边形加字母 N，令人想到那不勒斯的队徽，十分的晦气。因此我画了一个橘子替代它。在根目录新建一个<code>source\images</code>文件夹，把图片放进去，然后在个性化设置的<code>favicon</code>一栏指向这些图片。<br>
+另外，在<code>themes\next-reload\source\css\_variables\Pisces.styl</code>里面调</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$site</span>-author-image-<span class="attribute">border-width</span> = <span class="number">0px</span>;</span><br></pre></td></tr></table></figure>
+<p>去掉烦人的边框。</p>
+<h3 id="配置-next-主题自带的搜索功能">配置 next 主题自带的搜索功能</h3>
+<p>需要安装一个<a target="_blank" rel="noopener" href="https://github.com/next-theme/hexo-generator-searchdb">插件</a>。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i hexo-generator-searchdb</span><br></pre></td></tr></table></figure>
+<p>在<code>_config.yml</code>里面加上</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">search:</span></span><br><span class="line"><span class="attr">path:</span> <span class="string">search.xml</span></span><br><span class="line"><span class="attr">field:</span> <span class="string">post</span></span><br><span class="line"><span class="attr">content:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">format:</span> <span class="string">html</span></span><br></pre></td></tr></table></figure>
+<p>并且在 next theme config 里面打开<code>local_search</code>。</p>
+<h3 id="更改字体">更改字体</h3>
+<p>以前用的是黑体。但是最近感觉阅读汉字需要衬线的帮助了，所以决定换成 Noto Serif。在<code>_config.yml</code>里面更改字体设置：</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">font:</span></span><br><span class="line">    <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># Uri of fonts host, e.g. https://fonts.googleapis.com (Default).</span></span><br><span class="line">    <span class="comment"># host:</span></span><br><span class="line">    <span class="comment"># can use loli.net in case</span></span><br><span class="line">    <span class="attr">host:</span> <span class="string">https://fonts.loli.net</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># Font options:</span></span><br><span class="line">    <span class="comment"># `external: true` will load this font family from `host` above.</span></span><br><span class="line">    <span class="comment"># `family: Times New Roman`. Without any quotes.</span></span><br><span class="line">    <span class="comment"># `size: x.x`. Use `em` as unit. Default: 1 (16px)</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># Global font settings used for all elements inside &lt;body&gt;.</span></span><br><span class="line">    <span class="attr">global:</span></span><br><span class="line">      <span class="attr">external:</span> <span class="literal">true</span></span><br><span class="line">      <span class="attr">family:</span> <span class="string">Noto</span> <span class="string">Serif</span> <span class="string">SC</span></span><br><span class="line">      <span class="attr">size:</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># Font settings for site title (.site-title).</span></span><br><span class="line">    <span class="attr">title:</span></span><br><span class="line">      <span class="attr">external:</span> <span class="literal">true</span></span><br><span class="line">      <span class="attr">family:</span> <span class="string">Noto</span> <span class="string">Serif</span> <span class="string">SC</span></span><br><span class="line">      <span class="attr">size:</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># Font settings for headlines (&lt;h1&gt; to &lt;h6&gt;).</span></span><br><span class="line">    <span class="attr">headings:</span></span><br><span class="line">      <span class="attr">external:</span> <span class="literal">true</span></span><br><span class="line">      <span class="attr">family:</span></span><br><span class="line">      <span class="attr">size:</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># Font settings for posts (.post-body).</span></span><br><span class="line">    <span class="attr">posts:</span></span><br><span class="line">      <span class="attr">external:</span> <span class="literal">true</span></span><br><span class="line">      <span class="attr">family:</span> <span class="string">Noto</span> <span class="string">Serif</span> <span class="string">SC</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># Font settings for &lt;code&gt; and code blocks.</span></span><br><span class="line">    <span class="attr">codes:</span></span><br><span class="line">      <span class="attr">external:</span> <span class="literal">true</span></span><br><span class="line">      <span class="attr">family:</span> <span class="string">Source</span> <span class="string">Code</span> <span class="string">Pro</span></span><br></pre></td></tr></table></figure>
+<p>此外，还希望标题弄成稍微粗一点的字体。找了一下，在<code>\themes\next-reload\source\css\_common\components\post\post-header.styl</code>里面的<code>posts-expand .post-title</code>那里，加入</p>
+<figure class="highlight styl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">font-weight</span>: bolder;</span><br></pre></td></tr></table></figure>
+<p>就可以了。</p>
+<h3 id="其他">其他</h3>
+<ul>
+<li>
+<p>侧边栏加入阅读进度百分比：<br>
+<code>scrollpercent: true</code></p>
+</li>
+<li>
+<p>页脚删除“由 Hexo &amp; NexT.xxx_theme 强力驱动”，换成自定义内容：</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># If not defined, `author` from Hexo `_config.yml` will be used.</span></span><br><span class="line"><span class="attr">copyright:</span> <span class="string">自定义内容</span></span><br><span class="line"><span class="comment"># Powered by Hexo &amp; NexT</span></span><br><span class="line"><span class="attr">powered:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>设置书签功能：<code>bookmark</code></p>
+</li>
+<li>
+<p>默认目录展开：在<code>_config.yml</code>的<code>toc</code>(table of content)中打开<code>expand_all</code>。</p>
+</li>
+<li>
+<p>添加字数和阅读时间统计：<br>
+安装一个<a target="_blank" rel="noopener" href="https://github.com/next-theme/hexo-word-counter">插件</a></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm i hexo-word-counter --save</span><br><span class="line">hexo clean</span><br></pre></td></tr></table></figure>
+<p>并打开wordcount。</p>
+</li>
+<li>
+<p>把某些地方刷橙：在<code>\themes\next-reload\source\css\_variables\base.styl</code>里面可调。但是注意有一些变量是在具体的 theme stylus 文件里面的，比如 <code>pisces.styl</code>，而这些文件的优先级更高。</p>
+</li>
+</ul>
+<h2 id="katex">KaTeX</h2>
+<p>出于一些原因，还要重装 hexo。每次重装之后，都要调整一些 markdown 渲染的问题，其中最重要的就是公式。以前，我使用 mathjax，但是这回试了一下 katex。看起来后者要快一些。</p>
+<p>KaTeX是可汗学院搞出来的一个 JS 库，和 mathjax 一样，用来在网页上显示 LaTeX 排版的东西。感觉原理上，mathjax 输出的是 html 文档，要把 hexo 渲染出来的 html 再渲染一遍。而 katex 是从 tex 代码生成 html 片段，所以比较快。</p>
+<h3 id="安装-katex">安装 KaTeX</h3>
+<p>去掉了自带的渲染器，装上<a target="_blank" rel="noopener" href="https://github.com/upupming/hexo-renderer-markdown-it-plus">新的</a>：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm un hexo-renderer-marked --save</span><br><span class="line">npm i @upupming/hexo-renderer-markdown-it-plus --save</span><br></pre></td></tr></table></figure>
+<p>在根目录的<code>_config.yml</code>最后加上</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Markdown config:</span></span><br><span class="line"><span class="attr">markdown:</span>  </span><br><span class="line">  <span class="attr">render:</span>  </span><br><span class="line">    <span class="attr">html:</span> <span class="literal">true</span>  </span><br><span class="line">    <span class="attr">xhtmlOut:</span> <span class="literal">false</span>  </span><br><span class="line">    <span class="attr">breaks:</span> <span class="literal">true</span>  </span><br><span class="line">    <span class="attr">linkify:</span> <span class="literal">true</span>  </span><br><span class="line">    <span class="attr">typographer:</span> <span class="literal">true</span>  </span><br><span class="line">  <span class="attr">plugins:</span> </span><br><span class="line">  <span class="attr">anchors:</span>  </span><br><span class="line">    <span class="attr">level:</span> <span class="number">2</span></span><br><span class="line">    <span class="attr">collisionSuffix:</span> <span class="string">&#x27;v&#x27;</span></span><br><span class="line">    <span class="attr">permalink:</span> <span class="literal">true</span></span><br><span class="line">    <span class="attr">permalinkClass:</span> <span class="string">header-anchor</span></span><br><span class="line">    <span class="attr">permalinkSide:</span> <span class="string">&#x27;left&#x27;</span></span><br><span class="line">    <span class="attr">permalinkSymbol:</span> <span class="string">¶</span></span><br></pre></td></tr></table></figure>
+<p>这里面好像 plugins 不加 markdown-it-katex 也没事，是默认 enable 的。这个渲染器<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_42951560/article/details/123596899">可以弄很多插件</a>，比如 emoji，footnote什么的，不过我暂时并不需要。</p>
+<p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext>KaTeX</mtext></mrow><annotation encoding="application/x-tex">\KaTeX</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8988em;vertical-align:-0.2155em;"></span><span class="mord text"><span class="mord textrm">K</span><span class="mspace" style="margin-right:-0.17em;"></span><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6833em;"><span style="top:-2.905em;"><span class="pstrut" style="height:2.7em;"></span><span class="mord"><span class="mord textrm mtight sizing reset-size6 size3">A</span></span></span></span></span></span><span class="mspace" style="margin-right:-0.15em;"></span><span class="mord text"><span class="mord textrm">T</span><span class="mspace" style="margin-right:-0.1667em;"></span><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.4678em;"><span style="top:-2.7845em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord textrm">E</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2155em;"><span></span></span></span></span><span class="mspace" style="margin-right:-0.125em;"></span><span class="mord textrm">X</span></span></span></span></span></span> 和一般的 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext>LaTeX</mtext></mrow><annotation encoding="application/x-tex">\LaTeX</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8988em;vertical-align:-0.2155em;"></span><span class="mord text"><span class="mord textrm">L</span><span class="mspace" style="margin-right:-0.36em;"></span><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6833em;"><span style="top:-2.905em;"><span class="pstrut" style="height:2.7em;"></span><span class="mord"><span class="mord textrm mtight sizing reset-size6 size3">A</span></span></span></span></span></span><span class="mspace" style="margin-right:-0.15em;"></span><span class="mord text"><span class="mord textrm">T</span><span class="mspace" style="margin-right:-0.1667em;"></span><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.4678em;"><span style="top:-2.7845em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord textrm">E</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2155em;"><span></span></span></span></span><span class="mspace" style="margin-right:-0.125em;"></span><span class="mord textrm">X</span></span></span></span></span></span> 在我的使用范围内没有什么区别。有的东西太久不用也会忘，有一个 <a target="_blank" rel="noopener" href="https://upupming.site/2018/10/18/katex-test">cheatsheet</a>。</p>
+<p>另外，这个方案下，在$的内部最好没有空格，否则会报警（<code>LaTeX-incompatible input and strict mode is set to 'warn': Unicode text character used in math mode</code>）。公式内换行用<code>\\</code>看起来没啥问题，但是最好留意一下。</p>
+<h3 id="katex-实现引用公式的一种办法">KaTeX 实现引用公式的一种办法</h3>
+<p>前面说，katex 的原理是输入 tex，输出 html片段，所以在这情况下，做公式的自动计数和引用是比较难的，似乎 katex 本身还不支持 <code>\ref</code> ，不过我找到了一个别人的<a target="_blank" rel="noopener" href="https://column.mowchan.me/post/2021/katex-ref-label-support.html">办法</a>，参考了一下。</p>
+<p>具体来说，hexo 里面肯定是用某种插件实现 katex 渲染的，我是在装 <code>@upupming\hexo-renderer-markdown-it-plus</code> 之后发现它自带了一个 <code>markdown-it-katex</code>，装在 <code>\node_modules/@abreto</code>下面。进去找到<code>\node_modules\@abreto\markdown-it-katex\index.js</code>，看到</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = <span class="keyword">function</span> <span class="title function_">math_plugin</span>(<span class="params">md, options</span>)</span><br><span class="line"><span class="comment">// Default options</span></span><br><span class="line">    options = options || &#123; &#125;</span><br></pre></td></tr></table></figure>
+<p>于是把<code>options</code>改成</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">options = options || &#123;</span><br><span class="line">        <span class="attr">trust</span>: <span class="function">(<span class="params">context</span>) =&gt;</span> [<span class="string">&#x27;\\htmlId&#x27;</span>, <span class="string">&#x27;\\href&#x27;</span>].<span class="title function_">includes</span>(context.<span class="property">command</span>),</span><br><span class="line">        <span class="attr">macros</span>: &#123;</span><br><span class="line">          <span class="string">&quot;\\eqref&quot;</span>: <span class="string">&quot;\\href&#123;###1&#125;&#123;(\\text&#123;#1&#125;)&#125;&quot;</span>,</span><br><span class="line">          <span class="string">&quot;\\ref&quot;</span>: <span class="string">&quot;\\href&#123;###1&#125;&#123;\\text&#123;#1&#125;&#125;&quot;</span>,</span><br><span class="line">          <span class="string">&quot;\\id&quot;</span>: <span class="string">&quot;\\htmlId&#123;#1&#125;&#123;&#125;&quot;</span></span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
+<p>这里面原理就是让 katex 信任 htmlId 和 href，这样就可以定义几个宏，手动把公式的编号打上 html id，然后用超链接的形式去索引他们。</p>
+<blockquote>
+<p>在 KaTeX 的宏定义中，可以以<code>#数字</code>的形式设置占位符，按顺序对应定义的参数。如 <code>\test&#123;1&#125;&#123;2&#125;&#123;3&#125;</code> 宏指令的定义若要依次引用第 1、2、3 个参数，就以<code>#1</code>、<code>#2</code>、<code>#3</code> 占位即可。占位符可重复引用，不同的占位符最多 9 个。<br>
+<code>\id</code> 指令用<code>\htmlId</code> 模拟，用于生成页面内锚点，在 LaTeX 中与 <code>\tag</code> 或 <code>\caption</code> 配合使用，所以我们在这里也将 <code>\htmlId</code> 的第二个参数留空，在页面上不做显示。<br>
+<code>\ref</code> 和 <code>\eqref</code> 指令都是引用，区别在于后者会加上括号，一般用于公式的引用。我们用 <code>\href</code> 指令来模拟，第一个参数是跳转的链接，第二个指令是引用显示。一般引用显示都是数字或字母的编号，为了避免被 KaTeX 引擎识别为变量，加一个 <code>\text</code> 指令。需要注意的是，由于页面锚点的 URL 也是用<code>#</code>表示，这会引发和宏定义占位符的冲突。所幸 KaTeX 的引擎考虑到了这一点，使用两个<code>#</code>，也就是<code>##</code>就可以表示<code>#</code>本身，而不会被当作占位符解析（其实是我试出来的）。</p>
+</blockquote>
+<p>有一个很烦的事情，我刚弄的时候这个东西一直实现不了，一直报<code>Template render error: (unknown path)</code>，最后发现是 html id 相关的内容在 <code>@abreto\markdown-it-katex\node_modules\katex</code>里面缺失了，所以我就十分粗暴地单独安装了一个 katex，然后把这里面的内容直接替换了，结果就好了。</p>
+<p>最后的效果就是这样的：</p>
+<figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$$\text&#123;重要的很长的公式&#125;\id&#123;1.1&#125;\tag&#123;1.1&#125;$$</span><br><span class="line"></span><br><span class="line">所以，我们回忆起$\eqref&#123;1.1&#125;$或者$\ref&#123;1.1&#125;$...</span><br></pre></td></tr></table></figure>
+<p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mtable width="100%"><mtr><mtd width="50%"></mtd><mtd><mrow><mtext>重要的很长的公式</mtext><mrow></mrow></mrow></mtd><mtd width="50%"></mtd><mtd><mtext>(1.1)</mtext></mtd></mtr></mtable><annotation encoding="application/x-tex">\text{重要的很长的公式}\id{1.1}\tag{1.1}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord text"><span class="mord cjk_fallback">重要的很长的公式</span></span><span class="enclosing" id="1.1"></span></span><span class="tag"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord text"><span class="mord">(</span><span class="mord"><span class="mord">1.1</span></span><span class="mord">)</span></span></span></span></span></span></p>
+<p>所以，我们回忆起<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow href="#1.1"><mo stretchy="false">(</mo><mtext>1.1</mtext><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\eqref{1.1}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><a href="#1.1"><span class="mopen">(</span><span class="mord text"><span class="mord">1.1</span></span><span class="mclose">)</span></a></span></span></span>或者<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext href="#1.1">1.1</mtext></mrow><annotation encoding="application/x-tex">\ref{1.1}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><a href="#1.1"><span class="mord text"><span class="mord">1.1</span></span></a></span></span></span>…</p>
+<p>当然，这个时候一定会报</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">LaTeX-incompatible input and strict mode is <span class="built_in">set</span> to <span class="string">&#x27;warn&#x27;</span>: HTML extension is disabled on strict mode [htmlExtension]</span><br></pre></td></tr></table></figure>
+<h2 id="一些以前没有发现的功能">一些以前没有发现的功能</h2>
+<p>markdown 中使用 html 标签（已经设置了 markdown 渲染器中 <code>html: true</code>）：</p>
+<ul>
+<li>下划线：<code>&lt;u&gt;underlined&lt;/u&gt;</code>=<u>underlined</u></li>
+<li>带有颜色的字体：<code>&lt;font color=cyan&gt;colored&lt;/font&gt;</code>=<font color=cyan>colored</font></li>
+<li>高亮：<code>&lt;mark&gt;highlighted&lt;/mark&gt;</code>=<mark>highlighted</mark></li>
+<li>删除线：<code>&lt;del&gt;deleted&lt;/del&gt;</code>=<del>deleted</del></li>
+<li>波浪线：<code>&lt;span style=&quot;text-decoration-line: underline; text-decoration-style: wavy;&quot;&gt;wavy&lt;/span&gt;</code>=<span style="text-decoration-line: underline; text-decoration-style: wavy;">wavy</span></li>
+<li>双下划线：<code>：&lt;span style=&quot;text-decoration-line: underline; text-decoration-style: double; &quot;&gt;double underlined &lt;/span&gt; </code>=<span style="text-decoration-line: underline; text-decoration-style: double; ">double underlined </span></li>
+</ul>
+<p>hexo 中的标签功能：</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">&#123;<span class="string">%</span> <span class="string">note</span> <span class="string">default</span> <span class="string">点击展开</span> <span class="string">%</span>&#125;  <span class="comment"># default 是标签的类型</span></span><br><span class="line"><span class="string">default</span> <span class="string">标签中的内容</span> </span><br><span class="line">  &#123;<span class="string">%</span> <span class="string">note</span> <span class="string">primary</span> <span class="string">还可以点击展开</span> <span class="string">%</span>&#125;</span><br><span class="line">  <span class="string">primary</span> <span class="string">标签中的内容</span></span><br><span class="line">  &#123;<span class="string">%</span> <span class="string">endnote</span> <span class="string">%</span>&#125;</span><br><span class="line">&#123;<span class="string">%</span> <span class="string">endnote</span> <span class="string">%</span>&#125; </span><br><span class="line"></span><br><span class="line">&#123;<span class="string">%</span> <span class="string">note</span> <span class="string">success</span> <span class="string">展开</span> <span class="string">%</span>&#125;</span><br><span class="line"><span class="string">success</span>  </span><br><span class="line">&#123;<span class="string">%</span> <span class="string">endnote</span> <span class="string">%</span>&#125;  </span><br><span class="line"></span><br><span class="line">&#123;<span class="string">%</span> <span class="string">note</span> <span class="string">info</span> <span class="string">展开</span> <span class="string">%</span>&#125;  </span><br><span class="line"><span class="string">info</span> </span><br><span class="line">&#123;<span class="string">%</span> <span class="string">endnote</span> <span class="string">%</span>&#125;  </span><br><span class="line"></span><br><span class="line">&#123;<span class="string">%</span> <span class="string">note</span> <span class="string">warning</span> <span class="string">展开</span> <span class="string">%</span>&#125;  </span><br><span class="line"><span class="string">warning</span></span><br><span class="line">&#123;<span class="string">%</span> <span class="string">endnote</span> <span class="string">%</span>&#125;  </span><br><span class="line"></span><br><span class="line">&#123;<span class="string">%</span> <span class="string">note</span> <span class="string">danger</span> <span class="string">展开</span> <span class="string">%</span>&#125;  </span><br><span class="line"><span class="string">danger</span></span><br><span class="line">&#123;<span class="string">%</span> <span class="string">endnote</span> <span class="string">%</span>&#125;</span><br></pre></td></tr></table></figure>
+<p>一般来说，可以在<code>themes/your_theme/_config.yml</code>里面调整标签的风格。</p>
+<h2 id="评论系统">评论系统</h2>
+<p>正如一开始所说的，Valine 被 NexT 放弃了。不过，还好有 Waline 作为替代者。我找到了很详尽的<a target="_blank" rel="noopener" href="https://qianfanguojin.top/2022/01/20/Hexo%E5%8D%9A%E5%AE%A2%E8%BF%9B%E9%98%B6%EF%BC%9A%E4%B8%BA-Next-%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0-Waline-%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F/">教程</a>，安装的过程比较顺利。并且，由于可以和以前一样使用 leancloud 服务器，评论都是自动迁移了的，这还不错。</p>
+<h2 id="零敲碎打">零敲碎打</h2>
+<ul>
+<li>对于每一篇历史文章都重新手动确定了 categories/分类 和 tags/标签。</li>
+<li>标签页仍然展示文章目录的问题。具体来说，标签页应该只显示一堆分散的标签，不具备文章的结构，因此自然没有在侧边栏展示文章目录的道理。但是，我使用的 Pisces scheme 仍然有这个性质。以前感觉这是一个小问题，这次顺便就给解决了。在<code>\themes\next-reload\layout\_macro\sidebar.njk</code>里面把<code>set display_toc</code>那里改成<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;%- set display_toc = page.<span class="property">toc</span>.<span class="property">enable</span> and display_toc and page.<span class="property">type</span> != <span class="string">&quot;tags&quot;</span> %&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>就可以了。</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/hexo/" rel="tag"># hexo</a>
+              <a href="/tags/NexT/" rel="tag"># NexT</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2022/04/20/2022-04-20/" rel="prev" title="The order of discourse, 话语的秩序">
+                  <i class="fa fa-chevron-left"></i> The order of discourse, 话语的秩序
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments" id="waline"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 2019 – 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-copyright"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Miralem - 允许一切带引用的转载</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>站点总字数：</span>
+    <span title="站点总字数">687k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">10:24</span>
+  </span>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script><script src="/js/bookmark.js"></script>
+
+  
+<script src="https://cdn.jsdelivr.net/npm/hexo-generator-searchdb@1.4.0/dist/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css" integrity="sha256-TThEtR+XalhWKkfF383YLOrI50NGNeIqrzS+q08afrY=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/contrib/copy-tex.min.css" integrity="sha256-Wk20U9mS/kHGcSgkjSiRezW5exqT6wAOKwySOaLotXM=" crossorigin="anonymous">
+  <script class="next-config" data-name="katex" type="application/json">{"copy_tex_js":{"url":"https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/contrib/copy-tex.min.js","integrity":"sha256-etSqbSVF4+Lwe8MGk/Vanc1sR+mWv+qOG73fxWw9p94="}}</script>
+  <script src="/js/third-party/math/katex.js"></script>
+
+
+<script class="next-config" data-name="waline" type="application/json">{"lang":"zh-cn","enable":true,"serverURL":"waline-server-phi.vercel.app","cssUrl":"https://unpkg.com/@waline/client@v2/dist/waline.css","commentCount":true,"pageview":false,"placeholder":"请文明评论呀","GRAVATAR_URL":"https://seccdn.libravatar.org/gravatarproxy/{{mail|md5}}?s=80","meta":["nick","mail","link"],"pageSize":10,"visitor":false,"comment_count":true,"requiredFields":[],"libUrl":"//unpkg.com/@waline/client@v2/dist/waline.js","el":"#waline","comment":true,"path":"/2022/05/06/2022-05-06/"}</script>
+<link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline.css">
+<script>
+document.addEventListener('page:loaded', () => {
+  NexT.utils.loadComments(CONFIG.waline.el).then(() =>
+    NexT.utils.getScript(CONFIG.waline.libUrl, { condition: window.Waline })
+  ).then(() => 
+    Waline.init(Object.assign({}, CONFIG.waline,{ el: document.querySelector(CONFIG.waline.el) }))
+  );
+});
+</script>
+
+</body>
+</html>
