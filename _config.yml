@@ -123,6 +123,25 @@ search:
   content: true
   format: html
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Next theme config:
 theme_config:
   # Schemes
@@ -229,7 +248,7 @@ theme_config:
   # Sidebar Avatar
   avatar:
     # Replace the default image and set the url here.
-    url: /images/apple-touch-icon-placid.png
+    url: https://github.com/ClaudioMarchisio/ClaudioMarchisio.github.io/blob/hexo/source/images/apple-touch-icon-placid.png?raw=true
     # If true, the avatar will be displayed in circle.
     rounded: false
     # If true, the avatar will be rotated with the cursor.
