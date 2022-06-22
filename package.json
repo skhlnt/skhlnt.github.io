@@ -6,6 +6,7 @@
     "version": "5.4.2"
   },
   "dependencies": {
+    "@next-theme/plugins": "^8.11.1",
     "@upupming/hexo-renderer-markdown-it-plus": "^2.0.2",
     "@waline/hexo-next": "^3.0.1",
     "hexo": "^5.4.2",
