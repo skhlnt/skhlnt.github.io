@@ -45,9 +45,9 @@ pagination_dir: page
 theme: next-reload
 deploy:
   type: git
-  repo: 'https://github.com/skhlnt/claudiomarchisio.github.io.git'
+  repo: 'https://github.com/skhlnt/skhlnt.github.io.git'
   branch: master
-  repository: 'git@github.com:skhlnt/ClaudioMarchisio.github.io'
+  repository: 'git@github.com:skhlnt/skhlnt.github.io'
 markdown_it_plus:
   render:
     html: true
@@ -116,7 +116,7 @@ theme_config:
     offset: 12
   avatar:
     url: >-
-      https://github.com/ClaudioMarchisio/ClaudioMarchisio.github.io/blob/hexo/source/images/apple-touch-icon-placid.png?raw=true
+      https://github.com/skhlnt/skhlnt.github.io/blob/hexo/source/images/apple-touch-icon-placid.png?raw=true
     rounded: false
     rotated: false
   site_state: true

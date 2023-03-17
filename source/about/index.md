@@ -27,7 +27,7 @@ tags: [大橘子]
 
 这就是为什么我的博客的图标是一个橘子。不仅仅是一个简单的橘子，更是一个至上主义的橘子。
 
-![orange!](https://github.com/ClaudioMarchisio/ClaudioMarchisio.github.io/blob/hexo/source/images/apple-touch-icon-placid.png?raw=true)
+![orange!](https://github.com/skhlnt/skhlnt.github.io/blob/hexo/source/images/apple-touch-icon-placid.png?raw=true)
 
 除了橘子之外，我还喜欢一种动物，那就是熊。和赵警官的沟通中，我说我曾经干过很多份工作。赵警官建议我坦白从宽，我犹豫了半天，最后说我只在黑龙江东方红林场担任过职业棕熊。
 
